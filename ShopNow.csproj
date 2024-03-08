@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Source Code\DAL\" />
+    <Folder Include="Source Code\BUS\" />
+    <Folder Include="Source Code\GUI\VIEWS\MainApp\" />
+    <Folder Include="SQL\" />
+  </ItemGroup>
+
+</Project>
