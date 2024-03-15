@@ -9,10 +9,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Source Code\DAL\" />
-    <Folder Include="Source Code\BUS\" />
-    <Folder Include="Source Code\GUI\VIEWS\MainApp\" />
-    <Folder Include="SQL\" />
+    <Compile Remove="Source Code\BUS\**" />
+    <Compile Remove="Source Code\DAL\**" />
+    <Compile Remove="Source Code\GUI\VIEWS\MainApp\**" />
+    <Compile Remove="SQL\**" />
+    <EmbeddedResource Remove="Source Code\BUS\**" />
+    <EmbeddedResource Remove="Source Code\DAL\**" />
+    <EmbeddedResource Remove="Source Code\GUI\VIEWS\MainApp\**" />
+    <EmbeddedResource Remove="SQL\**" />
+    <None Remove="Source Code\BUS\**" />
+    <None Remove="Source Code\DAL\**" />
+    <None Remove="Source Code\GUI\VIEWS\MainApp\**" />
+    <None Remove="SQL\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Source Code\GUI\VIEWS\Admin\" />
   </ItemGroup>
 
 </Project>
