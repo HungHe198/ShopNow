@@ -23,8 +23,4 @@
     <None Remove="SQL\**" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Source Code\GUI\VIEWS\Admin\" />
-  </ItemGroup>
-
 </Project>
