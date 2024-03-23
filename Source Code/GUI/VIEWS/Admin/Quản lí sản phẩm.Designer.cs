@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Quản_lí_sản_phẩm));
-            dataGridView1 = new DataGridView();
+            dgv_Dulieu = new DataGridView();
             button1 = new Button();
             btn_Quanlithongke = new Button();
             btn_Quanlicoso = new Button();
@@ -52,22 +52,22 @@
             lb_Tensanpham = new Label();
             lb_Masanpham = new Label();
             btn_Capnhat = new Button();
-            button3 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            btn_Huy = new Button();
+            ((System.ComponentModel.ISupportInitialize)dgv_Dulieu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Quanlisanpham).BeginInit();
             grb_Quanlisanpham.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgv_Dulieu
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(6, 186);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(628, 566);
-            dataGridView1.TabIndex = 0;
+            dgv_Dulieu.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgv_Dulieu.Location = new Point(6, 186);
+            dgv_Dulieu.Name = "dgv_Dulieu";
+            dgv_Dulieu.RowHeadersWidth = 51;
+            dgv_Dulieu.RowTemplate.Height = 29;
+            dgv_Dulieu.Size = new Size(628, 566);
+            dgv_Dulieu.TabIndex = 0;
             // 
             // button1
             // 
@@ -148,7 +148,7 @@
             grb_Quanlisanpham.Controls.Add(btn_Themsanpham);
             grb_Quanlisanpham.Controls.Add(tb_Timkiem);
             grb_Quanlisanpham.Controls.Add(cmb_Sapxep);
-            grb_Quanlisanpham.Controls.Add(dataGridView1);
+            grb_Quanlisanpham.Controls.Add(dgv_Dulieu);
             grb_Quanlisanpham.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             grb_Quanlisanpham.Location = new Point(258, 21);
             grb_Quanlisanpham.Name = "grb_Quanlisanpham";
@@ -193,7 +193,7 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(button3);
+            groupBox2.Controls.Add(btn_Huy);
             groupBox2.Controls.Add(btn_Capnhat);
             groupBox2.Controls.Add(cmb_Trangthai);
             groupBox2.Controls.Add(tb_Gia);
@@ -281,17 +281,17 @@
             btn_Capnhat.Name = "btn_Capnhat";
             btn_Capnhat.Size = new Size(100, 43);
             btn_Capnhat.TabIndex = 11;
-            btn_Capnhat.Text = "    ";
+            btn_Capnhat.Text = "Cập nhật";
             btn_Capnhat.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_Huy
             // 
-            button3.Location = new Point(189, 330);
-            button3.Name = "button3";
-            button3.Size = new Size(100, 43);
-            button3.TabIndex = 11;
-            button3.Text = "button2";
-            button3.UseVisualStyleBackColor = true;
+            btn_Huy.Location = new Point(189, 330);
+            btn_Huy.Name = "btn_Huy";
+            btn_Huy.Size = new Size(100, 43);
+            btn_Huy.TabIndex = 11;
+            btn_Huy.Text = "Hủy";
+            btn_Huy.UseVisualStyleBackColor = true;
             // 
             // Quản_lí_sản_phẩm
             // 
@@ -310,7 +310,7 @@
             Controls.Add(grb_Quanlisanpham);
             Name = "Quản_lí_sản_phẩm";
             Text = "Quản_lí_sản_phẩm";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgv_Dulieu).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Quanlisanpham).EndInit();
             grb_Quanlisanpham.ResumeLayout(false);
             grb_Quanlisanpham.PerformLayout();
@@ -321,7 +321,7 @@
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgv_Dulieu;
         private Button button1;
         private Button btn_Quanlithongke;
         private Button btn_Quanlicoso;
@@ -335,7 +335,7 @@
         private ComboBox cmb_Sapxep;
         private Button btn_Themsanpham;
         private GroupBox groupBox2;
-        private Button button3;
+        private Button btn_Huy;
         private Button btn_Capnhat;
         private ComboBox cmb_Trangthai;
         private TextBox tb_Gia;
