@@ -10,18 +10,28 @@
 
   <ItemGroup>
     <Compile Remove="Source Code\BUS\**" />
-    <Compile Remove="Source Code\DAL\**" />
     <Compile Remove="Source Code\GUI\VIEWS\MainApp\**" />
     <EmbeddedResource Remove="Source Code\BUS\**" />
-    <EmbeddedResource Remove="Source Code\DAL\**" />
     <EmbeddedResource Remove="Source Code\GUI\VIEWS\MainApp\**" />
     <None Remove="Source Code\BUS\**" />
-    <None Remove="Source Code\DAL\**" />
     <None Remove="Source Code\GUI\VIEWS\MainApp\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="SQL\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.19" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.19">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.19" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.19">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
