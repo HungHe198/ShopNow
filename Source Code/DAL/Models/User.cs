@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ShopNow.DAL.Models
+namespace ShopNow.Source.DAL.Models
 {
     public partial class User
     {
@@ -9,6 +9,7 @@ namespace ShopNow.DAL.Models
         {
             Carts = new HashSet<Cart>();
             Customers = new HashSet<Customer>();
+            Employees = new HashSet<Employee>();
         }
 
         public Guid Id { get; set; }
@@ -30,5 +31,6 @@ namespace ShopNow.DAL.Models
         public virtual Role? Role { get; set; }
         public virtual ICollection<Cart> Carts { get; set; }
         public virtual ICollection<Customer> Customers { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
     }
 }

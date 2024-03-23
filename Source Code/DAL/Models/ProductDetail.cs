@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ShopNow.DAL.Models
+namespace ShopNow.Source.DAL.Models
 {
     public partial class ProductDetail
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ShopNow.DAL.Models
+namespace ShopNow.Source.DAL.Models
 {
     public partial class Employee
     {
@@ -27,6 +27,7 @@ namespace ShopNow.DAL.Models
         public byte? Status { get; set; }
 
         public virtual Facility Facility { get; set; } = null!;
+        public virtual User User { get; set; } = null!;
         public virtual ICollection<Supplier> Suppliers { get; set; }
     }
 }

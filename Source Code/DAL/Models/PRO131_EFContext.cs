@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace ShopNow.DAL.Models
+namespace ShopNow.Source.DAL.Models
 {
     public partial class PRO131_EFContext : DbContext
     {
@@ -327,6 +327,12 @@ namespace ShopNow.DAL.Models
                     .HasForeignKey(d => d.FacilityId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_EMPLOYEE_FACILITY_ID");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Employees)
+                    .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_EMPLOYEE_USERS_ID");
             });
 
             modelBuilder.Entity<Facility>(entity =>
