@@ -1,3 +1,4 @@
+﻿using ShopNow.Source_Code.GUI.VIEWS.Admin;
 using ShopNow.Source_Code.GUI.VIEWS.Login;
 
 namespace ShopNow
@@ -13,7 +14,7 @@ namespace ShopNow
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Login());
+            Application.Run(new Quản_lí_sản_phẩm ());
         }
     }
 }

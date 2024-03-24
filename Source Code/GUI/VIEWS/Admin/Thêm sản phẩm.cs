@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace ShopNow.Source_Code.GUI.VIEWS.Admin
 {
-    public partial class Form1 : Form
+    public partial class Thêm_sản_phẩm : Form
     {
-        public Form1()
+        public Thêm_sản_phẩm()
         {
             InitializeComponent();
         }
+
+
     }
 }
