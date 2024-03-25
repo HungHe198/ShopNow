@@ -9,11 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Source Code\BUS\**" />
     <Compile Remove="Source Code\GUI\VIEWS\MainApp\**" />
-    <EmbeddedResource Remove="Source Code\BUS\**" />
     <EmbeddedResource Remove="Source Code\GUI\VIEWS\MainApp\**" />
-    <None Remove="Source Code\BUS\**" />
     <None Remove="Source Code\GUI\VIEWS\MainApp\**" />
   </ItemGroup>
 
