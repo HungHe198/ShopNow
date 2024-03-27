@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ShopNow.Source.DAL.Models
+namespace ShopNow.Models
 {
     public partial class Supplier
     {
@@ -11,21 +11,21 @@ namespace ShopNow.Source.DAL.Models
         }
 
         public Guid Id { get; set; }
-        public Guid EmployeeId { get; set; }
-        public string Name { get; set; } = null!;
-        public string PhoneNumber { get; set; } = null!;
-        public string Email { get; set; } = null!;
-        public string Address { get; set; } = null!;
+        public Guid? EmployeeId { get; set; }
+        public string? Name { get; set; }
+        public string? PhoneNumber { get; set; }
+        public string? Email { get; set; }
+        public string? Address { get; set; }
         public DateTime? CreatedTime { get; set; }
         public Guid? CreatedBy { get; set; }
-        public bool Deleted { get; set; }
+        public bool? Deleted { get; set; }
         public DateTime? DeletedTime { get; set; }
         public Guid? DeletedBy { get; set; }
         public DateTime? ModifiedTime { get; set; }
         public Guid? ModifiedBy { get; set; }
         public byte? Status { get; set; }
 
-        public virtual Employee Employee { get; set; } = null!;
+        public virtual Employee? Employee { get; set; }
         public virtual ICollection<ImportHistory> ImportHistories { get; set; }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ShopNow.Source.DAL.Models
+namespace ShopNow.Models
 {
     public partial class Product
     {
@@ -13,15 +13,15 @@ namespace ShopNow.Source.DAL.Models
         }
 
         public Guid Id { get; set; }
-        public string ProductName { get; set; } = null!;
-        public Guid DiscountId { get; set; }
+        public string? ProductName { get; set; }
+        public Guid? DiscountId { get; set; }
         public decimal? Price { get; set; }
         public string? Description { get; set; }
         public int? Quantity { get; set; }
         public double? Warranty { get; set; }
-        public double Display { get; set; }
-        public int Ram { get; set; }
-        public int Rom { get; set; }
+        public double? Display { get; set; }
+        public int? Ram { get; set; }
+        public int? Rom { get; set; }
         public DateTime? CreatedTime { get; set; }
         public Guid? CreatedBy { get; set; }
         public bool? Deleted { get; set; }
@@ -31,7 +31,7 @@ namespace ShopNow.Source.DAL.Models
         public Guid? ModifiedBy { get; set; }
         public byte? Status { get; set; }
 
-        public virtual Discount Discount { get; set; } = null!;
+        public virtual Discount? Discount { get; set; }
         public virtual ICollection<CartProduct> CartProducts { get; set; }
         public virtual ICollection<ImportHistory> ImportHistories { get; set; }
         public virtual ICollection<ProductDetail> ProductDetails { get; set; }

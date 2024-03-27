@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ShopNow.Source.DAL.Models
+namespace ShopNow.Models
 {
     public partial class Bill
     {
         public Guid Id { get; set; }
-        public Guid CustomerId { get; set; }
-        public byte Status { get; set; }
-        public decimal TotalPrice { get; set; }
+        public Guid? CustomerId { get; set; }
+        public byte? Status { get; set; }
+        public decimal? TotalPrice { get; set; }
         public DateTime? CreatedTime { get; set; }
         public Guid? CreatedBy { get; set; }
         public bool? Deleted { get; set; }
@@ -17,6 +17,6 @@ namespace ShopNow.Source.DAL.Models
         public DateTime? ModifiedTime { get; set; }
         public Guid? ModifiedBy { get; set; }
 
-        public virtual Customer Customer { get; set; } = null!;
+        public virtual Customer? Customer { get; set; }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace ShopNow.Source.DAL.Models
+namespace ShopNow.Models
 {
     public partial class PRO131_EFContext : DbContext
     {
@@ -60,7 +60,6 @@ namespace ShopNow.Source.DAL.Models
                 entity.Property(e => e.CustomerId).HasColumnName("CUSTOMER_ID");
 
                 entity.Property(e => e.Deleted)
-                    .IsRequired()
                     .HasColumnName("DELETED")
                     .HasDefaultValueSql("((1))");
 
@@ -87,7 +86,6 @@ namespace ShopNow.Source.DAL.Models
                 entity.HasOne(d => d.Customer)
                     .WithMany(p => p.Bills)
                     .HasForeignKey(d => d.CustomerId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_BILL_CUSTOMER_ID");
             });
 
@@ -114,13 +112,11 @@ namespace ShopNow.Source.DAL.Models
                 entity.HasOne(d => d.Bill)
                     .WithMany()
                     .HasForeignKey(d => d.BillId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_BD_BILL_ID");
 
                 entity.HasOne(d => d.Product)
                     .WithMany()
                     .HasForeignKey(d => d.ProductId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_BD_PRODUCTS_ID");
             });
 
@@ -137,14 +133,13 @@ namespace ShopNow.Source.DAL.Models
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Carts)
                     .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_CART_USER_ID");
             });
 
             modelBuilder.Entity<CartProduct>(entity =>
             {
                 entity.HasKey(e => new { e.CartId, e.ProductId })
-                    .HasName("PK__CART_PRO__8E2AFE193B3AF813");
+                    .HasName("PK__CART_PRO__8E2AFE19403C0AEA");
 
                 entity.ToTable("CART_PRODUCT");
 
@@ -203,13 +198,11 @@ namespace ShopNow.Source.DAL.Models
                 entity.HasOne(d => d.CustomerType)
                     .WithMany(p => p.Customers)
                     .HasForeignKey(d => d.CustomerTypeId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_CUSTOMER_CT_ID");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Customers)
                     .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_CUSTOMER_USER_ID");
             });
 
@@ -325,13 +318,11 @@ namespace ShopNow.Source.DAL.Models
                 entity.HasOne(d => d.Facility)
                     .WithMany(p => p.Employees)
                     .HasForeignKey(d => d.FacilityId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_EMPLOYEE_FACILITY_ID");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Employees)
                     .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_EMPLOYEE_USERS_ID");
             });
 
@@ -432,13 +423,11 @@ namespace ShopNow.Source.DAL.Models
                 entity.HasOne(d => d.Product)
                     .WithMany(p => p.ImportHistories)
                     .HasForeignKey(d => d.ProductId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_IH_PRODUCTS_ID");
 
                 entity.HasOne(d => d.Supplier)
                     .WithMany(p => p.ImportHistories)
                     .HasForeignKey(d => d.SupplierId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_IH_SUPPLIER_ID");
             });
 
@@ -457,7 +446,6 @@ namespace ShopNow.Source.DAL.Models
                     .HasColumnName("CREATED_TIME");
 
                 entity.Property(e => e.Deleted)
-                    .IsRequired()
                     .HasColumnName("DELETED")
                     .HasDefaultValueSql("((1))");
 
@@ -506,7 +494,6 @@ namespace ShopNow.Source.DAL.Models
                 entity.HasOne(d => d.Discount)
                     .WithMany(p => p.Products)
                     .HasForeignKey(d => d.DiscountId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_PRODUCTS_DISCOUNT_ID");
             });
 
@@ -545,7 +532,6 @@ namespace ShopNow.Source.DAL.Models
                     .HasColumnName("CREATED_TIME");
 
                 entity.Property(e => e.Deleted)
-                    .IsRequired()
                     .HasColumnName("DELETED")
                     .HasDefaultValueSql("((1))");
 
@@ -587,7 +573,6 @@ namespace ShopNow.Source.DAL.Models
                 entity.HasOne(d => d.Product)
                     .WithMany(p => p.ProductDetails)
                     .HasForeignKey(d => d.ProductId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_PD_PRODUCTS_ID");
             });
 
@@ -659,7 +644,6 @@ namespace ShopNow.Source.DAL.Models
                 entity.HasOne(d => d.Employee)
                     .WithMany(p => p.Suppliers)
                     .HasForeignKey(d => d.EmployeeId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_SUPPLIER_EMPLOYEE_ID");
             });
 
@@ -682,7 +666,9 @@ namespace ShopNow.Source.DAL.Models
                     .HasColumnType("datetime")
                     .HasColumnName("CREATED_TIME");
 
-                entity.Property(e => e.Deleted).HasColumnName("DELETED");
+                entity.Property(e => e.Deleted)
+                    .HasColumnName("DELETED")
+                    .HasDefaultValueSql("((1))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
