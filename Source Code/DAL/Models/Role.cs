@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ShopNow.Source.DAL.Models
+namespace ShopNow.Models
 {
     public partial class Role
     {

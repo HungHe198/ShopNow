@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ShopNow.Source.DAL.Models
+namespace ShopNow.Models
 {
     public partial class Discount
     {
@@ -12,11 +12,11 @@ namespace ShopNow.Source.DAL.Models
 
         public Guid Id { get; set; }
         public string? Name { get; set; }
-        public int Discount1 { get; set; }
+        public int? Discount1 { get; set; }
         public string? Description { get; set; }
         public DateTime? CreatedTime { get; set; }
         public Guid? CreatedBy { get; set; }
-        public bool Deleted { get; set; }
+        public bool? Deleted { get; set; }
         public DateTime? DeletedTime { get; set; }
         public Guid? DeletedBy { get; set; }
         public DateTime? ModifiedTime { get; set; }
