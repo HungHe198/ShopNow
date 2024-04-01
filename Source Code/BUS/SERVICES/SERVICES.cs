@@ -8,10 +8,10 @@ namespace ShopNow.Source_Code.BUS.SERVICES
 {
     class SERVICES
     {
-        public void Test()
-        { 
+        //public void Test()
+        //{ 
            
-        } 
+        //} 
             
     }
 }
