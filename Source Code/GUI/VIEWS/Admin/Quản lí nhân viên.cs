@@ -16,5 +16,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
         {
             InitializeComponent();
         }
+
+
     }
 }

@@ -28,9 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Quản_lí_nhân_viên));
             grb_Quanlinhanvien = new GroupBox();
+            btn_Themnhanvien = new Button();
+            label1 = new Label();
+            button2 = new Button();
+            btn_Sua = new Button();
             dataGridView1 = new DataGridView();
+            cmb_Sapxep = new ComboBox();
+            tb_Timkiem = new TextBox();
             btn_Quanlithongke = new Button();
             btn_Quanlicoso = new Button();
             btn_QLGG = new Button();
@@ -46,14 +51,80 @@
             // 
             // grb_Quanlinhanvien
             // 
+            grb_Quanlinhanvien.Controls.Add(btn_Themnhanvien);
+            grb_Quanlinhanvien.Controls.Add(label1);
+            grb_Quanlinhanvien.Controls.Add(button2);
+            grb_Quanlinhanvien.Controls.Add(btn_Sua);
             grb_Quanlinhanvien.Controls.Add(dataGridView1);
-            grb_Quanlinhanvien.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            grb_Quanlinhanvien.Controls.Add(cmb_Sapxep);
+            grb_Quanlinhanvien.Controls.Add(tb_Timkiem);
+            grb_Quanlinhanvien.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             grb_Quanlinhanvien.Location = new Point(223, 4);
             grb_Quanlinhanvien.Name = "grb_Quanlinhanvien";
             grb_Quanlinhanvien.Size = new Size(966, 747);
             grb_Quanlinhanvien.TabIndex = 4;
             grb_Quanlinhanvien.TabStop = false;
-            grb_Quanlinhanvien.Text = "Quản lí nhân viên";
+            // 
+            // btn_Themnhanvien
+            // 
+            btn_Themnhanvien.AutoSize = true;
+            btn_Themnhanvien.BackColor = Color.Coral;
+            btn_Themnhanvien.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            btn_Themnhanvien.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_Themnhanvien.FlatAppearance.MouseOverBackColor = Color.Yellow;
+            btn_Themnhanvien.FlatStyle = FlatStyle.Flat;
+            btn_Themnhanvien.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Themnhanvien.ForeColor = Color.White;
+            btn_Themnhanvien.Location = new Point(665, 136);
+            btn_Themnhanvien.Name = "btn_Themnhanvien";
+            btn_Themnhanvien.Size = new Size(70, 35);
+            btn_Themnhanvien.TabIndex = 17;
+            btn_Themnhanvien.Text = "Thêm";
+            btn_Themnhanvien.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label1.Location = new Point(6, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(201, 26);
+            label1.TabIndex = 16;
+            label1.Text = "Quản lí nhân viên";
+            // 
+            // button2
+            // 
+            button2.AutoSize = true;
+            button2.BackColor = Color.Red;
+            button2.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            button2.FlatAppearance.MouseDownBackColor = Color.Black;
+            button2.FlatAppearance.MouseOverBackColor = Color.Yellow;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(890, 136);
+            button2.Name = "button2";
+            button2.Size = new Size(70, 35);
+            button2.TabIndex = 14;
+            button2.Text = "Xóa";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // btn_Sua
+            // 
+            btn_Sua.AutoSize = true;
+            btn_Sua.BackColor = Color.SandyBrown;
+            btn_Sua.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            btn_Sua.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_Sua.FlatAppearance.MouseOverBackColor = Color.Yellow;
+            btn_Sua.FlatStyle = FlatStyle.Flat;
+            btn_Sua.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Sua.ForeColor = Color.White;
+            btn_Sua.Location = new Point(779, 136);
+            btn_Sua.Name = "btn_Sua";
+            btn_Sua.Size = new Size(70, 35);
+            btn_Sua.TabIndex = 14;
+            btn_Sua.Text = "Sửa";
+            btn_Sua.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -64,6 +135,23 @@
             dataGridView1.RowTemplate.Height = 29;
             dataGridView1.Size = new Size(954, 557);
             dataGridView1.TabIndex = 0;
+            // 
+            // cmb_Sapxep
+            // 
+            cmb_Sapxep.FormattingEnabled = true;
+            cmb_Sapxep.Location = new Point(382, 136);
+            cmb_Sapxep.Name = "cmb_Sapxep";
+            cmb_Sapxep.Size = new Size(151, 28);
+            cmb_Sapxep.TabIndex = 12;
+            // 
+            // tb_Timkiem
+            // 
+            tb_Timkiem.BackColor = SystemColors.InactiveBorder;
+            tb_Timkiem.Location = new Point(6, 136);
+            tb_Timkiem.Name = "tb_Timkiem";
+            tb_Timkiem.PlaceholderText = "Nhập sản phẩm cần tìm";
+            tb_Timkiem.Size = new Size(356, 27);
+            tb_Timkiem.TabIndex = 13;
             // 
             // btn_Quanlithongke
             // 
@@ -122,7 +210,6 @@
             // ptb_Quanlisanpham
             // 
             ptb_Quanlisanpham.BackColor = SystemColors.ActiveCaption;
-            ptb_Quanlisanpham.Image = (Image)resources.GetObject("ptb_Quanlisanpham.Image");
             ptb_Quanlisanpham.Location = new Point(12, 12);
             ptb_Quanlisanpham.Name = "ptb_Quanlisanpham";
             ptb_Quanlisanpham.Size = new Size(205, 170);
@@ -156,6 +243,7 @@
             Name = "Quản_lí_nhân_viên";
             Text = "Quản_lí_nhân_viên";
             grb_Quanlinhanvien.ResumeLayout(false);
+            grb_Quanlinhanvien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Quanlisanpham).EndInit();
             ResumeLayout(false);
@@ -173,5 +261,11 @@
         private Button btn_QLSP;
         private PictureBox ptb_Quanlisanpham;
         private Button button1;
+        private Label label1;
+        private Button btn_Sua;
+        private ComboBox cmb_Sapxep;
+        private TextBox tb_Timkiem;
+        private Button btn_Themnhanvien;
+        private Button button2;
     }
 }

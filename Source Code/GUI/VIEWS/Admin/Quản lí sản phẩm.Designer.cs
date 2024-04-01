@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Quản_lí_sản_phẩm));
             dgv_Dulieu = new DataGridView();
             button1 = new Button();
             btn_Quanlithongke = new Button();
@@ -39,10 +38,14 @@
             btn_QLSP = new Button();
             ptb_Quanlisanpham = new PictureBox();
             grb_Quanlisanpham = new GroupBox();
+            label1 = new Label();
+            btn_Xoasanpham = new Button();
             btn_Themsanpham = new Button();
             tb_Timkiem = new TextBox();
             cmb_Sapxep = new ComboBox();
             groupBox2 = new GroupBox();
+            btn_Huy = new Button();
+            btn_Capnhat = new Button();
             cmb_Trangthai = new ComboBox();
             tb_Gia = new TextBox();
             tb_Tensanpham = new TextBox();
@@ -51,8 +54,6 @@
             label2 = new Label();
             lb_Tensanpham = new Label();
             lb_Masanpham = new Label();
-            btn_Capnhat = new Button();
-            btn_Huy = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv_Dulieu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Quanlisanpham).BeginInit();
             grb_Quanlisanpham.SuspendLayout();
@@ -135,7 +136,6 @@
             // ptb_Quanlisanpham
             // 
             ptb_Quanlisanpham.BackColor = SystemColors.ActiveCaption;
-            ptb_Quanlisanpham.Image = (Image)resources.GetObject("ptb_Quanlisanpham.Image");
             ptb_Quanlisanpham.Location = new Point(12, 21);
             ptb_Quanlisanpham.Name = "ptb_Quanlisanpham";
             ptb_Quanlisanpham.Size = new Size(240, 189);
@@ -145,6 +145,8 @@
             // 
             // grb_Quanlisanpham
             // 
+            grb_Quanlisanpham.Controls.Add(label1);
+            grb_Quanlisanpham.Controls.Add(btn_Xoasanpham);
             grb_Quanlisanpham.Controls.Add(btn_Themsanpham);
             grb_Quanlisanpham.Controls.Add(tb_Timkiem);
             grb_Quanlisanpham.Controls.Add(cmb_Sapxep);
@@ -155,7 +157,33 @@
             grb_Quanlisanpham.Size = new Size(643, 760);
             grb_Quanlisanpham.TabIndex = 12;
             grb_Quanlisanpham.TabStop = false;
-            grb_Quanlisanpham.Text = "Quản lí sản phẩm";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label1.Location = new Point(6, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(199, 26);
+            label1.TabIndex = 7;
+            label1.Text = "Quản lí sản phẩm";
+            // 
+            // btn_Xoasanpham
+            // 
+            btn_Xoasanpham.AutoSize = true;
+            btn_Xoasanpham.BackColor = Color.Red;
+            btn_Xoasanpham.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            btn_Xoasanpham.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_Xoasanpham.FlatAppearance.MouseOverBackColor = Color.Yellow;
+            btn_Xoasanpham.FlatStyle = FlatStyle.Flat;
+            btn_Xoasanpham.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Xoasanpham.ForeColor = Color.White;
+            btn_Xoasanpham.Location = new Point(564, 140);
+            btn_Xoasanpham.Name = "btn_Xoasanpham";
+            btn_Xoasanpham.Size = new Size(70, 32);
+            btn_Xoasanpham.TabIndex = 6;
+            btn_Xoasanpham.Text = "Xóa";
+            btn_Xoasanpham.UseVisualStyleBackColor = false;
             // 
             // btn_Themsanpham
             // 
@@ -167,7 +195,7 @@
             btn_Themsanpham.FlatStyle = FlatStyle.Flat;
             btn_Themsanpham.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btn_Themsanpham.ForeColor = Color.White;
-            btn_Themsanpham.Location = new Point(6, 50);
+            btn_Themsanpham.Location = new Point(6, 83);
             btn_Themsanpham.Name = "btn_Themsanpham";
             btn_Themsanpham.Size = new Size(152, 38);
             btn_Themsanpham.TabIndex = 6;
@@ -186,7 +214,7 @@
             // cmb_Sapxep
             // 
             cmb_Sapxep.FormattingEnabled = true;
-            cmb_Sapxep.Location = new Point(486, 139);
+            cmb_Sapxep.Location = new Point(382, 140);
             cmb_Sapxep.Name = "cmb_Sapxep";
             cmb_Sapxep.Size = new Size(151, 28);
             cmb_Sapxep.TabIndex = 3;
@@ -209,6 +237,24 @@
             groupBox2.TabIndex = 21;
             groupBox2.TabStop = false;
             groupBox2.Text = "Chi tiết sản phẩm";
+            // 
+            // btn_Huy
+            // 
+            btn_Huy.Location = new Point(189, 330);
+            btn_Huy.Name = "btn_Huy";
+            btn_Huy.Size = new Size(100, 43);
+            btn_Huy.TabIndex = 11;
+            btn_Huy.Text = "Hủy";
+            btn_Huy.UseVisualStyleBackColor = true;
+            // 
+            // btn_Capnhat
+            // 
+            btn_Capnhat.Location = new Point(19, 330);
+            btn_Capnhat.Name = "btn_Capnhat";
+            btn_Capnhat.Size = new Size(100, 43);
+            btn_Capnhat.TabIndex = 11;
+            btn_Capnhat.Text = "Cập nhật";
+            btn_Capnhat.UseVisualStyleBackColor = true;
             // 
             // cmb_Trangthai
             // 
@@ -275,24 +321,6 @@
             lb_Masanpham.TabIndex = 6;
             lb_Masanpham.Text = "Mã sản phẩm";
             // 
-            // btn_Capnhat
-            // 
-            btn_Capnhat.Location = new Point(19, 330);
-            btn_Capnhat.Name = "btn_Capnhat";
-            btn_Capnhat.Size = new Size(100, 43);
-            btn_Capnhat.TabIndex = 11;
-            btn_Capnhat.Text = "Cập nhật";
-            btn_Capnhat.UseVisualStyleBackColor = true;
-            // 
-            // btn_Huy
-            // 
-            btn_Huy.Location = new Point(189, 330);
-            btn_Huy.Name = "btn_Huy";
-            btn_Huy.Size = new Size(100, 43);
-            btn_Huy.TabIndex = 11;
-            btn_Huy.Text = "Hủy";
-            btn_Huy.UseVisualStyleBackColor = true;
-            // 
             // Quản_lí_sản_phẩm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -345,5 +373,7 @@
         private Label label2;
         private Label lb_Tensanpham;
         private Label lb_Masanpham;
+        private Button btn_Xoasanpham;
+        private Label label1;
     }
 }
