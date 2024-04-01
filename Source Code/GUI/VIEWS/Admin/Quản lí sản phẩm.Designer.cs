@@ -43,6 +43,8 @@
             tb_Timkiem = new TextBox();
             cmb_Sapxep = new ComboBox();
             groupBox2 = new GroupBox();
+            btn_Huy = new Button();
+            btn_Capnhat = new Button();
             cmb_Trangthai = new ComboBox();
             tb_Gia = new TextBox();
             tb_Tensanpham = new TextBox();
@@ -51,8 +53,6 @@
             label2 = new Label();
             lb_Tensanpham = new Label();
             lb_Masanpham = new Label();
-            btn_Capnhat = new Button();
-            btn_Huy = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv_Dulieu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Quanlisanpham).BeginInit();
             grb_Quanlisanpham.SuspendLayout();
@@ -186,7 +186,7 @@
             // cmb_Sapxep
             // 
             cmb_Sapxep.FormattingEnabled = true;
-            cmb_Sapxep.Location = new Point(486, 139);
+            cmb_Sapxep.Location = new Point(396, 140);
             cmb_Sapxep.Name = "cmb_Sapxep";
             cmb_Sapxep.Size = new Size(151, 28);
             cmb_Sapxep.TabIndex = 3;
@@ -209,6 +209,24 @@
             groupBox2.TabIndex = 21;
             groupBox2.TabStop = false;
             groupBox2.Text = "Chi tiết sản phẩm";
+            // 
+            // btn_Huy
+            // 
+            btn_Huy.Location = new Point(189, 330);
+            btn_Huy.Name = "btn_Huy";
+            btn_Huy.Size = new Size(100, 43);
+            btn_Huy.TabIndex = 11;
+            btn_Huy.Text = "Hủy";
+            btn_Huy.UseVisualStyleBackColor = true;
+            // 
+            // btn_Capnhat
+            // 
+            btn_Capnhat.Location = new Point(19, 330);
+            btn_Capnhat.Name = "btn_Capnhat";
+            btn_Capnhat.Size = new Size(100, 43);
+            btn_Capnhat.TabIndex = 11;
+            btn_Capnhat.Text = "Cập nhật";
+            btn_Capnhat.UseVisualStyleBackColor = true;
             // 
             // cmb_Trangthai
             // 
@@ -274,24 +292,6 @@
             lb_Masanpham.Size = new Size(98, 20);
             lb_Masanpham.TabIndex = 6;
             lb_Masanpham.Text = "Mã sản phẩm";
-            // 
-            // btn_Capnhat
-            // 
-            btn_Capnhat.Location = new Point(19, 330);
-            btn_Capnhat.Name = "btn_Capnhat";
-            btn_Capnhat.Size = new Size(100, 43);
-            btn_Capnhat.TabIndex = 11;
-            btn_Capnhat.Text = "Cập nhật";
-            btn_Capnhat.UseVisualStyleBackColor = true;
-            // 
-            // btn_Huy
-            // 
-            btn_Huy.Location = new Point(189, 330);
-            btn_Huy.Name = "btn_Huy";
-            btn_Huy.Size = new Size(100, 43);
-            btn_Huy.TabIndex = 11;
-            btn_Huy.Text = "Hủy";
-            btn_Huy.UseVisualStyleBackColor = true;
             // 
             // Quản_lí_sản_phẩm
             // 

@@ -30,7 +30,10 @@
         {
             lb_Themsanpham = new Label();
             grb_Thongtin = new GroupBox();
+            btn_Chonanh = new Button();
+            ptb_Themsanpham = new PictureBox();
             cmb_Trangthai = new ComboBox();
+            tb_Mota = new TextBox();
             tb_Gia = new TextBox();
             tb_Tensanpham = new TextBox();
             tb_Masanpham = new TextBox();
@@ -39,9 +42,6 @@
             label2 = new Label();
             lb_Tensanpham = new Label();
             lb_Masanpham = new Label();
-            tb_Mota = new TextBox();
-            ptb_Themsanpham = new PictureBox();
-            btn_Chonanh = new Button();
             grb_Thongtin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptb_Themsanpham).BeginInit();
             SuspendLayout();
@@ -49,10 +49,10 @@
             // lb_Themsanpham
             // 
             lb_Themsanpham.AutoSize = true;
-            lb_Themsanpham.Font = new Font("Segoe UI", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lb_Themsanpham.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lb_Themsanpham.Location = new Point(377, 28);
             lb_Themsanpham.Name = "lb_Themsanpham";
-            lb_Themsanpham.Size = new Size(243, 41);
+            lb_Themsanpham.Size = new Size(240, 41);
             lb_Themsanpham.TabIndex = 0;
             lb_Themsanpham.Text = "Thêm sản phẩm";
             // 
@@ -77,6 +77,24 @@
             grb_Thongtin.TabStop = false;
             grb_Thongtin.Text = "Thông tin";
             // 
+            // btn_Chonanh
+            // 
+            btn_Chonanh.Location = new Point(673, 287);
+            btn_Chonanh.Name = "btn_Chonanh";
+            btn_Chonanh.Size = new Size(94, 29);
+            btn_Chonanh.TabIndex = 4;
+            btn_Chonanh.Text = "Chọn ảnh";
+            btn_Chonanh.UseVisualStyleBackColor = true;
+            // 
+            // ptb_Themsanpham
+            // 
+            ptb_Themsanpham.BackColor = SystemColors.ActiveCaption;
+            ptb_Themsanpham.Location = new Point(578, 70);
+            ptb_Themsanpham.Name = "ptb_Themsanpham";
+            ptb_Themsanpham.Size = new Size(278, 196);
+            ptb_Themsanpham.TabIndex = 3;
+            ptb_Themsanpham.TabStop = false;
+            // 
             // cmb_Trangthai
             // 
             cmb_Trangthai.FormattingEnabled = true;
@@ -84,6 +102,14 @@
             cmb_Trangthai.Name = "cmb_Trangthai";
             cmb_Trangthai.Size = new Size(270, 28);
             cmb_Trangthai.TabIndex = 2;
+            // 
+            // tb_Mota
+            // 
+            tb_Mota.Location = new Point(59, 342);
+            tb_Mota.Multiline = true;
+            tb_Mota.Name = "tb_Mota";
+            tb_Mota.Size = new Size(832, 165);
+            tb_Mota.TabIndex = 1;
             // 
             // tb_Gia
             // 
@@ -150,32 +176,6 @@
             lb_Masanpham.Size = new Size(98, 20);
             lb_Masanpham.TabIndex = 0;
             lb_Masanpham.Text = "Mã sản phẩm";
-            // 
-            // tb_Mota
-            // 
-            tb_Mota.Location = new Point(59, 342);
-            tb_Mota.Multiline = true;
-            tb_Mota.Name = "tb_Mota";
-            tb_Mota.Size = new Size(832, 165);
-            tb_Mota.TabIndex = 1;
-            // 
-            // ptb_Themsanpham
-            // 
-            ptb_Themsanpham.BackColor = SystemColors.ActiveCaption;
-            ptb_Themsanpham.Location = new Point(578, 70);
-            ptb_Themsanpham.Name = "ptb_Themsanpham";
-            ptb_Themsanpham.Size = new Size(278, 196);
-            ptb_Themsanpham.TabIndex = 3;
-            ptb_Themsanpham.TabStop = false;
-            // 
-            // btn_Chonanh
-            // 
-            btn_Chonanh.Location = new Point(673, 287);
-            btn_Chonanh.Name = "btn_Chonanh";
-            btn_Chonanh.Size = new Size(94, 29);
-            btn_Chonanh.TabIndex = 4;
-            btn_Chonanh.Text = "Chọn ảnh";
-            btn_Chonanh.UseVisualStyleBackColor = true;
             // 
             // Thêm_sản_phẩm
             // 
