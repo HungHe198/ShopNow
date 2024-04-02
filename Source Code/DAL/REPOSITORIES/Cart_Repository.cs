@@ -28,5 +28,23 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
             }
 
         }
+        public bool IsUpdateCart(Cart obj)
+        {
+            try
+            {
+                // Thêm user vào context
+                context.Update(obj);
+                // Lưu thay đổi vào cơ sở dữ liệu
+                int result = context.SaveChanges();
+                // Trả về true nếu có ít nhất một bản ghi được thêm vào
+                return result > 0;
+            }
+            catch (Exception ex)
+            {
+                // Xử lý ngoại lệ tại đây
+                return false;
+            }
+
+        }
     }
 }
