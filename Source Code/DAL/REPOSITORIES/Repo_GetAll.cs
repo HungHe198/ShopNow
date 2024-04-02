@@ -1,4 +1,4 @@
-﻿using ShopNow.Source.DAL.Models;
+﻿using ShopNow.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ShopNow.Source_Code.DAL.REPOSITORIES
 {
-    class Repo
+    class Repo_GetAll
     {
         PRO131_EFContext _db = new PRO131_EFContext();
         public List<Product> GetAllProducts()
