@@ -39,6 +39,12 @@
             btn_QLSP = new Button();
             ptb_Quanlisanpham = new PictureBox();
             button1 = new Button();
+            btn_Them = new Button();
+            tb_Timkiem = new TextBox();
+            cmb_Sapxep = new ComboBox();
+            btn_Xoa = new Button();
+            btn_Sua = new Button();
+            label1 = new Label();
             grb_Quanlinhanvien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Quanlisanpham).BeginInit();
@@ -46,14 +52,19 @@
             // 
             // grb_Quanlinhanvien
             // 
+            grb_Quanlinhanvien.Controls.Add(label1);
+            grb_Quanlinhanvien.Controls.Add(btn_Sua);
+            grb_Quanlinhanvien.Controls.Add(btn_Xoa);
+            grb_Quanlinhanvien.Controls.Add(btn_Them);
+            grb_Quanlinhanvien.Controls.Add(tb_Timkiem);
+            grb_Quanlinhanvien.Controls.Add(cmb_Sapxep);
             grb_Quanlinhanvien.Controls.Add(dataGridView1);
-            grb_Quanlinhanvien.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            grb_Quanlinhanvien.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
             grb_Quanlinhanvien.Location = new Point(223, 4);
             grb_Quanlinhanvien.Name = "grb_Quanlinhanvien";
             grb_Quanlinhanvien.Size = new Size(966, 747);
             grb_Quanlinhanvien.TabIndex = 4;
             grb_Quanlinhanvien.TabStop = false;
-            grb_Quanlinhanvien.Text = "Quản lí nhân viên";
             // 
             // dataGridView1
             // 
@@ -139,6 +150,84 @@
             button1.Text = "...";
             button1.UseVisualStyleBackColor = true;
             // 
+            // btn_Them
+            // 
+            btn_Them.AutoSize = true;
+            btn_Them.BackColor = Color.Coral;
+            btn_Them.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            btn_Them.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_Them.FlatAppearance.MouseOverBackColor = Color.Yellow;
+            btn_Them.FlatStyle = FlatStyle.Flat;
+            btn_Them.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Them.ForeColor = Color.White;
+            btn_Them.Location = new Point(661, 134);
+            btn_Them.Name = "btn_Them";
+            btn_Them.Size = new Size(77, 38);
+            btn_Them.TabIndex = 9;
+            btn_Them.Text = "Thêm ";
+            btn_Them.UseVisualStyleBackColor = false;
+            // 
+            // tb_Timkiem
+            // 
+            tb_Timkiem.BackColor = SystemColors.InactiveBorder;
+            tb_Timkiem.Location = new Point(6, 147);
+            tb_Timkiem.Name = "tb_Timkiem";
+            tb_Timkiem.PlaceholderText = "Nhập để tìm kiếm";
+            tb_Timkiem.Size = new Size(356, 25);
+            tb_Timkiem.TabIndex = 8;
+            // 
+            // cmb_Sapxep
+            // 
+            cmb_Sapxep.FormattingEnabled = true;
+            cmb_Sapxep.Location = new Point(396, 147);
+            cmb_Sapxep.Name = "cmb_Sapxep";
+            cmb_Sapxep.Size = new Size(151, 25);
+            cmb_Sapxep.TabIndex = 7;
+            // 
+            // btn_Xoa
+            // 
+            btn_Xoa.AutoSize = true;
+            btn_Xoa.BackColor = Color.Red;
+            btn_Xoa.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            btn_Xoa.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_Xoa.FlatAppearance.MouseOverBackColor = Color.Yellow;
+            btn_Xoa.FlatStyle = FlatStyle.Flat;
+            btn_Xoa.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Xoa.ForeColor = Color.White;
+            btn_Xoa.Location = new Point(883, 134);
+            btn_Xoa.Name = "btn_Xoa";
+            btn_Xoa.Size = new Size(77, 38);
+            btn_Xoa.TabIndex = 9;
+            btn_Xoa.Text = "Xóa";
+            btn_Xoa.UseVisualStyleBackColor = false;
+            // 
+            // btn_Sua
+            // 
+            btn_Sua.AutoSize = true;
+            btn_Sua.BackColor = Color.Tan;
+            btn_Sua.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            btn_Sua.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_Sua.FlatAppearance.MouseOverBackColor = Color.Yellow;
+            btn_Sua.FlatStyle = FlatStyle.Flat;
+            btn_Sua.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Sua.ForeColor = Color.White;
+            btn_Sua.Location = new Point(773, 134);
+            btn_Sua.Name = "btn_Sua";
+            btn_Sua.Size = new Size(77, 38);
+            btn_Sua.TabIndex = 9;
+            btn_Sua.Text = "Sửa";
+            btn_Sua.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(6, 21);
+            label1.Name = "label1";
+            label1.Size = new Size(187, 25);
+            label1.TabIndex = 10;
+            label1.Text = "Quản lí nhân viên";
+            // 
             // Quản_lí_nhân_viên
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -156,6 +245,7 @@
             Name = "Quản_lí_nhân_viên";
             Text = "Quản_lí_nhân_viên";
             grb_Quanlinhanvien.ResumeLayout(false);
+            grb_Quanlinhanvien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Quanlisanpham).EndInit();
             ResumeLayout(false);
@@ -173,5 +263,11 @@
         private Button btn_QLSP;
         private PictureBox ptb_Quanlisanpham;
         private Button button1;
+        private Label label1;
+        private Button btn_Sua;
+        private Button btn_Xoa;
+        private Button btn_Them;
+        private TextBox tb_Timkiem;
+        private ComboBox cmb_Sapxep;
     }
 }

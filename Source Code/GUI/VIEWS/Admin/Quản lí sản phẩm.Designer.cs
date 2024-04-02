@@ -39,6 +39,7 @@
             btn_QLSP = new Button();
             ptb_Quanlisanpham = new PictureBox();
             grb_Quanlisanpham = new GroupBox();
+            label1 = new Label();
             btn_Themsanpham = new Button();
             tb_Timkiem = new TextBox();
             cmb_Sapxep = new ComboBox();
@@ -53,6 +54,8 @@
             label2 = new Label();
             lb_Tensanpham = new Label();
             lb_Masanpham = new Label();
+            btn_Xoa = new Button();
+            btn_Sua = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv_Dulieu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Quanlisanpham).BeginInit();
             grb_Quanlisanpham.SuspendLayout();
@@ -145,17 +148,29 @@
             // 
             // grb_Quanlisanpham
             // 
+            grb_Quanlisanpham.Controls.Add(btn_Sua);
+            grb_Quanlisanpham.Controls.Add(btn_Xoa);
+            grb_Quanlisanpham.Controls.Add(label1);
             grb_Quanlisanpham.Controls.Add(btn_Themsanpham);
             grb_Quanlisanpham.Controls.Add(tb_Timkiem);
             grb_Quanlisanpham.Controls.Add(cmb_Sapxep);
             grb_Quanlisanpham.Controls.Add(dgv_Dulieu);
-            grb_Quanlisanpham.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            grb_Quanlisanpham.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
             grb_Quanlisanpham.Location = new Point(258, 21);
             grb_Quanlisanpham.Name = "grb_Quanlisanpham";
             grb_Quanlisanpham.Size = new Size(643, 760);
             grb_Quanlisanpham.TabIndex = 12;
             grb_Quanlisanpham.TabStop = false;
-            grb_Quanlisanpham.Text = "Quản lí sản phẩm";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(0, 21);
+            label1.Name = "label1";
+            label1.Size = new Size(188, 25);
+            label1.TabIndex = 11;
+            label1.Text = "Quản lí sản phẩm";
             // 
             // btn_Themsanpham
             // 
@@ -167,7 +182,7 @@
             btn_Themsanpham.FlatStyle = FlatStyle.Flat;
             btn_Themsanpham.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btn_Themsanpham.ForeColor = Color.White;
-            btn_Themsanpham.Location = new Point(6, 50);
+            btn_Themsanpham.Location = new Point(0, 83);
             btn_Themsanpham.Name = "btn_Themsanpham";
             btn_Themsanpham.Size = new Size(152, 38);
             btn_Themsanpham.TabIndex = 6;
@@ -180,15 +195,15 @@
             tb_Timkiem.Location = new Point(6, 140);
             tb_Timkiem.Name = "tb_Timkiem";
             tb_Timkiem.PlaceholderText = "Nhập sản phẩm cần tìm";
-            tb_Timkiem.Size = new Size(356, 27);
+            tb_Timkiem.Size = new Size(369, 25);
             tb_Timkiem.TabIndex = 5;
             // 
             // cmb_Sapxep
             // 
             cmb_Sapxep.FormattingEnabled = true;
-            cmb_Sapxep.Location = new Point(396, 140);
+            cmb_Sapxep.Location = new Point(443, 140);
             cmb_Sapxep.Name = "cmb_Sapxep";
-            cmb_Sapxep.Size = new Size(151, 28);
+            cmb_Sapxep.Size = new Size(151, 25);
             cmb_Sapxep.TabIndex = 3;
             // 
             // groupBox2
@@ -293,6 +308,40 @@
             lb_Masanpham.TabIndex = 6;
             lb_Masanpham.Text = "Mã sản phẩm";
             // 
+            // btn_Xoa
+            // 
+            btn_Xoa.AutoSize = true;
+            btn_Xoa.BackColor = Color.Red;
+            btn_Xoa.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            btn_Xoa.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_Xoa.FlatAppearance.MouseOverBackColor = Color.Yellow;
+            btn_Xoa.FlatStyle = FlatStyle.Flat;
+            btn_Xoa.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Xoa.ForeColor = Color.White;
+            btn_Xoa.Location = new Point(333, 83);
+            btn_Xoa.Name = "btn_Xoa";
+            btn_Xoa.Size = new Size(77, 38);
+            btn_Xoa.TabIndex = 22;
+            btn_Xoa.Text = "Xóa";
+            btn_Xoa.UseVisualStyleBackColor = false;
+            // 
+            // btn_Sua
+            // 
+            btn_Sua.AutoSize = true;
+            btn_Sua.BackColor = Color.Tan;
+            btn_Sua.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            btn_Sua.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_Sua.FlatAppearance.MouseOverBackColor = Color.Yellow;
+            btn_Sua.FlatStyle = FlatStyle.Flat;
+            btn_Sua.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Sua.ForeColor = Color.White;
+            btn_Sua.Location = new Point(209, 83);
+            btn_Sua.Name = "btn_Sua";
+            btn_Sua.Size = new Size(77, 38);
+            btn_Sua.TabIndex = 22;
+            btn_Sua.Text = "Sửa";
+            btn_Sua.UseVisualStyleBackColor = false;
+            // 
             // Quản_lí_sản_phẩm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -345,5 +394,8 @@
         private Label label2;
         private Label lb_Tensanpham;
         private Label lb_Masanpham;
+        private Label label1;
+        private Button btn_Sua;
+        private Button btn_Xoa;
     }
 }
