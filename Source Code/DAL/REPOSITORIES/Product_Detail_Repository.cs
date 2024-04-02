@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShopNow.Source_Code.DAL.REPOSITORIES
 {
-    internal class Product_Detail_Repository
+    class Product_Detail_Repository
     {
     }
 }
