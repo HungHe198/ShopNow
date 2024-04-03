@@ -9,13 +9,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Resources\Images\**" />
     <Compile Remove="Source Code\GUI\VIEWS\MainApp\**" />
+    <EmbeddedResource Remove="Resources\Images\**" />
     <EmbeddedResource Remove="Source Code\GUI\VIEWS\MainApp\**" />
+    <None Remove="Resources\Images\**" />
     <None Remove="Source Code\GUI\VIEWS\MainApp\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\Images\" />
+    <Folder Include="Resources\" />
     <Folder Include="SQL\" />
   </ItemGroup>
 

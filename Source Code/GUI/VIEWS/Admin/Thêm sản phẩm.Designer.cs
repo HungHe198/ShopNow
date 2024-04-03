@@ -31,7 +31,7 @@
             lb_Themsanpham = new Label();
             grb_Thongtin = new GroupBox();
             btn_Chonanh = new Button();
-            ptb_Themsanpham = new PictureBox();
+
             cmb_Trangthai = new ComboBox();
             tb_Mota = new TextBox();
             tb_Gia = new TextBox();
@@ -43,7 +43,7 @@
             lb_Tensanpham = new Label();
             lb_Masanpham = new Label();
             grb_Thongtin.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)ptb_Themsanpham).BeginInit();
+
             SuspendLayout();
             // 
             // lb_Themsanpham
@@ -59,7 +59,7 @@
             // grb_Thongtin
             // 
             grb_Thongtin.Controls.Add(btn_Chonanh);
-            grb_Thongtin.Controls.Add(ptb_Themsanpham);
+
             grb_Thongtin.Controls.Add(cmb_Trangthai);
             grb_Thongtin.Controls.Add(tb_Mota);
             grb_Thongtin.Controls.Add(tb_Gia);
@@ -86,14 +86,7 @@
             btn_Chonanh.Text = "Chọn ảnh";
             btn_Chonanh.UseVisualStyleBackColor = true;
             // 
-            // ptb_Themsanpham
-            // 
-            ptb_Themsanpham.BackColor = SystemColors.ActiveCaption;
-            ptb_Themsanpham.Location = new Point(578, 70);
-            ptb_Themsanpham.Name = "ptb_Themsanpham";
-            ptb_Themsanpham.Size = new Size(278, 196);
-            ptb_Themsanpham.TabIndex = 3;
-            ptb_Themsanpham.TabStop = false;
+
             // 
             // cmb_Trangthai
             // 
@@ -188,7 +181,7 @@
             Text = "Thêm_sản_phẩm";
             grb_Thongtin.ResumeLayout(false);
             grb_Thongtin.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)ptb_Themsanpham).EndInit();
+
             ResumeLayout(false);
             PerformLayout();
         }
@@ -208,6 +201,6 @@
         private Label lb_Tensanpham;
         private TextBox tb_Mota;
         private Button btn_Chonanh;
-        private PictureBox ptb_Themsanpham;
+
     }
 }

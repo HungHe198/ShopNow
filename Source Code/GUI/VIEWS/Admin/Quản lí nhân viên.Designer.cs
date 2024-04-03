@@ -37,7 +37,7 @@
             btn_QLNH = new Button();
             btn_QLNV = new Button();
             btn_QLSP = new Button();
-            ptb_Quanlisanpham = new PictureBox();
+
             button1 = new Button();
             btn_Them = new Button();
             tb_Timkiem = new TextBox();
@@ -47,7 +47,6 @@
             label1 = new Label();
             grb_Quanlinhanvien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_Quanlisanpham).BeginInit();
             SuspendLayout();
             // 
             // grb_Quanlinhanvien
@@ -130,16 +129,6 @@
             btn_QLSP.Text = "Quản lí sản phẩm";
             btn_QLSP.UseVisualStyleBackColor = true;
             // 
-            // ptb_Quanlisanpham
-            // 
-            ptb_Quanlisanpham.BackColor = SystemColors.ActiveCaption;
-            ptb_Quanlisanpham.Image = (Image)resources.GetObject("ptb_Quanlisanpham.Image");
-            ptb_Quanlisanpham.Location = new Point(12, 12);
-            ptb_Quanlisanpham.Name = "ptb_Quanlisanpham";
-            ptb_Quanlisanpham.Size = new Size(205, 170);
-            ptb_Quanlisanpham.SizeMode = PictureBoxSizeMode.StretchImage;
-            ptb_Quanlisanpham.TabIndex = 5;
-            ptb_Quanlisanpham.TabStop = false;
             // 
             // button1
             // 
@@ -240,14 +229,13 @@
             Controls.Add(btn_QLNH);
             Controls.Add(btn_QLNV);
             Controls.Add(btn_QLSP);
-            Controls.Add(ptb_Quanlisanpham);
             Controls.Add(grb_Quanlinhanvien);
             Name = "Quản_lí_nhân_viên";
             Text = "Quản_lí_nhân_viên";
             grb_Quanlinhanvien.ResumeLayout(false);
             grb_Quanlinhanvien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_Quanlisanpham).EndInit();
+
             ResumeLayout(false);
         }
 
@@ -261,7 +249,6 @@
         private Button btn_QLNH;
         private Button btn_QLNV;
         private Button btn_QLSP;
-        private PictureBox ptb_Quanlisanpham;
         private Button button1;
         private Label label1;
         private Button btn_Sua;

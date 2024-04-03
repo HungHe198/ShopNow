@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ptb_Quanlisanpham.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAoIAAAKCCAYAAABF8LgVAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
         cwAAEnMBjCK5BwAA/7JJREFUeF7s/QmjLEeRpYvW//9HXa+7b996/br7Vt8qoGuEYh6EQAghJCGgoHi2
@@ -4660,5 +4660,5 @@
         GGMz4/SEwLIdsni/AKApc0MjzTVs2V/yUeSdre+t5LfYrqq/jwv7OnfXvp0L+zr2ecHy5z//f7KSyHYU
         JzDRAAAAAElFTkSuQmCC
 </value>
-  </data>
+
 </root>

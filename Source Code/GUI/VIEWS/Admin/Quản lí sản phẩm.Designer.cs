@@ -37,7 +37,6 @@
             btn_QLNH = new Button();
             btn_QLNV = new Button();
             btn_QLSP = new Button();
-            ptb_Quanlisanpham = new PictureBox();
             grb_Quanlisanpham = new GroupBox();
             label1 = new Label();
             btn_Themsanpham = new Button();
@@ -57,7 +56,7 @@
             btn_Xoa = new Button();
             btn_Sua = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv_Dulieu).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_Quanlisanpham).BeginInit();
+
             grb_Quanlisanpham.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -135,16 +134,7 @@
             btn_QLSP.Text = "Quản lí sản phẩm";
             btn_QLSP.UseVisualStyleBackColor = true;
             // 
-            // ptb_Quanlisanpham
-            // 
-            ptb_Quanlisanpham.BackColor = SystemColors.ActiveCaption;
-            ptb_Quanlisanpham.Image = (Image)resources.GetObject("ptb_Quanlisanpham.Image");
-            ptb_Quanlisanpham.Location = new Point(12, 21);
-            ptb_Quanlisanpham.Name = "ptb_Quanlisanpham";
-            ptb_Quanlisanpham.Size = new Size(240, 189);
-            ptb_Quanlisanpham.SizeMode = PictureBoxSizeMode.StretchImage;
-            ptb_Quanlisanpham.TabIndex = 13;
-            ptb_Quanlisanpham.TabStop = false;
+
             // 
             // grb_Quanlisanpham
             // 
@@ -355,12 +345,12 @@
             Controls.Add(btn_QLNH);
             Controls.Add(btn_QLNV);
             Controls.Add(btn_QLSP);
-            Controls.Add(ptb_Quanlisanpham);
+
             Controls.Add(grb_Quanlisanpham);
             Name = "Quản_lí_sản_phẩm";
             Text = "Quản_lí_sản_phẩm";
             ((System.ComponentModel.ISupportInitialize)dgv_Dulieu).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_Quanlisanpham).EndInit();
+
             grb_Quanlisanpham.ResumeLayout(false);
             grb_Quanlisanpham.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -378,7 +368,7 @@
         private Button btn_QLNH;
         private Button btn_QLNV;
         private Button btn_QLSP;
-        private PictureBox ptb_Quanlisanpham;
+
         private GroupBox grb_Quanlisanpham;
         private TextBox tb_Timkiem;
         private ComboBox cmb_Sapxep;
