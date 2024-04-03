@@ -48,5 +48,17 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
             }
 
         }
+        public bool isDelBill(Bill obj)
+        {
+            try
+            {
+                obj.Deleted = true;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }

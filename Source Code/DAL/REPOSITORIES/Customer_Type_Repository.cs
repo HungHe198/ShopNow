@@ -46,5 +46,18 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
             }
 
         }
+
+        public bool isDelCustomerType(CustomerType obj)
+        {
+            try
+            {
+                obj.Deleted = true;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }
