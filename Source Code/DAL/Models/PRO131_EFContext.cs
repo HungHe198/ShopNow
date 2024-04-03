@@ -37,7 +37,7 @@ namespace ShopNow.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=LEVANHUNG\\LEVANHUNG;Initial Catalog=PRO131_EF;Integrated Security=True;Trust Server Certificate=True");
+                optionsBuilder.UseSqlServer("Data Source=LEVANHUNG\\LEVANHUNG;Initial Catalog=PRO131_EF;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
             }
         }
 
@@ -75,6 +75,10 @@ namespace ShopNow.Models
                     .HasColumnType("datetime")
                     .HasColumnName("MODIFIED_TIME");
 
+                entity.Property(e => e.NameCustomer)
+                    .HasMaxLength(255)
+                    .HasColumnName("NAME_CUSTOMER");
+
                 entity.Property(e => e.Status)
                     .HasColumnName("STATUS")
                     .HasDefaultValueSql("((1))");
@@ -97,9 +101,31 @@ namespace ShopNow.Models
 
                 entity.Property(e => e.BillId).HasColumnName("BILL_ID");
 
+                entity.Property(e => e.CreatedBy).HasColumnName("CREATED_BY");
+
+                entity.Property(e => e.CreatedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("CREATED_TIME");
+
+                entity.Property(e => e.Deleted)
+                    .HasColumnName("DELETED")
+                    .HasDefaultValueSql("((1))");
+
+                entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
+
+                entity.Property(e => e.DeletedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("DELETED_TIME");
+
                 entity.Property(e => e.Id)
                     .HasColumnName("ID")
                     .HasDefaultValueSql("(newsequentialid())");
+
+                entity.Property(e => e.ModifiedBy).HasColumnName("MODIFIED_BY");
+
+                entity.Property(e => e.ModifiedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("MODIFIED_TIME");
 
                 entity.Property(e => e.Price)
                     .HasColumnType("decimal(18, 0)")
@@ -128,6 +154,28 @@ namespace ShopNow.Models
                     .HasColumnName("ID")
                     .HasDefaultValueSql("(newsequentialid())");
 
+                entity.Property(e => e.CreatedBy).HasColumnName("CREATED_BY");
+
+                entity.Property(e => e.CreatedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("CREATED_TIME");
+
+                entity.Property(e => e.Deleted)
+                    .HasColumnName("DELETED")
+                    .HasDefaultValueSql("((1))");
+
+                entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
+
+                entity.Property(e => e.DeletedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("DELETED_TIME");
+
+                entity.Property(e => e.ModifiedBy).HasColumnName("MODIFIED_BY");
+
+                entity.Property(e => e.ModifiedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("MODIFIED_TIME");
+
                 entity.Property(e => e.UserId).HasColumnName("USER_ID");
 
                 entity.HasOne(d => d.User)
@@ -139,13 +187,35 @@ namespace ShopNow.Models
             modelBuilder.Entity<CartProduct>(entity =>
             {
                 entity.HasKey(e => new { e.CartId, e.ProductId })
-                    .HasName("PK__CART_PRO__8E2AFE19403C0AEA");
+                    .HasName("PK__CART_PRO__8E2AFE1963F6BEAF");
 
                 entity.ToTable("CART_PRODUCT");
 
                 entity.Property(e => e.CartId).HasColumnName("CART_ID");
 
                 entity.Property(e => e.ProductId).HasColumnName("PRODUCT_ID");
+
+                entity.Property(e => e.CreatedBy).HasColumnName("CREATED_BY");
+
+                entity.Property(e => e.CreatedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("CREATED_TIME");
+
+                entity.Property(e => e.Deleted)
+                    .HasColumnName("DELETED")
+                    .HasDefaultValueSql("((1))");
+
+                entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
+
+                entity.Property(e => e.DeletedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("DELETED_TIME");
+
+                entity.Property(e => e.ModifiedBy).HasColumnName("MODIFIED_BY");
+
+                entity.Property(e => e.ModifiedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("MODIFIED_TIME");
 
                 entity.Property(e => e.Quantity).HasColumnName("QUANTITY");
 
@@ -174,12 +244,34 @@ namespace ShopNow.Models
                     .HasMaxLength(255)
                     .HasColumnName("ADDRESS");
 
+                entity.Property(e => e.CreatedBy).HasColumnName("CREATED_BY");
+
+                entity.Property(e => e.CreatedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("CREATED_TIME");
+
                 entity.Property(e => e.CustomerTypeId).HasColumnName("CUSTOMER_TYPE_ID");
+
+                entity.Property(e => e.Deleted)
+                    .HasColumnName("DELETED")
+                    .HasDefaultValueSql("((1))");
+
+                entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
+
+                entity.Property(e => e.DeletedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("DELETED_TIME");
 
                 entity.Property(e => e.Email)
                     .HasMaxLength(255)
                     .IsUnicode(false)
                     .HasColumnName("EMAIL");
+
+                entity.Property(e => e.ModifiedBy).HasColumnName("MODIFIED_BY");
+
+                entity.Property(e => e.ModifiedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("MODIFIED_TIME");
 
                 entity.Property(e => e.Name)
                     .HasMaxLength(255)
@@ -214,9 +306,31 @@ namespace ShopNow.Models
                     .HasColumnName("ID")
                     .HasDefaultValueSql("(newsequentialid())");
 
+                entity.Property(e => e.CreatedBy).HasColumnName("CREATED_BY");
+
+                entity.Property(e => e.CreatedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("CREATED_TIME");
+
+                entity.Property(e => e.Deleted)
+                    .HasColumnName("DELETED")
+                    .HasDefaultValueSql("((1))");
+
+                entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
+
+                entity.Property(e => e.DeletedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("DELETED_TIME");
+
                 entity.Property(e => e.Description)
                     .HasMaxLength(255)
                     .HasColumnName("DESCRIPTION");
+
+                entity.Property(e => e.ModifiedBy).HasColumnName("MODIFIED_BY");
+
+                entity.Property(e => e.ModifiedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("MODIFIED_TIME");
 
                 entity.Property(e => e.Name)
                     .HasMaxLength(255)
@@ -237,7 +351,9 @@ namespace ShopNow.Models
                     .HasColumnType("datetime")
                     .HasColumnName("CREATED_TIME");
 
-                entity.Property(e => e.Deleted).HasColumnName("DELETED");
+                entity.Property(e => e.Deleted)
+                    .HasColumnName("DELETED")
+                    .HasDefaultValueSql("((1))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -282,7 +398,9 @@ namespace ShopNow.Models
                     .HasColumnType("datetime")
                     .HasColumnName("CREATED_TIME");
 
-                entity.Property(e => e.Deleted).HasColumnName("DELETED");
+                entity.Property(e => e.Deleted)
+                    .HasColumnName("DELETED")
+                    .HasDefaultValueSql("((1))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -344,7 +462,9 @@ namespace ShopNow.Models
                     .HasColumnType("datetime")
                     .HasColumnName("CREATED_TIME");
 
-                entity.Property(e => e.Deleted).HasColumnName("DELETED");
+                entity.Property(e => e.Deleted)
+                    .HasColumnName("DELETED")
+                    .HasDefaultValueSql("((1))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -387,7 +507,9 @@ namespace ShopNow.Models
                     .HasColumnType("datetime")
                     .HasColumnName("CREATED_TIME");
 
-                entity.Property(e => e.Deleted).HasColumnName("DELETED");
+                entity.Property(e => e.Deleted)
+                    .HasColumnName("DELETED")
+                    .HasDefaultValueSql("((1))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -584,9 +706,31 @@ namespace ShopNow.Models
                     .HasColumnName("ID")
                     .HasDefaultValueSql("(newsequentialid())");
 
+                entity.Property(e => e.CreatedBy).HasColumnName("CREATED_BY");
+
+                entity.Property(e => e.CreatedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("CREATED_TIME");
+
+                entity.Property(e => e.Deleted)
+                    .HasColumnName("DELETED")
+                    .HasDefaultValueSql("((1))");
+
+                entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
+
+                entity.Property(e => e.DeletedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("DELETED_TIME");
+
                 entity.Property(e => e.Description)
                     .HasMaxLength(255)
                     .HasColumnName("DESCRIPTION");
+
+                entity.Property(e => e.ModifiedBy).HasColumnName("MODIFIED_BY");
+
+                entity.Property(e => e.ModifiedTime)
+                    .HasColumnType("datetime")
+                    .HasColumnName("MODIFIED_TIME");
 
                 entity.Property(e => e.Name)
                     .HasMaxLength(255)
@@ -611,7 +755,9 @@ namespace ShopNow.Models
                     .HasColumnType("datetime")
                     .HasColumnName("CREATED_TIME");
 
-                entity.Property(e => e.Deleted).HasColumnName("DELETED");
+                entity.Property(e => e.Deleted)
+                    .HasColumnName("DELETED")
+                    .HasDefaultValueSql("((1))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
