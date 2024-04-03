@@ -46,5 +46,17 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
             }
 
         }
+        public bool isDelProductDetail(ProductDetail obj)
+        {
+            try
+            {
+                obj.Deleted = true;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }

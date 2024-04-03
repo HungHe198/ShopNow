@@ -38,6 +38,7 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
                 // Lưu thay đổi vào cơ sở dữ liệu
                 int result = context.SaveChanges();
                 // Trả về true nếu có ít nhất một bản ghi được thêm vào
+                // nếu không được thì ghi thêm tên bảng vào giữa context và save..
                 return result > 0;
             }
             catch (Exception ex)
@@ -46,6 +47,18 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
                 return false;
             }
 
+        }
+        public bool isDelBillDetail(BillDetail obj)
+        {
+            try
+            {
+                obj.Deleted = true;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
         }
     }
 }
