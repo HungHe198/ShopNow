@@ -16,5 +16,33 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
         {
             InitializeComponent();
         }
+
+        public void ShowForm(Form childForm)
+        {
+            // Đặt form hiện tại là form chủ
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            // Xóa các controls hiện có và thêm form mới vào
+            this.Controls.Clear();
+            this.Controls.Add(childForm);
+            childForm.Show();
+        }
+
+        // Khi cần hiển thị CustomerLoginForm
+
+        // Khi cần hiển thị AdminLoginForm
+        private void btnqtv_Click(object sender, EventArgs e)
+        {
+            ShowForm(new LoginAdmin());
+
+        }
+
+        private void btnkhang_Click(object sender, EventArgs e)
+        {
+            ShowForm(new LoginCustomer());
+
+        }
     }
 }
