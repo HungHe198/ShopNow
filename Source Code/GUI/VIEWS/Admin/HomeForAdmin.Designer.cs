@@ -1,6 +1,6 @@
 ﻿namespace ShopNow.Source_Code.GUI.Thongke
 {
-    partial class Form1
+    partial class HomeForAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForAdmin));
             pictureBox1 = new PictureBox();
             comboBox3 = new ComboBox();
             button3 = new Button();
             comboBox1 = new ComboBox();
             label2 = new Label();
             groupBox2 = new GroupBox();
+            button15 = new Button();
+            button14 = new Button();
+            button13 = new Button();
+            button12 = new Button();
+            button11 = new Button();
+            button5 = new Button();
             textBox1 = new TextBox();
             button2 = new Button();
             button1 = new Button();
@@ -55,12 +61,6 @@
             pictureBox4 = new PictureBox();
             BtnAvatar = new PictureBox();
             button4 = new Button();
-            button5 = new Button();
-            button11 = new Button();
-            button12 = new Button();
-            button13 = new Button();
-            button14 = new Button();
-            button15 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox2.SuspendLayout();
             panel1.SuspendLayout();
@@ -136,6 +136,60 @@
             groupBox2.Size = new Size(685, 558);
             groupBox2.TabIndex = 17;
             groupBox2.TabStop = false;
+            // 
+            // button15
+            // 
+            button15.Location = new Point(60, 296);
+            button15.Name = "button15";
+            button15.Size = new Size(147, 177);
+            button15.TabIndex = 18;
+            button15.Text = "Ảnh sản phẩm ";
+            button15.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            button14.Location = new Point(490, 296);
+            button14.Name = "button14";
+            button14.Size = new Size(147, 177);
+            button14.TabIndex = 17;
+            button14.Text = "Ảnh sản phẩm ";
+            button14.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            button13.Location = new Point(490, 72);
+            button13.Name = "button13";
+            button13.Size = new Size(147, 177);
+            button13.TabIndex = 16;
+            button13.Text = "Ảnh sản phẩm ";
+            button13.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            button12.Location = new Point(281, 72);
+            button12.Name = "button12";
+            button12.Size = new Size(147, 177);
+            button12.TabIndex = 15;
+            button12.Text = "Ảnh sản phẩm ";
+            button12.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            button11.Location = new Point(281, 296);
+            button11.Name = "button11";
+            button11.Size = new Size(147, 177);
+            button11.TabIndex = 14;
+            button11.Text = "Ảnh sản phẩm ";
+            button11.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(60, 72);
+            button5.Name = "button5";
+            button5.Size = new Size(147, 177);
+            button5.TabIndex = 13;
+            button5.Text = "Ảnh sản phẩm ";
+            button5.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
@@ -341,9 +395,9 @@
             // 
             BtnAvatar.BorderStyle = BorderStyle.FixedSingle;
             BtnAvatar.Image = (Image)resources.GetObject("BtnAvatar.Image");
-            BtnAvatar.Location = new Point(-1, 0);
+            BtnAvatar.Location = new Point(3, 3);
             BtnAvatar.Name = "BtnAvatar";
-            BtnAvatar.Size = new Size(73, 74);
+            BtnAvatar.Size = new Size(69, 71);
             BtnAvatar.TabIndex = 0;
             BtnAvatar.TabStop = false;
             // 
@@ -355,60 +409,6 @@
             button4.Size = new Size(224, 61);
             button4.TabIndex = 39;
             button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            button5.Location = new Point(60, 72);
-            button5.Name = "button5";
-            button5.Size = new Size(147, 177);
-            button5.TabIndex = 13;
-            button5.Text = "Ảnh sản phẩm ";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            button11.Location = new Point(281, 296);
-            button11.Name = "button11";
-            button11.Size = new Size(147, 177);
-            button11.TabIndex = 14;
-            button11.Text = "Ảnh sản phẩm ";
-            button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            button12.Location = new Point(281, 72);
-            button12.Name = "button12";
-            button12.Size = new Size(147, 177);
-            button12.TabIndex = 15;
-            button12.Text = "Ảnh sản phẩm ";
-            button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            button13.Location = new Point(490, 72);
-            button13.Name = "button13";
-            button13.Size = new Size(147, 177);
-            button13.TabIndex = 16;
-            button13.Text = "Ảnh sản phẩm ";
-            button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            button14.Location = new Point(490, 296);
-            button14.Name = "button14";
-            button14.Size = new Size(147, 177);
-            button14.TabIndex = 17;
-            button14.Text = "Ảnh sản phẩm ";
-            button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            button15.Location = new Point(60, 296);
-            button15.Name = "button15";
-            button15.Size = new Size(147, 177);
-            button15.TabIndex = 18;
-            button15.Text = "Ảnh sản phẩm ";
-            button15.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -427,6 +427,7 @@
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();

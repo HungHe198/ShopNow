@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ShopNow.Source_Code.GUI.VIEWS.Home
 {
-    public partial class Form1 : Form
+    public partial class HomeForCustomer : Form
     {
-        public Form1()
+        public HomeForCustomer()
         {
             InitializeComponent();
         }

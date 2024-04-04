@@ -1,6 +1,6 @@
 ﻿namespace ShopNow.Source_Code.GUI.VIEWS.Home
 {
-    partial class Form1
+    partial class HomeForCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForCustomer));
             button1 = new Button();
             button2 = new Button();
             textBox1 = new TextBox();

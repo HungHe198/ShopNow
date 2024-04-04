@@ -1,6 +1,6 @@
 ﻿namespace ShopNow.Source_Code.GUI.VIEWS.Login
 {
-    partial class loginkhach
+    partial class LoginCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             Label acb;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginkhach));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginCustomer));
             button1 = new Button();
             linkLabel1 = new LinkLabel();
             txtmk2 = new TextBox();

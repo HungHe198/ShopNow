@@ -1,6 +1,6 @@
 ﻿namespace ShopNow.Source_Code.GUI.Doanhthu
 {
-    partial class Form1
+    partial class ProductDetail
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductDetail));
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
@@ -48,10 +48,10 @@
             button2 = new Button();
             button1 = new Button();
             panel1 = new Panel();
-            button3 = new Button();
-            button6 = new Button();
-            button7 = new Button();
             textBox2 = new TextBox();
+            button6 = new Button();
+            button3 = new Button();
+            button7 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -211,14 +211,12 @@
             panel1.Size = new Size(424, 454);
             panel1.TabIndex = 46;
             // 
-            // button3
+            // textBox2
             // 
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.Location = new Point(373, 205);
-            button3.Name = "button3";
-            button3.Size = new Size(48, 45);
-            button3.TabIndex = 0;
-            button3.UseVisualStyleBackColor = true;
+            textBox2.Location = new Point(14, 17);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(353, 27);
+            textBox2.TabIndex = 2;
             // 
             // button6
             // 
@@ -229,6 +227,15 @@
             button6.Text = "Ảnh sản phẩm";
             button6.UseVisualStyleBackColor = true;
             // 
+            // button3
+            // 
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.Location = new Point(373, 205);
+            button3.Name = "button3";
+            button3.Size = new Size(48, 45);
+            button3.TabIndex = 0;
+            button3.UseVisualStyleBackColor = true;
+            // 
             // button7
             // 
             button7.Location = new Point(32, 570);
@@ -238,14 +245,7 @@
             button7.Text = "Mua ngay";
             button7.UseVisualStyleBackColor = true;
             // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(14, 17);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(353, 27);
-            textBox2.TabIndex = 2;
-            // 
-            // Form1
+            // ProductDetail
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -259,7 +259,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(dataGridView1);
-            Name = "Form1";
+            Name = "ProductDetail";
             Text = "  ";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

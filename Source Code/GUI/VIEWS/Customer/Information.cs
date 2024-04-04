@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ShopNow.Source_Code.GUI.Thongke
+namespace ShopNow.Source_Code.GUI.VIEWS.Customer
 {
-    public partial class Form1 : Form
+    public partial class Information : Form
     {
-        public Form1()
+        public Information()
         {
             InitializeComponent();
         }

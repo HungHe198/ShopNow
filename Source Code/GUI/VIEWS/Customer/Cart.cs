@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ShopNow.Source_Code.GUI.VIEWS.Login
+namespace ShopNow.Source_Code.GUI.VIEWS.Customer
 {
-    public partial class loginkhach : Form
+    public partial class Cart : Form
     {
-        public loginkhach()
+        public Cart()
         {
             InitializeComponent();
         }

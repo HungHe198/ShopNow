@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ShopNow.Source_Code.GUI.VIEWS.Login
+namespace ShopNow.Source_Code.GUI.Thongke
 {
-    public partial class ADmin : Form
+    public partial class HomeForAdmin : Form
     {
-        public ADmin()
+        public HomeForAdmin()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

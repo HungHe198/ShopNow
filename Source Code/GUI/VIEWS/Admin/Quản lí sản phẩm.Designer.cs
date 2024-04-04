@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Quản_lí_sản_phẩm));
             dgv_Dulieu = new DataGridView();
             button1 = new Button();
             btn_Quanlithongke = new Button();
@@ -38,6 +37,8 @@
             btn_QLNV = new Button();
             btn_QLSP = new Button();
             grb_Quanlisanpham = new GroupBox();
+            btn_Sua = new Button();
+            btn_Xoa = new Button();
             label1 = new Label();
             btn_Themsanpham = new Button();
             tb_Timkiem = new TextBox();
@@ -53,10 +54,7 @@
             label2 = new Label();
             lb_Tensanpham = new Label();
             lb_Masanpham = new Label();
-            btn_Xoa = new Button();
-            btn_Sua = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv_Dulieu).BeginInit();
-
             grb_Quanlisanpham.SuspendLayout();
             groupBox2.SuspendLayout();
             SuspendLayout();
@@ -70,6 +68,7 @@
             dgv_Dulieu.RowTemplate.Height = 29;
             dgv_Dulieu.Size = new Size(628, 566);
             dgv_Dulieu.TabIndex = 0;
+            
             // 
             // button1
             // 
@@ -134,8 +133,6 @@
             btn_QLSP.Text = "Quản lí sản phẩm";
             btn_QLSP.UseVisualStyleBackColor = true;
             // 
-
-            // 
             // grb_Quanlisanpham
             // 
             grb_Quanlisanpham.Controls.Add(btn_Sua);
@@ -151,6 +148,40 @@
             grb_Quanlisanpham.Size = new Size(643, 760);
             grb_Quanlisanpham.TabIndex = 12;
             grb_Quanlisanpham.TabStop = false;
+            // 
+            // btn_Sua
+            // 
+            btn_Sua.AutoSize = true;
+            btn_Sua.BackColor = Color.Tan;
+            btn_Sua.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            btn_Sua.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_Sua.FlatAppearance.MouseOverBackColor = Color.Yellow;
+            btn_Sua.FlatStyle = FlatStyle.Flat;
+            btn_Sua.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Sua.ForeColor = Color.White;
+            btn_Sua.Location = new Point(209, 83);
+            btn_Sua.Name = "btn_Sua";
+            btn_Sua.Size = new Size(77, 38);
+            btn_Sua.TabIndex = 22;
+            btn_Sua.Text = "Sửa";
+            btn_Sua.UseVisualStyleBackColor = false;
+            // 
+            // btn_Xoa
+            // 
+            btn_Xoa.AutoSize = true;
+            btn_Xoa.BackColor = Color.Red;
+            btn_Xoa.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            btn_Xoa.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_Xoa.FlatAppearance.MouseOverBackColor = Color.Yellow;
+            btn_Xoa.FlatStyle = FlatStyle.Flat;
+            btn_Xoa.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Xoa.ForeColor = Color.White;
+            btn_Xoa.Location = new Point(333, 83);
+            btn_Xoa.Name = "btn_Xoa";
+            btn_Xoa.Size = new Size(77, 38);
+            btn_Xoa.TabIndex = 22;
+            btn_Xoa.Text = "Xóa";
+            btn_Xoa.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -298,40 +329,6 @@
             lb_Masanpham.TabIndex = 6;
             lb_Masanpham.Text = "Mã sản phẩm";
             // 
-            // btn_Xoa
-            // 
-            btn_Xoa.AutoSize = true;
-            btn_Xoa.BackColor = Color.Red;
-            btn_Xoa.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
-            btn_Xoa.FlatAppearance.MouseDownBackColor = Color.Black;
-            btn_Xoa.FlatAppearance.MouseOverBackColor = Color.Yellow;
-            btn_Xoa.FlatStyle = FlatStyle.Flat;
-            btn_Xoa.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_Xoa.ForeColor = Color.White;
-            btn_Xoa.Location = new Point(333, 83);
-            btn_Xoa.Name = "btn_Xoa";
-            btn_Xoa.Size = new Size(77, 38);
-            btn_Xoa.TabIndex = 22;
-            btn_Xoa.Text = "Xóa";
-            btn_Xoa.UseVisualStyleBackColor = false;
-            // 
-            // btn_Sua
-            // 
-            btn_Sua.AutoSize = true;
-            btn_Sua.BackColor = Color.Tan;
-            btn_Sua.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
-            btn_Sua.FlatAppearance.MouseDownBackColor = Color.Black;
-            btn_Sua.FlatAppearance.MouseOverBackColor = Color.Yellow;
-            btn_Sua.FlatStyle = FlatStyle.Flat;
-            btn_Sua.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_Sua.ForeColor = Color.White;
-            btn_Sua.Location = new Point(209, 83);
-            btn_Sua.Name = "btn_Sua";
-            btn_Sua.Size = new Size(77, 38);
-            btn_Sua.TabIndex = 22;
-            btn_Sua.Text = "Sửa";
-            btn_Sua.UseVisualStyleBackColor = false;
-            // 
             // Quản_lí_sản_phẩm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -345,12 +342,10 @@
             Controls.Add(btn_QLNH);
             Controls.Add(btn_QLNV);
             Controls.Add(btn_QLSP);
-
             Controls.Add(grb_Quanlisanpham);
             Name = "Quản_lí_sản_phẩm";
             Text = "Quản_lí_sản_phẩm";
             ((System.ComponentModel.ISupportInitialize)dgv_Dulieu).EndInit();
-
             grb_Quanlisanpham.ResumeLayout(false);
             grb_Quanlisanpham.PerformLayout();
             groupBox2.ResumeLayout(false);

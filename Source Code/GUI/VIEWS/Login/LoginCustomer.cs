@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ShopNow.Source_Code.GUI.VIEWS.Login
 {
-    public partial class Login : Form
+    public partial class LoginCustomer : Form
     {
-        public Login()
+        public LoginCustomer()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace ShopNow.Source_Code.GUI.VIEWS.Login
 {
-    partial class ADmin
+    partial class LoginAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ADmin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginAdmin));
             Label acb;
             label1 = new Label();
             pictureBox1 = new PictureBox();
