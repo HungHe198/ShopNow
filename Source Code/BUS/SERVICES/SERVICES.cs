@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ShopNow.Source_Code.BUS.SERVICES
 {
-    class SERVICES
+    class Services
     {
         //public void Test()
         //{ 

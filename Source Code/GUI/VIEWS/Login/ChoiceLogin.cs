@@ -25,13 +25,13 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
        
         private void btn_admin_Click(object sender, EventArgs e)
         {
-            SERVICES.ShowForm(this, new LoginAdmin());
+            Services.ShowForm(this, new LoginAdmin());
 
         }
 
         private void btn_Customer_Click(object sender, EventArgs e)
         {
-            SERVICES.ShowForm(this, new LoginCustomer());
+            Services.ShowForm(this, new LoginCustomer());
 
         }
     }
