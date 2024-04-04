@@ -10,8 +10,19 @@ namespace ShopNow.Source_Code.BUS.SERVICES
     {
         //public void Test()
         //{ 
-           
+
         //} 
-            
+        public static void ShowForm(Form FatherForm,Form childForm)
+        {
+            // Đặt form hiện tại là form chủ
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+
+            // Xóa các controls hiện có và thêm form mới vào
+            FatherForm.Controls.Clear();
+            FatherForm.Controls.Add(childForm);
+            childForm.Show();
+        }
     }
 }

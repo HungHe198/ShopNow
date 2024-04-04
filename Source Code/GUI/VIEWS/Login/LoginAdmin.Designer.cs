@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginAdmin));
             Label acb;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginAdmin));
             label1 = new Label();
             pictureBox1 = new PictureBox();
             label3 = new Label();
@@ -37,88 +37,106 @@
             txtmk1 = new TextBox();
             linkLabel1 = new LinkLabel();
             button1 = new Button();
+            btn_Back = new Button();
             acb = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
+            // 
+            // acb
+            // 
+            acb.AutoSize = true;
+            acb.Location = new Point(979, 280);
+            acb.Name = "acb";
+            acb.Size = new Size(71, 20);
+            acb.TabIndex = 8;
+            acb.Text = "Tài khoản";
             // 
             // label1
             // 
             label1.Font = new Font("Stencil", 27.75F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.MenuText;
-            label1.Location = new Point(856, 140);
+            label1.Location = new Point(978, 187);
             label1.Name = "label1";
-            label1.Size = new Size(298, 50);
+            label1.Size = new Size(341, 67);
             label1.TabIndex = 7;
             label1.Text = "LOGIN";
             label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click;
             // 
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(788, 584);
+            pictureBox1.Size = new Size(901, 779);
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
-            // 
-            // acb
-            // 
-            acb.AutoSize = true;
-            acb.Location = new Point(857, 210);
-            acb.Name = "acb";
-            acb.Size = new Size(57, 15);
-            acb.TabIndex = 8;
-            acb.Text = "Tài khoản";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(858, 278);
+            label3.Location = new Point(981, 371);
             label3.Name = "label3";
-            label3.Size = new Size(57, 15);
+            label3.Size = new Size(70, 20);
             label3.TabIndex = 9;
             label3.Text = "Mật khẩu";
             // 
             // txttk1
             // 
-            txttk1.Location = new Point(856, 238);
+            txttk1.Location = new Point(978, 317);
+            txttk1.Margin = new Padding(3, 4, 3, 4);
             txttk1.Name = "txttk1";
-            txttk1.Size = new Size(244, 23);
+            txttk1.Size = new Size(278, 27);
             txttk1.TabIndex = 10;
             // 
             // txtmk1
             // 
-            txtmk1.Location = new Point(856, 298);
+            txtmk1.Location = new Point(978, 397);
+            txtmk1.Margin = new Padding(3, 4, 3, 4);
             txtmk1.Name = "txtmk1";
-            txtmk1.Size = new Size(244, 23);
+            txtmk1.Size = new Size(278, 27);
             txtmk1.TabIndex = 11;
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(1043, 351);
+            linkLabel1.Location = new Point(1192, 468);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(89, 15);
+            linkLabel1.Size = new Size(109, 20);
             linkLabel1.TabIndex = 12;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Quên mật khẩu";
             // 
             // button1
             // 
-            button1.Location = new Point(946, 405);
+            button1.AutoSize = true;
+            button1.Location = new Point(978, 556);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(92, 31);
             button1.TabIndex = 13;
             button1.Text = "Đăng nhập";
             button1.UseVisualStyleBackColor = true;
             // 
-            // ADmin
+            // btn_Back
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            btn_Back.AutoSize = true;
+            btn_Back.Location = new Point(1153, 556);
+            btn_Back.Margin = new Padding(3, 4, 3, 4);
+            btn_Back.Name = "btn_Back";
+            btn_Back.Size = new Size(92, 31);
+            btn_Back.TabIndex = 14;
+            btn_Back.Text = "Quay lại";
+            btn_Back.UseVisualStyleBackColor = true;
+            btn_Back.Click += btn_Back_Click;
+            // 
+            // LoginAdmin
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.MenuHighlight;
-            ClientSize = new Size(1221, 581);
+            ClientSize = new Size(1395, 775);
+            Controls.Add(btn_Back);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
             Controls.Add(txtmk1);
@@ -127,8 +145,10 @@
             Controls.Add(acb);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
-            Name = "ADmin";
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "LoginAdmin";
             Text = "ADmin";
+            Load += LoginAdmin_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -144,5 +164,6 @@
         private TextBox txtmk1;
         private LinkLabel linkLabel1;
         private Button button1;
+        private Button btn_Back;
     }
 }

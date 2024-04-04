@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopNow.Source_Code.BUS.SERVICES;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,38 +11,27 @@ using System.Windows.Forms;
 
 namespace ShopNow.Source_Code.GUI.VIEWS.Login
 {
-    public partial class Form1 : Form
+    public partial class ChoiceLogin : Form
     {
-        public Form1()
+        public ChoiceLogin()
         {
             InitializeComponent();
         }
 
-        public void ShowForm(Form childForm)
+        private void ChoiceLogin_Load(object sender, EventArgs e)
         {
-            // Đặt form hiện tại là form chủ
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
 
-            // Xóa các controls hiện có và thêm form mới vào
-            this.Controls.Clear();
-            this.Controls.Add(childForm);
-            childForm.Show();
         }
-
-        // Khi cần hiển thị CustomerLoginForm
-
-        // Khi cần hiển thị AdminLoginForm
-        private void btnqtv_Click(object sender, EventArgs e)
+       
+        private void btn_admin_Click(object sender, EventArgs e)
         {
-            ShowForm(new LoginAdmin());
+            SERVICES.ShowForm(this, new LoginAdmin());
 
         }
 
-        private void btnkhang_Click(object sender, EventArgs e)
+        private void btn_Customer_Click(object sender, EventArgs e)
         {
-            ShowForm(new LoginCustomer());
+            SERVICES.ShowForm(this, new LoginCustomer());
 
         }
     }
