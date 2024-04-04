@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopNow.Source_Code.BUS.SERVICES;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,16 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
         public LoginCustomer()
         {
             InitializeComponent();
+        }
+
+        private void LoginCustomer_Load(object sender, EventArgs e)
+        {
+
+        }
+      
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            SERVICES.ShowForm(this, new ChoiceLogin());
         }
     }
 }
