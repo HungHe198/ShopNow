@@ -51,7 +51,10 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
             try
             {
                 obj.Deleted = true;
-                return true;
+                context.Update(obj);
+                int result = context.SaveChanges();
+                // Trả về true nếu có ít nhất một bản ghi được thêm vào
+                return result > 0;
             }
             catch (Exception ex)
             {
