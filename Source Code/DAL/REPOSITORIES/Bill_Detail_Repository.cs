@@ -52,8 +52,10 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
         {
             try
             {
-                obj.Deleted = true;
-                return true;
+                obj.Deleted = true; 
+                context.Update(obj);
+                int result = context.SaveChanges();
+                return (result > 0);
             }
             catch (Exception ex)
             {
