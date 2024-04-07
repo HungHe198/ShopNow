@@ -79,9 +79,9 @@
             label1.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(6, 21);
             label1.Name = "label1";
-            label1.Size = new Size(191, 25);
+            label1.Size = new Size(173, 25);
             label1.TabIndex = 10;
-            label1.Text = "Lịch sử mua hàng";
+            label1.Text = "Lịch sử hóa đơn";
             // 
             // btn_Sua
             // 
@@ -157,7 +157,7 @@
             btn_IH.Name = "btn_IH";
             btn_IH.Size = new Size(205, 45);
             btn_IH.TabIndex = 21;
-            btn_IH.Text = "Lịch sử mua hàng";
+            btn_IH.Text = "Lịch sử hóa đơn";
             btn_IH.UseVisualStyleBackColor = true;
             // 
             // btn_Quanlithongke
