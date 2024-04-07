@@ -22,7 +22,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
             InitializeComponent();
         }
         ServicesSalesOperations operations = new ServicesSalesOperations();
-
+        Services Services = new Services();  
         Guid CartId;
         Guid ProductId;
 
@@ -58,8 +58,15 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
             {
                 operations.LoadCart(this.dgvMainCart, userId);
             }
-            operations.LoadCart(this.dgvMainCart, userId);
-            btn_Save.Enabled = false;
+            CartId = Guid.Empty;
+            ProductId = Guid.Empty;
+            txt_Name.Text = string.Empty;
+            txt_Price.Text = string.Empty;
+            txt_Quantity.Text = string.Empty;
+            txt_totalPrice.Text = string.Empty;
+            Services.ShowForm(this, new formTrong());
+                
+                btn_Save.Enabled = false;
         }
 
 
@@ -93,12 +100,6 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
             }
 
         }
-
-        private void dgvMainCart_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             operations.LoadCart(this.dgvMainCart, userId);

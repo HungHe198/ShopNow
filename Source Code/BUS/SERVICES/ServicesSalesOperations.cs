@@ -36,7 +36,7 @@ namespace ShopNow.Source_Code.BUS.SERVICES
                             join p in getAll.GetAllProducts(null) on cp.ProductId equals p.Id
                             //join pd in getAll.GetAllProductDetails() on p.Id equals pd.ProductId.GetValueOrDefault()
                             where c.UserId == userId
-                                   && c.Deleted.GetValueOrDefault() == false
+                                  && c.Deleted.GetValueOrDefault() == false
                                   && cp.Deleted.GetValueOrDefault() == false
                                   && p.Deleted.GetValueOrDefault() == false
                                   && cp.Quantity != 0 && p.Quantity != 0

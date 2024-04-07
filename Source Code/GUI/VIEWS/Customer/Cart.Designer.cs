@@ -90,7 +90,7 @@
             dgvMainCart.Size = new Size(1092, 609);
             dgvMainCart.TabIndex = 0;
             dgvMainCart.CellClick += dgvMainCart_CellClick;
-            dgvMainCart.CellContentClick += dgvMainCart_CellContentClick;
+            
             // 
             // grb_Quanlinhanvien
             // 
