@@ -136,6 +136,7 @@
             groupBox2.Size = new Size(685, 558);
             groupBox2.TabIndex = 17;
             groupBox2.TabStop = false;
+           
             // 
             // button15
             // 
@@ -410,7 +411,7 @@
             button4.TabIndex = 39;
             button4.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // HomeForAdmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -425,7 +426,7 @@
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
-            Name = "Form1";
+            Name = "HomeForAdmin";
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

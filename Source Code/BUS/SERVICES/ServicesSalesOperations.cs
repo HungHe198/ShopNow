@@ -27,32 +27,33 @@ namespace ShopNow.Source_Code.BUS.SERVICES
         Product_Repository Product_Repository = new Product_Repository();
         Product_Detail_Repository Product_Detail_Repository = new Product_Detail_Repository();
         Repo_GetAll getAll = new Repo_GetAll();
-        public void LoadCart(DataGridView mainCartDGV, Guid userId)
+        public void LoadCart(DataGridView mainDGV, Guid userId)
         {
 
             var cartData = (from c in getAll.GetAllCart()
                             join cp in getAll.GetAllCartProducts() on c.Id equals cp.CartId
                             join p in getAll.GetAllProducts(null) on cp.ProductId equals p.Id
-                            join pd in getAll.GetAllProductDetails() on p.Id equals pd.ProductId.GetValueOrDefault()
+                            //join pd in getAll.GetAllProductDetails() on p.Id equals pd.ProductId.GetValueOrDefault()
                             where c.UserId == userId
-                                  && c.Deleted.GetValueOrDefault()
-                                  && cp.Deleted.GetValueOrDefault()
-                                  && p.Deleted.GetValueOrDefault()
+                                   && c.Deleted.GetValueOrDefault() == false
+                                  && cp.Deleted.GetValueOrDefault() == false
+                                  && p.Deleted.GetValueOrDefault() == false
+                                  && cp.Quantity != 0 && p.Quantity != 0
                             select new
                             {
                                 ProductName = p.ProductName,
                                 Price = p.Price.GetValueOrDefault(),
                                 Quantity = cp.Quantity.GetValueOrDefault(),
                                 TotalPrice = (double)cp.Quantity.GetValueOrDefault() * (double)p.Price.GetValueOrDefault(),
-                                UrlImage = pd.UrlImage,
+                                //UrlImage = pd.UrlImage,
                             }).ToList();
             // Gán BindingList làm DataSource cho DataGridView
-            mainCartDGV.DataSource = cartData;
-            mainCartDGV.Columns["ProductName"].Width = 472;
-            mainCartDGV.Columns["Price"].Width = 260;
-            mainCartDGV.Columns["Quantity"].Width = 100;
-            mainCartDGV.Columns["TotalPrice"].Width = 260;
-            mainCartDGV.Columns["UrlImage"].Visible = false;
+            mainDGV.DataSource = cartData;
+            mainDGV.Columns["ProductName"].Width = 472;
+            mainDGV.Columns["Price"].Width = 260;
+            mainDGV.Columns["Quantity"].Width = 100;
+            mainDGV.Columns["TotalPrice"].Width = 260;
+            //mainDGV.Columns["UrlImage"].Visible = false;
         }
     }
 }

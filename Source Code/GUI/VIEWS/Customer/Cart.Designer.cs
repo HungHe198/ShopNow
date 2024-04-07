@@ -85,10 +85,11 @@
             dgvMainCart.Name = "dgvMainCart";
             dgvMainCart.RowHeadersWidth = 51;
             dgvMainCart.RowTemplate.Height = 29;
+            dgvMainCart.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dgvMainCart.Size = new Size(1092, 609);
             dgvMainCart.TabIndex = 0;
             dgvMainCart.CellClick += dgvMainCart_CellClick;
-  
+            dgvMainCart.CellContentClick += dgvMainCart_CellContentClick;
             // 
             // grb_Quanlinhanvien
             // 
