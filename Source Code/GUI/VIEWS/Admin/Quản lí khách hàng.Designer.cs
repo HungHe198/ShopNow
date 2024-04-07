@@ -259,6 +259,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "Quản_lí_khách_hàng";
             Text = "Quản_lí_khách_hàng";
+            Load += Quản_lí_khách_hàng_Load;
             grb_Quanlinhanvien.ResumeLayout(false);
             grb_Quanlinhanvien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

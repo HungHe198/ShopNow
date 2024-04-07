@@ -16,5 +16,12 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
         {
             InitializeComponent();
         }
+
+        private void InvoiceHistory_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }

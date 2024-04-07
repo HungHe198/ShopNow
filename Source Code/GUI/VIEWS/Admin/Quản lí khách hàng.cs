@@ -21,5 +21,10 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
         {
 
         }
+
+        private void Quản_lí_khách_hàng_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
