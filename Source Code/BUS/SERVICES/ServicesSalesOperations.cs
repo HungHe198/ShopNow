@@ -27,6 +27,7 @@ namespace ShopNow.Source_Code.BUS.SERVICES
         Product_Repository Product_Repository = new Product_Repository();
         Product_Detail_Repository Product_Detail_Repository = new Product_Detail_Repository();
         Repo_GetAll getAll = new Repo_GetAll();
+        GetById GetById = new GetById();
         public void LoadCart(DataGridView mainDGV, Guid userId)
         {
 
@@ -41,6 +42,8 @@ namespace ShopNow.Source_Code.BUS.SERVICES
                                   && cp.Quantity != 0 && p.Quantity != 0
                             select new
                             {
+                                CartId = cp.CartId,
+                                ProductId = cp.ProductId,
                                 ProductName = p.ProductName,
                                 Price = p.Price.GetValueOrDefault(),
                                 Quantity = cp.Quantity.GetValueOrDefault(),
@@ -53,7 +56,65 @@ namespace ShopNow.Source_Code.BUS.SERVICES
             mainDGV.Columns["Price"].Width = 260;
             mainDGV.Columns["Quantity"].Width = 100;
             mainDGV.Columns["TotalPrice"].Width = 260;
+            mainDGV.Columns["CartId"].Visible = false;
+            mainDGV.Columns["ProductId"].Visible = false;
+
+
             //mainDGV.Columns["UrlImage"].Visible = false;
+
+        }
+        public string IsDelCartProduct(Guid cartId, Guid productId)
+        {
+            try
+            {
+
+                var objDel = GetById.GetCartProductById(cartId, productId);
+                if (objDel == null)
+                {
+                    return "Xóa thất bại";
+                }
+                else
+                {
+                    objDel.Deleted = true;
+
+                    if (Cart_Product_Repository.IsUpdateCart_Product(objDel))
+                    {
+                        return "Xóa thành công";
+                    }
+                    else return "Xóa thất bại";
+                }
+
+            }
+
+            catch (Exception ex) { return "Xóa thất bại"; }
+
+
+        }
+        public string IsUpdateCartProduct(Guid cartId, Guid productId, int Quantity)
+        {
+            try
+            {
+
+                var objUpdate = GetById.GetCartProductById(cartId, productId);
+                if (objUpdate == null)
+                {
+                    return "Sửa thất bại";
+                }
+                else
+                {
+                    objUpdate.Quantity = Quantity;
+                    if (Cart_Product_Repository.IsUpdateCart_Product(objUpdate))
+                    {
+                        return "Succes";
+                    }
+                    else return "Sửa thất bại";
+                }
+
+            }
+
+            catch (Exception ex) { return "Xóa thất bại"; }
+
+
         }
     }
 }

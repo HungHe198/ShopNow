@@ -35,10 +35,10 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
 
             operations.LoadCart(this.dgvMainCart, userId);
             //LoadCart(userId);
-            
+
             btn_Save.Enabled = false;
         }
-        
+
         private void btn_Save_Click(object sender, EventArgs e)
         {
 
@@ -46,18 +46,19 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
             {
                 if ((Convert.ToInt32(txt_Quantity.Text) == 0) || string.IsNullOrEmpty(txt_Quantity.Text))
                 {
-                    // chuyeern deleted veef true
+                    operations.IsDelCartProduct(CartId, ProductId);
                 }
                 else
                 {
-                    //Luu so luong moi
+                    operations.IsUpdateCartProduct(CartId, ProductId, Convert.ToInt32(txt_Quantity.Text));
                 }
 
             }
             catch (Exception ex)
             {
-
+                operations.LoadCart(this.dgvMainCart, userId);
             }
+            operations.LoadCart(this.dgvMainCart, userId);
             btn_Save.Enabled = false;
         }
 
@@ -87,6 +88,8 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
                 txt_Price.Text = selectedRow.Cells["Price"].Value?.ToString();
                 txt_Quantity.Text = selectedRow.Cells["Quantity"].Value?.ToString();
                 txt_totalPrice.Text = selectedRow.Cells["TotalPrice"].Value?.ToString();
+                CartId = Guid.Parse(selectedRow.Cells["CartId"].Value.ToString());
+                ProductId = Guid.Parse(selectedRow.Cells["ProductId"].Value.ToString());
             }
 
         }
@@ -94,6 +97,11 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
         private void dgvMainCart_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            operations.LoadCart(this.dgvMainCart, userId);
         }
     }
 }

@@ -45,6 +45,7 @@
             txt_Price = new TextBox();
             pictureBox1 = new PictureBox();
             txt_Name = new TextBox();
+            btnRefresh = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvMainCart).BeginInit();
             grb_Quanlinhanvien.SuspendLayout();
             groupBox1.SuspendLayout();
@@ -75,7 +76,7 @@
             tb_Timkiem.Location = new Point(6, 79);
             tb_Timkiem.Name = "tb_Timkiem";
             tb_Timkiem.PlaceholderText = "Nhập để tìm kiếm";
-            tb_Timkiem.Size = new Size(964, 30);
+            tb_Timkiem.Size = new Size(844, 30);
             tb_Timkiem.TabIndex = 8;
             // 
             // dgvMainCart
@@ -93,6 +94,7 @@
             // 
             // grb_Quanlinhanvien
             // 
+            grb_Quanlinhanvien.Controls.Add(btnRefresh);
             grb_Quanlinhanvien.Controls.Add(label1);
             grb_Quanlinhanvien.Controls.Add(btn_Xoa);
             grb_Quanlinhanvien.Controls.Add(tb_Timkiem);
@@ -230,6 +232,16 @@
             txt_Name.Size = new Size(222, 27);
             txt_Name.TabIndex = 33;
             // 
+            // btnRefresh
+            // 
+            btnRefresh.Location = new Point(866, 79);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(100, 32);
+            btnRefresh.TabIndex = 11;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
+            // 
             // Cart
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -267,5 +279,6 @@
         private Label label5;
         private Label label4;
         private Label label3;
+        private Button btnRefresh;
     }
 }
