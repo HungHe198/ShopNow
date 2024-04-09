@@ -39,8 +39,7 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
         }
         public List<Cart> GetAllCart()
         {
-            return _db.Carts.ToList();
-
+            return _db.Carts.ToList();  
         }
         public List<CartProduct> GetAllCartProducts()
         {

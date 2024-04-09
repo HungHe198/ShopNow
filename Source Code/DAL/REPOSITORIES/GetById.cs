@@ -30,7 +30,7 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
 
         public Cart GetCartById(Guid guid)
         {
-            var Record = context.Carts.FirstOrDefault(bd => bd.Id == guid);
+            var Record = context.Carts.FirstOrDefault(bd => bd.UserId == guid);
             return Record == null ? null : Record;
         }
 

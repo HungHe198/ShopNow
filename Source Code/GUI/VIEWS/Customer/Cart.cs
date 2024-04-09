@@ -1,6 +1,7 @@
 ﻿using ShopNow.Models;
 using ShopNow.Source_Code.BUS.SERVICES;
 using ShopNow.Source_Code.DAL.REPOSITORIES;
+using ShopNow.Source_Code.GUI.Doanhthu;
 using ShopNow.Source_Code.GUI.VIEWS.Home;
 using System;
 using System.Collections.Generic;
@@ -27,7 +28,6 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
         Guid CartId;
         Guid ProductId;
 
-        public Guid userId = new Guid("B053BF55-10F5-EE11-BCA0-103D1C86EA3D");// lấy userId từ formLogin
 
         private void Cart_Load(object sender, EventArgs e)
         {
@@ -36,7 +36,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
             ptb_Logo.BackColor = Color.Transparent;
             dgvMainCart.SelectionMode = (DataGridViewSelectionMode)SelectionMode.One;
 
-            operations.LoadCart(this.dgvMainCart, userId);
+            operations.LoadCart(this.dgvMainCart, ServicesGlobalVariables.userId);
             //LoadCart(userId);
 
             btn_Save.Enabled = false;
@@ -59,7 +59,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
             }
             catch (Exception ex)
             {
-                operations.LoadCart(this.dgvMainCart, userId);
+                operations.LoadCart(this.dgvMainCart, ServicesGlobalVariables.userId);
             }
             CartId = Guid.Empty;
             ProductId = Guid.Empty;
@@ -87,6 +87,31 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
             }
         }
 
+        //private void dgvMainCart_CellClick(object sender, DataGridViewCellEventArgs e)
+        //{
+
+        //    if (e.RowIndex >= 0)
+        //    {
+        //        // Extract and display data from the selected row
+        //        DataGridViewRow selectedRow = dgvMainCart.Rows[e.RowIndex];
+        //        txt_Name.Text = selectedRow.Cells["ProductName"].Value?.ToString();
+        //        txt_Price.Text = selectedRow.Cells["Price"].Value?.ToString();
+        //        txt_Quantity.Text = selectedRow.Cells["Quantity"].Value?.ToString();
+        //        txt_totalPrice.Text = selectedRow.Cells["TotalPrice"].Value?.ToString();
+        //        CartId = Guid.Parse(selectedRow.Cells["CartId"].Value.ToString());
+        //        ProductId = Guid.Parse(selectedRow.Cells["ProductId"].Value.ToString());
+        //    }
+
+        //}
+
+
+        private void ptb_Logo_Click_1(object sender, EventArgs e)
+        {
+
+            Services.ShowForm(this, new HomeForCustomer());
+
+        }
+
         private void dgvMainCart_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -100,18 +125,45 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
                 txt_totalPrice.Text = selectedRow.Cells["TotalPrice"].Value?.ToString();
                 CartId = Guid.Parse(selectedRow.Cells["CartId"].Value.ToString());
                 ProductId = Guid.Parse(selectedRow.Cells["ProductId"].Value.ToString());
+                ServicesGlobalVariables.productId = ProductId;
+                ServicesGlobalVariables.productDetailId = Guid.Parse(selectedRow.Cells["ProductDetailId"].Value.ToString());
+                ServicesGlobalVariables.productName = txt_Name.Text;
+                ServicesGlobalVariables.color = selectedRow.Cells["Color"].Value?.ToString();
+
+                GetById getById = new GetById();
+                var productDetail = getById.GetProductDetailById(Guid.Parse(selectedRow.Cells["ProductDetailId"].Value.ToString()));
+                var productDescription = getById.GetProductById(ProductId).Description;
+                ServicesGlobalVariables.memory = productDetail.Memory.ToString();
+                ServicesGlobalVariables.ram = Convert.ToInt32(productDetail.Ram);
+                ServicesGlobalVariables.display = Convert.ToInt32(productDetail.Display);
+                ServicesGlobalVariables.description = productDescription;
+                ServicesGlobalVariables.quantity = Convert.ToInt32(selectedRow.Cells["SoLuongConLai"].Value?.ToString());
+
+
+
             }
-
-        }
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            operations.LoadCart(this.dgvMainCart, userId);
         }
 
-        private void ptb_logo_Click(object sender, EventArgs e)
+
+
+        private void btn_ViewDetails_Click(object sender, EventArgs e)
         {
-            Services.ShowForm(this, new HomeForCustomer());
-           
+            Doanhthu.ProductDetail productDetail = new Doanhthu.ProductDetail();
+            productDetail.ShowDialog();
+        }
+
+        private void btn_buy_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_DelAll_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

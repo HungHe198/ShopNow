@@ -31,9 +31,11 @@
             grb_Quanlinhanvien = new GroupBox();
             dgvMainCart = new DataGridView();
             label1 = new Label();
-            btn_Xoa = new Button();
+            btn_buy = new Button();
+            btn_DelAll = new Button();
+            btn_Del = new Button();
             groupBox1 = new GroupBox();
-            button2 = new Button();
+            btn_ViewDetails = new Button();
             btn_Save = new Button();
             label5 = new Label();
             label4 = new Label();
@@ -56,7 +58,9 @@
             // 
             grb_Quanlinhanvien.Controls.Add(dgvMainCart);
             grb_Quanlinhanvien.Controls.Add(label1);
-            grb_Quanlinhanvien.Controls.Add(btn_Xoa);
+            grb_Quanlinhanvien.Controls.Add(btn_buy);
+            grb_Quanlinhanvien.Controls.Add(btn_DelAll);
+            grb_Quanlinhanvien.Controls.Add(btn_Del);
             grb_Quanlinhanvien.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
             grb_Quanlinhanvien.Location = new Point(279, 12);
             grb_Quanlinhanvien.Name = "grb_Quanlinhanvien";
@@ -73,6 +77,7 @@
             dgvMainCart.RowTemplate.Height = 29;
             dgvMainCart.Size = new Size(1092, 836);
             dgvMainCart.TabIndex = 12;
+            dgvMainCart.CellClick += dgvMainCart_CellClick;
             // 
             // label1
             // 
@@ -84,26 +89,63 @@
             label1.TabIndex = 10;
             label1.Text = "Giỏ hàng";
             // 
-            // btn_Xoa
+            // btn_buy
             // 
-            btn_Xoa.AutoSize = true;
-            btn_Xoa.BackColor = Color.Red;
-            btn_Xoa.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
-            btn_Xoa.FlatAppearance.MouseDownBackColor = Color.Black;
-            btn_Xoa.FlatAppearance.MouseOverBackColor = Color.Yellow;
-            btn_Xoa.FlatStyle = FlatStyle.Flat;
-            btn_Xoa.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_Xoa.ForeColor = Color.White;
-            btn_Xoa.Location = new Point(976, 79);
-            btn_Xoa.Name = "btn_Xoa";
-            btn_Xoa.Size = new Size(122, 31);
-            btn_Xoa.TabIndex = 9;
-            btn_Xoa.Text = "Xóa sản phẩm";
-            btn_Xoa.UseVisualStyleBackColor = false;
+            btn_buy.AutoSize = true;
+            btn_buy.BackColor = Color.Red;
+            btn_buy.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            btn_buy.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_buy.FlatAppearance.MouseOverBackColor = Color.Yellow;
+            btn_buy.FlatStyle = FlatStyle.Flat;
+            btn_buy.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_buy.ForeColor = Color.White;
+            btn_buy.Location = new Point(688, 79);
+            btn_buy.Name = "btn_buy";
+            btn_buy.Size = new Size(122, 31);
+            btn_buy.TabIndex = 9;
+            btn_buy.Text = "Mua ngay";
+            btn_buy.UseVisualStyleBackColor = false;
+            btn_buy.Click += btn_buy_Click;
+            // 
+            // btn_DelAll
+            // 
+            btn_DelAll.AutoSize = true;
+            btn_DelAll.BackColor = Color.Red;
+            btn_DelAll.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            btn_DelAll.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_DelAll.FlatAppearance.MouseOverBackColor = Color.Yellow;
+            btn_DelAll.FlatStyle = FlatStyle.Flat;
+            btn_DelAll.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_DelAll.ForeColor = Color.White;
+            btn_DelAll.Location = new Point(980, 79);
+            btn_DelAll.Name = "btn_DelAll";
+            btn_DelAll.Size = new Size(118, 31);
+            btn_DelAll.TabIndex = 9;
+            btn_DelAll.Text = "Xóa tất cả";
+            btn_DelAll.UseVisualStyleBackColor = false;
+            btn_DelAll.Click += btn_DelAll_Click;
+            // 
+            // btn_Del
+            // 
+            btn_Del.AutoSize = true;
+            btn_Del.BackColor = Color.Red;
+            btn_Del.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
+            btn_Del.FlatAppearance.MouseDownBackColor = Color.Black;
+            btn_Del.FlatAppearance.MouseOverBackColor = Color.Yellow;
+            btn_Del.FlatStyle = FlatStyle.Flat;
+            btn_Del.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Del.ForeColor = Color.White;
+            btn_Del.Location = new Point(840, 79);
+            btn_Del.Name = "btn_Del";
+            btn_Del.Size = new Size(122, 31);
+            btn_Del.TabIndex = 9;
+            btn_Del.Text = "Xóa";
+            btn_Del.UseVisualStyleBackColor = false;
+            btn_Del.Click += btn_Xoa_Click;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(btn_ViewDetails);
             groupBox1.Controls.Add(btn_Save);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label4);
@@ -120,14 +162,15 @@
             groupBox1.TabIndex = 29;
             groupBox1.TabStop = false;
             // 
-            // button2
+            // btn_ViewDetails
             // 
-            button2.Location = new Point(23, 504);
-            button2.Name = "button2";
-            button2.Size = new Size(85, 60);
-            button2.TabIndex = 43;
-            button2.Text = "Chi tiết sản phẩm";
-            button2.UseVisualStyleBackColor = true;
+            btn_ViewDetails.Location = new Point(23, 504);
+            btn_ViewDetails.Name = "btn_ViewDetails";
+            btn_ViewDetails.Size = new Size(85, 60);
+            btn_ViewDetails.TabIndex = 43;
+            btn_ViewDetails.Text = "Chi tiết sản phẩm";
+            btn_ViewDetails.UseVisualStyleBackColor = true;
+            btn_ViewDetails.Click += btn_ViewDetails_Click;
             // 
             // btn_Save
             // 
@@ -228,6 +271,7 @@
             ptb_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
             ptb_Logo.TabIndex = 44;
             ptb_Logo.TabStop = false;
+            ptb_Logo.Click += ptb_Logo_Click_1;
             // 
             // Cart
             // 
@@ -260,13 +304,15 @@
         private TextBox txt_Price;
         private PictureBox pictureBox1;
         private TextBox txt_Name;
-        private Button button2;
+        private Button btn_ViewDetails;
         private Button btn_Save;
         private Label label5;
         private Label label4;
         private Label label3;
         private DataGridView dgvMainCart;
-        private Button btn_Xoa;
+        private Button btn_Del;
         private PictureBox ptb_Logo;
+        private Button btn_buy;
+        private Button btn_DelAll;
     }
 }

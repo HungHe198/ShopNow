@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            txt_Quantity = new TextBox();
             label1 = new Label();
             btn_confirm = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // txt_Quantity
             // 
-            textBox1.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(549, 84);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(253, 51);
-            textBox1.TabIndex = 0;
+            txt_Quantity.Font = new Font("Segoe UI Semibold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            txt_Quantity.Location = new Point(549, 84);
+            txt_Quantity.Name = "txt_Quantity";
+            txt_Quantity.Size = new Size(253, 51);
+            txt_Quantity.TabIndex = 0;
             // 
             // label1
             // 
@@ -60,6 +60,7 @@
             btn_confirm.TabIndex = 2;
             btn_confirm.Text = "Xác nhận";
             btn_confirm.UseVisualStyleBackColor = true;
+            btn_confirm.Click += btn_confirm_Click;
             // 
             // AddProductWithCart
             // 
@@ -70,7 +71,7 @@
             ClientSize = new Size(1113, 334);
             Controls.Add(btn_confirm);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(txt_Quantity);
             DoubleBuffered = true;
             Name = "AddProductWithCart";
             Text = "AddProductWithCart";
@@ -81,7 +82,7 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox txt_Quantity;
         private Label label1;
         private Button btn_confirm;
     }

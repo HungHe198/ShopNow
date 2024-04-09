@@ -9,7 +9,9 @@ namespace ShopNow.Source_Code.BUS.SERVICES
     public static class ServicesGlobalVariables
     {
         public static Guid userId;
-
+        public static Guid cartId;
+        public static Guid Admin = new Guid("984386D1-A3F6-EE11-BCA0-103D1C86EA3D");
+        public static Guid Customer = new Guid("994386D1-A3F6-EE11-BCA0-103D1C86EA3D");
         public static string GlobalBackColor = "#ffbe98";
 
         public static string? productName;
@@ -19,11 +21,12 @@ namespace ShopNow.Source_Code.BUS.SERVICES
         public static float display;
         public static int ram;
         public static int rom;
-        public static float memory;
+        public static string memory;
         public static float warranty;
         public static string? description;
         public static string? UrlImage;
 
         public static Guid productId;
+        public static Guid productDetailId;
     }
 }

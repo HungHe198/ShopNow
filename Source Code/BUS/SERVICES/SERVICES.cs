@@ -37,6 +37,7 @@ namespace ShopNow.Source_Code.BUS.SERVICES
                          new
                          {
                              Id = pd.Id,
+                             ProductId = pd.ProductId,
                              Name = p.ProductName,
                              Color = pd.Color,
                              Price = p.Price,
@@ -52,6 +53,7 @@ namespace ShopNow.Source_Code.BUS.SERVICES
             dgv_Product.DataSource = result.ToList();
             dgv_Product.Columns["UrlImage"].Visible = false;
             dgv_Product.Columns["Id"].Visible = false;
+            dgv_Product.Columns["ProductId"].Visible = false;
 
 
 
@@ -76,16 +78,17 @@ namespace ShopNow.Source_Code.BUS.SERVICES
             }
         }
         Cart_Product_Repository Cart_Product_Repository = new Cart_Product_Repository();
-        public string AddCartProduct(Guid ProductId, Guid CartId, int Quantity)
+        public string AddCartProduct(Guid ProductId1, Guid CartId1, int Quantity1)
         {
             try
             {
-                CartProduct cartProduct = new CartProduct() { CartId = CartId, ProductId = ProductId, Quantity = Quantity, Deleted = false };
+                CartProduct cartProduct = new CartProduct() { CartId = CartId1, ProductId = ProductId1, Quantity = Quantity1, Deleted = false };
+                MessageBox.Show(cartProduct.CartId.ToString() + cartProduct.ProductId.ToString() + cartProduct.Deleted.ToString());
                 if (Cart_Product_Repository.IsAddCart_Product(cartProduct))
                 {
                     return "Success";
                 }
-                else { return "False"; }
+                else { return "False 1"; }
             }
             catch (Exception ex) { return "False"; }
         }

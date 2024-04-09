@@ -25,7 +25,7 @@ namespace ShopNow.Source_Code.GUI.Doanhthu
         {
             this.BackColor = ColorTranslator.FromHtml(ServicesGlobalVariables.GlobalBackColor);
             ptb_Logo.BackColor = Color.Transparent;
-
+            var ProductDetail = GetById.GetProductDetailById(ServicesGlobalVariables.productDetailId);
             if (ServicesGlobalVariables.productName == null)
             {
                 lb_Name.Text = "(No Name)";
@@ -52,8 +52,8 @@ namespace ShopNow.Source_Code.GUI.Doanhthu
             txt_Ram.Text = ServicesGlobalVariables.ram.ToString();
             lb_describe.Text = ServicesGlobalVariables.description;
 
-            var Product = GetById.GetProductDetailById(ServicesGlobalVariables.productId);
-            txt_Memory.Text = Product.Memory.ToString();
+           
+            txt_Memory.Text = ProductDetail.Memory.ToString();
 
             //ServicesGlobalVariables.UrlImage = null;
 

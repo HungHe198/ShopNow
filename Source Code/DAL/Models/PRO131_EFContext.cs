@@ -37,7 +37,7 @@ namespace ShopNow.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=LEVANHUNG\\LEVANHUNG;Initial Catalog=PRO131_EF;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+                optionsBuilder.UseSqlServer("Data Source=LEVANHUNG\\LEVANHUNG;Initial Catalog=PRO131_EF;Integrated Security=True;Trust Server Certificate=True");
             }
         }
 
@@ -61,7 +61,7 @@ namespace ShopNow.Models
 
                 entity.Property(e => e.Deleted)
                     .HasColumnName("DELETED")
-                    .HasDefaultValueSql("((1))");
+                    .HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -109,7 +109,7 @@ namespace ShopNow.Models
 
                 entity.Property(e => e.Deleted)
                     .HasColumnName("DELETED")
-                    .HasDefaultValueSql("((1))");
+                    .HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -162,7 +162,7 @@ namespace ShopNow.Models
 
                 entity.Property(e => e.Deleted)
                     .HasColumnName("DELETED")
-                    .HasDefaultValueSql("((1))");
+                    .HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -187,7 +187,7 @@ namespace ShopNow.Models
             modelBuilder.Entity<CartProduct>(entity =>
             {
                 entity.HasKey(e => new { e.CartId, e.ProductId })
-                    .HasName("PK__CART_PRO__8E2AFE1963F6BEAF");
+                    .HasName("PK__CART_PRO__8E2AFE19DD410BC3");
 
                 entity.ToTable("CART_PRODUCT");
 
@@ -203,7 +203,7 @@ namespace ShopNow.Models
 
                 entity.Property(e => e.Deleted)
                     .HasColumnName("DELETED")
-                    .HasDefaultValueSql("((1))");
+                    .HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -254,7 +254,7 @@ namespace ShopNow.Models
 
                 entity.Property(e => e.Deleted)
                     .HasColumnName("DELETED")
-                    .HasDefaultValueSql("((1))");
+                    .HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -314,7 +314,7 @@ namespace ShopNow.Models
 
                 entity.Property(e => e.Deleted)
                     .HasColumnName("DELETED")
-                    .HasDefaultValueSql("((1))");
+                    .HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -353,7 +353,7 @@ namespace ShopNow.Models
 
                 entity.Property(e => e.Deleted)
                     .HasColumnName("DELETED")
-                    .HasDefaultValueSql("((1))");
+                    .HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -400,7 +400,7 @@ namespace ShopNow.Models
 
                 entity.Property(e => e.Deleted)
                     .HasColumnName("DELETED")
-                    .HasDefaultValueSql("((1))");
+                    .HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -464,7 +464,7 @@ namespace ShopNow.Models
 
                 entity.Property(e => e.Deleted)
                     .HasColumnName("DELETED")
-                    .HasDefaultValueSql("((1))");
+                    .HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -509,7 +509,7 @@ namespace ShopNow.Models
 
                 entity.Property(e => e.Deleted)
                     .HasColumnName("DELETED")
-                    .HasDefaultValueSql("((1))");
+                    .HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -569,7 +569,7 @@ namespace ShopNow.Models
 
                 entity.Property(e => e.Deleted)
                     .HasColumnName("DELETED")
-                    .HasDefaultValueSql("((1))");
+                    .HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -655,7 +655,7 @@ namespace ShopNow.Models
 
                 entity.Property(e => e.Deleted)
                     .HasColumnName("DELETED")
-                    .HasDefaultValueSql("((1))");
+                    .HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -714,7 +714,7 @@ namespace ShopNow.Models
 
                 entity.Property(e => e.Deleted)
                     .HasColumnName("DELETED")
-                    .HasDefaultValueSql("((1))");
+                    .HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -757,7 +757,7 @@ namespace ShopNow.Models
 
                 entity.Property(e => e.Deleted)
                     .HasColumnName("DELETED")
-                    .HasDefaultValueSql("((1))");
+                    .HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 
@@ -814,7 +814,7 @@ namespace ShopNow.Models
 
                 entity.Property(e => e.Deleted)
                     .HasColumnName("DELETED")
-                    .HasDefaultValueSql("((1))");
+                    .HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.DeletedBy).HasColumnName("DELETED_BY");
 

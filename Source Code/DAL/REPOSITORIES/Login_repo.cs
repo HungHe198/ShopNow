@@ -17,7 +17,7 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
         {
             try
             {
-                Guid RoleId = new Guid("8B4B598F-6AF6-EE11-BCA0-103D1C86EA3D");
+                Guid RoleId = ServicesGlobalVariables.Admin;
 
                 var User = GetById.GetUserByUserName(UserName);
                 if (User != null && User.RoleId == RoleId)
@@ -41,7 +41,7 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
         {
             try
             {
-                Guid RoleId = new Guid("8C4B598F-6AF6-EE11-BCA0-103D1C86EA3D");
+                Guid RoleId = ServicesGlobalVariables.Customer;
                 var User = GetById.GetUserByUserName(UserName);
                 if (User != null && User.RoleId == RoleId)
                 {

@@ -26,7 +26,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
         {
 
         }
-        GetById GetById = new GetById();    
+        GetById GetById = new GetById();
         public void Login()
         {
             try
@@ -37,6 +37,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
                 {
                     var User = GetById.GetUserByUserName(UserName);
                     ServicesGlobalVariables.userId = User.Id;
+                    ServicesGlobalVariables.cartId = GetById.GetCartById(User.Id).Id;
                     Services.ShowForm(this, new HomeForCustomer());
                 }
                 else
@@ -53,7 +54,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
         private void btn_Login_Click(object sender, EventArgs e)
         {
             //8C4B598F-6AF6-EE11-BCA0-103D1C86EA3D
-           Login();
+            Login();
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
@@ -63,7 +64,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
 
         private void txt_PassWord_Enter(object sender, EventArgs e)
         {
-          
+
         }
     }
 }

@@ -62,7 +62,8 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Home
             ServicesGlobalVariables.warranty = Convert.ToSingle(selectedRow.Cells["Warranty"].Value);
             ServicesGlobalVariables.description = selectedRow.Cells["Description"].Value.ToString();
             ServicesGlobalVariables.UrlImage = selectedRow.Cells["UrlImage"].Value.ToString();
-            ServicesGlobalVariables.productId = Guid.Parse(selectedRow.Cells["Id"].Value.ToString());
+            ServicesGlobalVariables.productDetailId = Guid.Parse(selectedRow.Cells["Id"].Value.ToString());
+            ServicesGlobalVariables.productId = Guid.Parse(selectedRow.Cells["ProductId"].Value.ToString());
 
             txt_Name.Text = ServicesGlobalVariables.productName;
             txt_Color.Text = ServicesGlobalVariables.color;
