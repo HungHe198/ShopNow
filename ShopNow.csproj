@@ -10,10 +10,13 @@
 
   <ItemGroup>
     <Compile Remove="Resources\**" />
+    <Compile Remove="Resuorce\**" />
     <Compile Remove="Source Code\GUI\VIEWS\MainApp\**" />
     <EmbeddedResource Remove="Resources\**" />
+    <EmbeddedResource Remove="Resuorce\**" />
     <EmbeddedResource Remove="Source Code\GUI\VIEWS\MainApp\**" />
     <None Remove="Resources\**" />
+    <None Remove="Resuorce\**" />
     <None Remove="Source Code\GUI\VIEWS\MainApp\**" />
   </ItemGroup>
 
