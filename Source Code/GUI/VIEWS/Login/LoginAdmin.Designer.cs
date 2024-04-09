@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginAdmin));
             label1 = new Label();
             label3 = new Label();
-            txttk1 = new TextBox();
-            txtmk1 = new TextBox();
+            txt_UserName = new TextBox();
+            txt_Password = new TextBox();
             linkLabel1 = new LinkLabel();
             btn_loginAD = new Button();
             btn_Back = new Button();
@@ -73,23 +73,23 @@
             label3.TabIndex = 9;
             label3.Text = "Mật khẩu";
             // 
-            // txttk1
+            // txt_UserName
             // 
-            txttk1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txttk1.Location = new Point(1013, 308);
-            txttk1.Margin = new Padding(3, 4, 3, 4);
-            txttk1.Name = "txttk1";
-            txttk1.Size = new Size(278, 34);
-            txttk1.TabIndex = 10;
+            txt_UserName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_UserName.Location = new Point(1013, 308);
+            txt_UserName.Margin = new Padding(3, 4, 3, 4);
+            txt_UserName.Name = "txt_UserName";
+            txt_UserName.Size = new Size(278, 34);
+            txt_UserName.TabIndex = 10;
             // 
-            // txtmk1
+            // txt_Password
             // 
-            txtmk1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            txtmk1.Location = new Point(1013, 388);
-            txtmk1.Margin = new Padding(3, 4, 3, 4);
-            txtmk1.Name = "txtmk1";
-            txtmk1.Size = new Size(278, 34);
-            txtmk1.TabIndex = 11;
+            txt_Password.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Password.Location = new Point(1013, 388);
+            txt_Password.Margin = new Padding(3, 4, 3, 4);
+            txt_Password.Name = "txt_Password";
+            txt_Password.Size = new Size(278, 34);
+            txt_Password.TabIndex = 11;
             // 
             // linkLabel1
             // 
@@ -151,8 +151,8 @@
             Controls.Add(btn_Back);
             Controls.Add(btn_loginAD);
             Controls.Add(linkLabel1);
-            Controls.Add(txtmk1);
-            Controls.Add(txttk1);
+            Controls.Add(txt_Password);
+            Controls.Add(txt_UserName);
             Controls.Add(label3);
             Controls.Add(acb);
             Controls.Add(label1);
@@ -170,8 +170,8 @@
         private Label label1;
         private Label acb;
         private Label label3;
-        private TextBox txttk1;
-        private TextBox txtmk1;
+        private TextBox txt_UserName;
+        private TextBox txt_Password;
         private LinkLabel linkLabel1;
         private Button btn_loginAD;
         private Button btn_Back;

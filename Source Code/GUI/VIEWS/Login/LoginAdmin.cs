@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
 using ShopNow.Source_Code.BUS.SERVICES;
+using ShopNow.Source_Code.DAL.REPOSITORIES;
 using ShopNow.Source_Code.GUI.Thongke;
 using System;
 using System.Collections.Generic;
@@ -22,10 +23,13 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
             InitializeComponent();
         }
 
-
+        Login_repo Login_repo = new Login_repo();
+        public string UserName;
+        public string Password;
+        public Guid UserId;
         private void LoginAdmin_Load(object sender, EventArgs e)
         {
-
+            
         }
         private void btn_Back_Click(object sender, EventArgs e)
         {
@@ -33,11 +37,31 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
         }
 
         private void btn_loginAD_Click(object sender, EventArgs e)
-        {
-            Services.ShowForm(this, new HomeForAdmin());
-        }
 
-        
+        {
+            //8B4B598F-6AF6-EE11-BCA0-103D1C86EA3D
+            try
+            {
+                UserName = txt_UserName.Text;
+                Password = txt_Password.Text;
+                if (Login_repo.IsLoggedInAdmin(UserName, Password))
+                {
+                    Services.ShowForm(this, new HomeForAdmin());
+                }
+                else
+                {
+                    MessageBox.Show("Đăng nhập không thành công");
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Đăng nhập không thành công");
+            }
+        }
     }
+
+
 }
-    
+
+

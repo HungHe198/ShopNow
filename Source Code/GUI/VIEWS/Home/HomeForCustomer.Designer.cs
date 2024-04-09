@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
+            btn_ViewDetails = new Button();
             label5 = new Label();
             label3 = new Label();
             label2 = new Label();
@@ -45,25 +45,29 @@
             txt_Color = new TextBox();
             txt_Quantity = new TextBox();
             btn_Logout = new Button();
+            btn_Cart = new Button();
+            textBox2 = new TextBox();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)ptb_productImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvMainShow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Banner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
             SuspendLayout();
             // 
-            // button2
+            // btn_ViewDetails
             // 
-            button2.Location = new Point(45, 839);
-            button2.Name = "button2";
-            button2.Size = new Size(111, 66);
-            button2.TabIndex = 30;
-            button2.Text = "Xem chi tiết";
-            button2.UseVisualStyleBackColor = true;
+            btn_ViewDetails.Enabled = false;
+            btn_ViewDetails.Location = new Point(45, 896);
+            btn_ViewDetails.Name = "btn_ViewDetails";
+            btn_ViewDetails.Size = new Size(111, 66);
+            btn_ViewDetails.TabIndex = 30;
+            btn_ViewDetails.Text = "Xem chi tiết";
+            btn_ViewDetails.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(12, 783);
+            label5.Location = new Point(12, 775);
             label5.Name = "label5";
             label5.Size = new Size(144, 20);
             label5.TabIndex = 28;
@@ -72,7 +76,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 725);
+            label3.Location = new Point(12, 717);
             label3.Name = "label3";
             label3.Size = new Size(117, 20);
             label3.TabIndex = 26;
@@ -98,7 +102,7 @@
             // 
             // txt_Display
             // 
-            txt_Display.Location = new Point(12, 806);
+            txt_Display.Location = new Point(12, 798);
             txt_Display.Name = "txt_Display";
             txt_Display.ReadOnly = true;
             txt_Display.Size = new Size(203, 27);
@@ -129,6 +133,7 @@
             dgvMainShow.RowTemplate.Height = 29;
             dgvMainShow.Size = new Size(1142, 562);
             dgvMainShow.TabIndex = 16;
+            dgvMainShow.CellClick += dgvMainShow_CellClick;
             // 
             // lbNameShop
             // 
@@ -154,7 +159,7 @@
             textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.Location = new Point(237, 103);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(1000, 34);
+            textBox1.Size = new Size(874, 34);
             textBox1.TabIndex = 12;
             // 
             // ptb_Banner
@@ -188,7 +193,7 @@
             // 
             // txt_Quantity
             // 
-            txt_Quantity.Location = new Point(12, 748);
+            txt_Quantity.Location = new Point(12, 740);
             txt_Quantity.Name = "txt_Quantity";
             txt_Quantity.ReadOnly = true;
             txt_Quantity.Size = new Size(203, 27);
@@ -206,6 +211,33 @@
             btn_Logout.UseVisualStyleBackColor = false;
             btn_Logout.Click += btn_Logout_Click;
             // 
+            // btn_Cart
+            // 
+            btn_Cart.Location = new Point(1117, 102);
+            btn_Cart.Name = "btn_Cart";
+            btn_Cart.Size = new Size(125, 36);
+            btn_Cart.TabIndex = 13;
+            btn_Cart.Text = "Giỏ hàng";
+            btn_Cart.UseVisualStyleBackColor = true;
+            btn_Cart.Click += btn_Cart_Click;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(12, 863);
+            textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
+            textBox2.Size = new Size(203, 27);
+            textBox2.TabIndex = 23;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(12, 840);
+            label4.Name = "label4";
+            label4.Size = new Size(31, 20);
+            label4.TabIndex = 28;
+            label4.Text = "Giá";
+            // 
             // HomeForCustomer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -213,11 +245,13 @@
             BackColor = Color.MistyRose;
             ClientSize = new Size(1422, 1055);
             Controls.Add(btn_Logout);
-            Controls.Add(button2);
+            Controls.Add(btn_ViewDetails);
+            Controls.Add(label4);
             Controls.Add(label5);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(textBox2);
             Controls.Add(txt_Display);
             Controls.Add(ptb_productImage);
             Controls.Add(dgvMainShow);
@@ -225,6 +259,7 @@
             Controls.Add(txt_Color);
             Controls.Add(txt_Name);
             Controls.Add(lbNameShop);
+            Controls.Add(btn_Cart);
             Controls.Add(btn_Seach);
             Controls.Add(textBox1);
             Controls.Add(ptb_Banner);
@@ -242,7 +277,7 @@
 
         #endregion
 
-        private Button button2;
+        private Button btn_ViewDetails;
         private Label label6;
         private Label label5;
         private Label label3;
@@ -263,5 +298,8 @@
         private TextBox txt_Color;
         private TextBox txt_Quantity;
         private Button btn_Logout;
+        private Button btn_Cart;
+        private TextBox textBox2;
+        private Label label4;
     }
 }

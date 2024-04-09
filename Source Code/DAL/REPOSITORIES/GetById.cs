@@ -93,6 +93,11 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
             var Record = context.Users.FirstOrDefault(bd => bd.Id == guid);
             return Record == null ? null : Record;
         }
+        public User GetUserByUserName(string UserName)
+        {
+            var User = context.Users.FirstOrDefault(u => u.Username == UserName && u.Deleted == false) ;
+            return User == null ? null : User;
+        }
 
 
 

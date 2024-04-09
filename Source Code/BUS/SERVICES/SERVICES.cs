@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopNow.Source_Code.DAL.REPOSITORIES;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,7 @@ namespace ShopNow.Source_Code.BUS.SERVICES
         //{ 
 
         //} 
-        public static void ShowForm(Form FatherForm,Form childForm)
+        public static void ShowForm(Form FatherForm, Form childForm)
         {
             // Đặt form hiện tại là form chủ
             childForm.TopLevel = false;
@@ -24,5 +25,27 @@ namespace ShopNow.Source_Code.BUS.SERVICES
             FatherForm.Controls.Add(childForm);
             childForm.Show();
         }
+        Repo_GetAll getAll = new Repo_GetAll();
+        public void LoadProduct(DataGridView dgv_Product, string Contents)
+        {
+            var result = from p in getAll.GetAllProducts(Contents)
+                         join pd in getAll.GetAllProductDetails()
+                         on p.Id equals pd.ProductId
+                         select
+                         new
+                         {
+                             Name = p.ProductName,
+                             Color = pd.Color,
+                             Price = p.Price,
+                             Quantity = p.Quantity,
+                             Display = p.Display,
+                             Ram = p.Ram,
+                             Rom = p.Rom,
+                             Warranty = p.Warranty,
+                             Description = p.Description,
+                         };
+            dgv_Product.DataSource = result.ToList();
+        }
     }
+
 }

@@ -1,4 +1,5 @@
 ﻿using ShopNow.Source_Code.BUS.SERVICES;
+using ShopNow.Source_Code.GUI.VIEWS.Customer;
 using ShopNow.Source_Code.GUI.VIEWS.Login;
 using System;
 using System.Collections.Generic;
@@ -19,7 +20,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Home
             InitializeComponent();
         }
 
-
+        Services Services = new Services();
 
 
 
@@ -27,13 +28,25 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Home
         {
             this.BackColor = ColorTranslator.FromHtml(ServicesGlobalVariables.GlobalBackColor);
             ptb_Logo.BackColor = Color.Transparent;
-
-
+            btn_ViewDetails.Enabled = false;
+            Services.LoadProduct(this.dgvMainShow, null);
         }
 
         private void btn_Logout_Click(object sender, EventArgs e)
         {
             Services.ShowForm(this, new ChoiceLogin());
+        }
+
+        private void btn_Cart_Click(object sender, EventArgs e)
+        {
+            Services.ShowForm(this, new Cart());
+        }
+
+        
+        private void dgvMainShow_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Name, Color, Quantity, Display, Price
+
         }
     }
 }

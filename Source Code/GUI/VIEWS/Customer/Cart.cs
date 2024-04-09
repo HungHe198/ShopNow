@@ -1,6 +1,7 @@
 ﻿using ShopNow.Models;
 using ShopNow.Source_Code.BUS.SERVICES;
 using ShopNow.Source_Code.DAL.REPOSITORIES;
+using ShopNow.Source_Code.GUI.VIEWS.Home;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
             InitializeComponent();
         }
         ServicesSalesOperations operations = new ServicesSalesOperations();
-        Services Services = new Services();  
+        Services Services = new Services();
         Guid CartId;
         Guid ProductId;
 
@@ -66,8 +67,8 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
             txt_Quantity.Text = string.Empty;
             txt_totalPrice.Text = string.Empty;
             Services.ShowForm(this, new formTrong());
-                
-                btn_Save.Enabled = false;
+
+            btn_Save.Enabled = false;
         }
 
 
@@ -104,6 +105,12 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             operations.LoadCart(this.dgvMainCart, userId);
+        }
+
+        private void ptb_logo_Click(object sender, EventArgs e)
+        {
+            Services.ShowForm(this, new HomeForCustomer());
+           
         }
     }
 }
