@@ -39,17 +39,20 @@ namespace ShopNow.Source_Code.GUI.Thongke
 
             Services.ShowForm(this, new ChoiceLogin());
         }
-
+        
         private void btn_information_Click(object sender, EventArgs e)
         {
             //dùng showdialog thôi
-            Services.ShowForm(this, new Information());
+            //MessageBox.Show(ServicesGlobalVariables.userId.ToString());
+            Information information = new Information();
+            information.ShowDialog();
 
         }
 
         private void btn_management_Click(object sender, EventArgs e)
         {
-            Services.ShowForm(this, new InvoiceHistory());
+            InvoiceHistory invoiceHistory = new InvoiceHistory();
+            invoiceHistory.ShowDialog();
         }
     }
 }

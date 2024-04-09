@@ -14,5 +14,43 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
             this.BackColor = ColorTranslator.FromHtml(ServicesGlobalVariables.GlobalBackColor);
 
         }
+
+        private void btn_QLNV_Click(object sender, EventArgs e)
+        {
+            Services.ShowForm(this, new Quản_lí_nhân_viên());
+        }
+
+        private void btn_QLNH_Click(object sender, EventArgs e)
+        {
+            //QUản lí nhập hàng
+            Services.ShowForm(this, new ImportHistory());
+        }
+
+        private void btn_QLGG_Click(object sender, EventArgs e)
+        {
+            //    Chưa có form 
+            //    Services.ShowForm(this, new )
+        }
+
+        private void btn_Quanlicoso_Click(object sender, EventArgs e)
+        {
+            Services.ShowForm(this, new Quản_lí_cơ_sở());
+
+        }
+
+        private void btn_Quanlithongke_Click(object sender, EventArgs e)
+        {
+            // CHưa có form
+        }
+
+        private void btn_IH_Click(object sender, EventArgs e)
+        {
+            Services.ShowForm(this, new InvoiceHistory());
+        }
+        private void btn_QLSP_Click(object sender, EventArgs e)
+        {
+
+            Services.ShowForm(this, new Quản_lí_sản_phẩm());
+        }
     }
 }

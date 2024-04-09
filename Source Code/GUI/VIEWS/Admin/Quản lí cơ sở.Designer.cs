@@ -36,6 +36,7 @@
             cmb_Sapxep = new ComboBox();
             dataGridView1 = new DataGridView();
             grb_Quanlinhanvien = new GroupBox();
+            ptb_Logo = new PictureBox();
             btn_IH = new Button();
             btn_Quanlithongke = new Button();
             btn_Quanlicoso = new Button();
@@ -43,10 +44,9 @@
             btn_QLNH = new Button();
             btn_QLNV = new Button();
             btn_QLSP = new Button();
-            ptb_logo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             grb_Quanlinhanvien.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)ptb_logo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -153,84 +153,92 @@
             grb_Quanlinhanvien.TabIndex = 20;
             grb_Quanlinhanvien.TabStop = false;
             // 
+            // ptb_Logo
+            // 
+            ptb_Logo.BackColor = Color.MistyRose;
+            ptb_Logo.Image = Properties.Resources.Logo;
+            ptb_Logo.Location = new Point(12, 16);
+            ptb_Logo.Name = "ptb_Logo";
+            ptb_Logo.Size = new Size(200, 84);
+            ptb_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptb_Logo.TabIndex = 35;
+            ptb_Logo.TabStop = false;
+            // 
             // btn_IH
             // 
             btn_IH.Location = new Point(12, 506);
             btn_IH.Name = "btn_IH";
             btn_IH.Size = new Size(205, 45);
-            btn_IH.TabIndex = 28;
+            btn_IH.TabIndex = 36;
             btn_IH.Text = "Lịch sử hóa đơn";
             btn_IH.UseVisualStyleBackColor = true;
+            btn_IH.Click += btn_IH_Click;
             // 
             // btn_Quanlithongke
             // 
             btn_Quanlithongke.Location = new Point(12, 455);
             btn_Quanlithongke.Name = "btn_Quanlithongke";
             btn_Quanlithongke.Size = new Size(205, 45);
-            btn_Quanlithongke.TabIndex = 29;
+            btn_Quanlithongke.TabIndex = 37;
             btn_Quanlithongke.Text = "Quản lí thống kê";
             btn_Quanlithongke.UseVisualStyleBackColor = true;
+            btn_Quanlithongke.Click += btn_Quanlithongke_Click;
             // 
             // btn_Quanlicoso
             // 
             btn_Quanlicoso.Location = new Point(12, 404);
             btn_Quanlicoso.Name = "btn_Quanlicoso";
             btn_Quanlicoso.Size = new Size(205, 45);
-            btn_Quanlicoso.TabIndex = 30;
+            btn_Quanlicoso.TabIndex = 38;
             btn_Quanlicoso.Text = "Quản lí cơ sở";
             btn_Quanlicoso.UseVisualStyleBackColor = true;
+            btn_Quanlicoso.Click += btn_Quanlicoso_Click;
             // 
             // btn_QLGG
             // 
             btn_QLGG.Location = new Point(12, 353);
             btn_QLGG.Name = "btn_QLGG";
             btn_QLGG.Size = new Size(205, 45);
-            btn_QLGG.TabIndex = 31;
+            btn_QLGG.TabIndex = 39;
             btn_QLGG.Text = "Quản lí giảm giá";
             btn_QLGG.UseVisualStyleBackColor = true;
+            btn_QLGG.Click += btn_QLGG_Click;
             // 
             // btn_QLNH
             // 
             btn_QLNH.Location = new Point(12, 302);
             btn_QLNH.Name = "btn_QLNH";
             btn_QLNH.Size = new Size(205, 45);
-            btn_QLNH.TabIndex = 32;
+            btn_QLNH.TabIndex = 40;
             btn_QLNH.Text = "Quản lí nhập hàng";
             btn_QLNH.UseVisualStyleBackColor = true;
+            btn_QLNH.Click += btn_QLNH_Click;
             // 
             // btn_QLNV
             // 
             btn_QLNV.Location = new Point(12, 251);
             btn_QLNV.Name = "btn_QLNV";
             btn_QLNV.Size = new Size(205, 45);
-            btn_QLNV.TabIndex = 33;
+            btn_QLNV.TabIndex = 41;
             btn_QLNV.Text = "Quản lí nhân viên";
             btn_QLNV.UseVisualStyleBackColor = true;
+            btn_QLNV.Click += btn_QLNV_Click;
             // 
             // btn_QLSP
             // 
             btn_QLSP.Location = new Point(12, 200);
             btn_QLSP.Name = "btn_QLSP";
             btn_QLSP.Size = new Size(205, 45);
-            btn_QLSP.TabIndex = 34;
+            btn_QLSP.TabIndex = 42;
             btn_QLSP.Text = "Quản lí sản phẩm";
             btn_QLSP.UseVisualStyleBackColor = true;
-            // 
-            // ptb_logo
-            // 
-            ptb_logo.BackColor = SystemColors.ControlDark;
-            ptb_logo.Location = new Point(12, 12);
-            ptb_logo.Name = "ptb_logo";
-            ptb_logo.Size = new Size(205, 168);
-            ptb_logo.TabIndex = 35;
-            ptb_logo.TabStop = false;
+            btn_QLSP.Click += btn_QLSP_Click;
             // 
             // Quản_lí_cơ_sở
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1220, 778);
-            Controls.Add(ptb_logo);
             Controls.Add(btn_IH);
             Controls.Add(btn_Quanlithongke);
             Controls.Add(btn_Quanlicoso);
@@ -238,6 +246,7 @@
             Controls.Add(btn_QLNH);
             Controls.Add(btn_QLNV);
             Controls.Add(btn_QLSP);
+            Controls.Add(ptb_Logo);
             Controls.Add(grb_Quanlinhanvien);
             Name = "Quản_lí_cơ_sở";
             Text = "Quản_lí_cơ_sở";
@@ -245,7 +254,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             grb_Quanlinhanvien.ResumeLayout(false);
             grb_Quanlinhanvien.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)ptb_logo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Logo).EndInit();
             ResumeLayout(false);
         }
 
@@ -259,6 +268,7 @@
         private ComboBox cmb_Sapxep;
         private DataGridView dataGridView1;
         private GroupBox grb_Quanlinhanvien;
+        private PictureBox ptb_Logo;
         private Button btn_IH;
         private Button btn_Quanlithongke;
         private Button btn_Quanlicoso;
@@ -266,6 +276,5 @@
         private Button btn_QLNH;
         private Button btn_QLNV;
         private Button btn_QLSP;
-        private PictureBox ptb_logo;
     }
 }

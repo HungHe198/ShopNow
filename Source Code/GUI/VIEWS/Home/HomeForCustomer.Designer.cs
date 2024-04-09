@@ -48,10 +48,15 @@
             btn_Cart = new Button();
             textBox2 = new TextBox();
             label4 = new Label();
+            groupBox1 = new GroupBox();
+            btn_information = new Button();
+            ptb_admin = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)ptb_productImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvMainShow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Banner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ptb_admin).BeginInit();
             SuspendLayout();
             // 
             // btn_ViewDetails
@@ -176,9 +181,9 @@
             // 
             ptb_Logo.BackColor = Color.MistyRose;
             ptb_Logo.Image = Properties.Resources.Logo;
-            ptb_Logo.Location = new Point(18, 31);
+            ptb_Logo.Location = new Point(18, 12);
             ptb_Logo.Name = "ptb_Logo";
-            ptb_Logo.Size = new Size(200, 105);
+            ptb_Logo.Size = new Size(200, 84);
             ptb_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
             ptb_Logo.TabIndex = 10;
             ptb_Logo.TabStop = false;
@@ -238,12 +243,43 @@
             label4.TabIndex = 28;
             label4.Text = "Giá";
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(btn_information);
+            groupBox1.Controls.Add(ptb_admin);
+            groupBox1.Location = new Point(18, 144);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(194, 250);
+            groupBox1.TabIndex = 32;
+            groupBox1.TabStop = false;
+            // 
+            // btn_information
+            // 
+            btn_information.Location = new Point(27, 138);
+            btn_information.Name = "btn_information";
+            btn_information.Size = new Size(136, 54);
+            btn_information.TabIndex = 1;
+            btn_information.Text = "Thông tin cá nhân";
+            btn_information.UseVisualStyleBackColor = true;
+            btn_information.Click += btn_information_Click;
+            // 
+            // ptb_admin
+            // 
+            ptb_admin.Image = Properties.Resources.Customer;
+            ptb_admin.Location = new Point(61, 35);
+            ptb_admin.Name = "ptb_admin";
+            ptb_admin.Size = new Size(76, 79);
+            ptb_admin.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptb_admin.TabIndex = 0;
+            ptb_admin.TabStop = false;
+            // 
             // HomeForCustomer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
             ClientSize = new Size(1422, 1055);
+            Controls.Add(groupBox1);
             Controls.Add(btn_Logout);
             Controls.Add(btn_ViewDetails);
             Controls.Add(label4);
@@ -271,6 +307,8 @@
             ((System.ComponentModel.ISupportInitialize)dgvMainShow).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Banner).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Logo).EndInit();
+            groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)ptb_admin).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -301,5 +339,8 @@
         private Button btn_Cart;
         private TextBox textBox2;
         private Label label4;
+        private GroupBox groupBox1;
+        private Button btn_information;
+        private PictureBox ptb_admin;
     }
 }

@@ -11,22 +11,21 @@ using System.Windows.Forms;
 
 namespace ShopNow.Source_Code.GUI.VIEWS.Admin
 {
-    public partial class Quản_lí_khách_hàng : Form
+    public partial class ImportHistory : Form
     {
-        public Quản_lí_khách_hàng()
+        public ImportHistory()
         {
             InitializeComponent();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Quản_lí_khách_hàng_Load(object sender, EventArgs e)
+        private void ImportHistory_Load(object sender, EventArgs e)
         {
             this.BackColor = ColorTranslator.FromHtml(ServicesGlobalVariables.GlobalBackColor);
 
+        }
+
+        private void btn_QLSP_Click(object sender, EventArgs e)
+        {
+            Services.ShowForm(this, new Quản_lí_sản_phẩm());
         }
 
         private void btn_QLNV_Click(object sender, EventArgs e)
@@ -61,10 +60,8 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
         {
             Services.ShowForm(this, new InvoiceHistory());
         }
-        private void btn_QLSP_Click(object sender, EventArgs e)
-        {
 
-            Services.ShowForm(this, new Quản_lí_sản_phẩm());
-        }
+
+
     }
 }

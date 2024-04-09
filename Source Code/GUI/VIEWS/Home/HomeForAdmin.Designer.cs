@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ptb_Logo = new PictureBox();
             ptb_Banner = new PictureBox();
             textBox1 = new TextBox();
             btn_Seach = new Button();
@@ -50,24 +49,14 @@
             button2 = new Button();
             button1 = new Button();
             btn_Logout = new Button();
-            ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
+            ptb_Logo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)ptb_Banner).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptb_admin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvMainShow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_productImage).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
             SuspendLayout();
-            // 
-            // ptb_Logo
-            // 
-            ptb_Logo.BackColor = Color.MistyRose;
-            ptb_Logo.Image = Properties.Resources.Logo;
-            ptb_Logo.Location = new Point(12, 18);
-            ptb_Logo.Name = "ptb_Logo";
-            ptb_Logo.Size = new Size(226, 106);
-            ptb_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
-            ptb_Logo.TabIndex = 0;
-            ptb_Logo.TabStop = false;
             // 
             // ptb_Banner
             // 
@@ -267,12 +256,24 @@
             btn_Logout.UseVisualStyleBackColor = false;
             btn_Logout.Click += btn_Logout_Click;
             // 
+            // ptb_Logo
+            // 
+            ptb_Logo.BackColor = Color.MistyRose;
+            ptb_Logo.Image = Properties.Resources.Logo;
+            ptb_Logo.Location = new Point(22, 12);
+            ptb_Logo.Name = "ptb_Logo";
+            ptb_Logo.Size = new Size(200, 84);
+            ptb_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptb_Logo.TabIndex = 33;
+            ptb_Logo.TabStop = false;
+            // 
             // HomeForAdmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 192);
             ClientSize = new Size(1395, 1055);
+            Controls.Add(ptb_Logo);
             Controls.Add(btn_Logout);
             Controls.Add(button1);
             Controls.Add(button2);
@@ -291,23 +292,20 @@
             Controls.Add(btn_Seach);
             Controls.Add(textBox1);
             Controls.Add(ptb_Banner);
-            Controls.Add(ptb_Logo);
             Name = "HomeForAdmin";
             Text = "Form1";
             Load += HomeForAdmin_Load;
-            ((System.ComponentModel.ISupportInitialize)ptb_Logo).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Banner).EndInit();
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)ptb_admin).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvMainShow).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_productImage).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Logo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private PictureBox ptb_Logo;
         private PictureBox ptb_Banner;
         private TextBox textBox1;
         private Button btn_Seach;
@@ -329,5 +327,6 @@
         private Button button2;
         private Button button1;
         private Button btn_Logout;
+        private PictureBox ptb_Logo;
     }
 }

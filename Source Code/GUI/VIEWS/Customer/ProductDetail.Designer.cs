@@ -31,7 +31,6 @@
             lbNameShop = new Label();
             btn_Seach = new Button();
             textBox1 = new TextBox();
-            ptb_Logo = new PictureBox();
             lb_Name = new Label();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             pictureBox1 = new PictureBox();
@@ -50,9 +49,10 @@
             textBox5 = new TextBox();
             textBox4 = new TextBox();
             textBox3 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
+            ptb_Logo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
             SuspendLayout();
             // 
             // lbNameShop
@@ -81,15 +81,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(1000, 34);
             textBox1.TabIndex = 9;
-            // 
-            // ptb_Logo
-            // 
-            ptb_Logo.BackColor = Color.Yellow;
-            ptb_Logo.Location = new Point(12, 5);
-            ptb_Logo.Name = "ptb_Logo";
-            ptb_Logo.Size = new Size(200, 106);
-            ptb_Logo.TabIndex = 8;
-            ptb_Logo.TabStop = false;
             // 
             // lb_Name
             // 
@@ -275,26 +266,37 @@
             textBox3.Size = new Size(545, 34);
             textBox3.TabIndex = 0;
             // 
+            // ptb_Logo
+            // 
+            ptb_Logo.BackColor = Color.MistyRose;
+            ptb_Logo.Image = Properties.Resources.Logo;
+            ptb_Logo.Location = new Point(12, 12);
+            ptb_Logo.Name = "ptb_Logo";
+            ptb_Logo.Size = new Size(200, 84);
+            ptb_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptb_Logo.TabIndex = 11;
+            ptb_Logo.TabStop = false;
+            // 
             // ProductDetail
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 192);
             ClientSize = new Size(1395, 775);
+            Controls.Add(ptb_Logo);
             Controls.Add(groupBox1);
             Controls.Add(pictureBox1);
             Controls.Add(lb_Name);
             Controls.Add(lbNameShop);
             Controls.Add(btn_Seach);
             Controls.Add(textBox1);
-            Controls.Add(ptb_Logo);
             Name = "ProductDetail";
             Text = " ";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)ptb_Logo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ptb_Logo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -304,7 +306,6 @@
         private Label lbNameShop;
         private Button btn_Seach;
         private TextBox textBox1;
-        private PictureBox ptb_Logo;
         private Label lb_Name;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
         private PictureBox pictureBox1;
@@ -323,5 +324,6 @@
         private TextBox textBox3;
         private Label lb_describe;
         private Label label1;
+        private PictureBox ptb_Logo;
     }
 }

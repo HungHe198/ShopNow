@@ -42,11 +42,17 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Home
             Services.ShowForm(this, new Cart());
         }
 
-        
+
         private void dgvMainShow_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             // Name, Color, Quantity, Display, Price
 
+        }
+
+        private void btn_information_Click(object sender, EventArgs e)
+        {
+            Information information = new Information();
+            information.ShowDialog();
         }
     }
 }

@@ -44,12 +44,12 @@
             txt_Price = new TextBox();
             pictureBox1 = new PictureBox();
             txt_Name = new TextBox();
-            ptb_logo = new PictureBox();
+            ptb_Logo = new PictureBox();
             grb_Quanlinhanvien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMainCart).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_logo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
             SuspendLayout();
             // 
             // grb_Quanlinhanvien
@@ -218,22 +218,23 @@
             txt_Name.Size = new Size(222, 27);
             txt_Name.TabIndex = 33;
             // 
-            // ptb_logo
+            // ptb_Logo
             // 
-            ptb_logo.BackColor = SystemColors.ControlDark;
-            ptb_logo.Location = new Point(42, 12);
-            ptb_logo.Name = "ptb_logo";
-            ptb_logo.Size = new Size(205, 109);
-            ptb_logo.TabIndex = 36;
-            ptb_logo.TabStop = false;
-            ptb_logo.Click += ptb_logo_Click;
+            ptb_Logo.BackColor = Color.MistyRose;
+            ptb_Logo.Image = Properties.Resources.Logo;
+            ptb_Logo.Location = new Point(25, 12);
+            ptb_Logo.Name = "ptb_Logo";
+            ptb_Logo.Size = new Size(200, 84);
+            ptb_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptb_Logo.TabIndex = 44;
+            ptb_Logo.TabStop = false;
             // 
             // Cart
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1395, 1055);
-            Controls.Add(ptb_logo);
+            Controls.Add(ptb_Logo);
             Controls.Add(groupBox1);
             Controls.Add(grb_Quanlinhanvien);
             Name = "Cart";
@@ -245,7 +246,7 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ptb_logo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Logo).EndInit();
             ResumeLayout(false);
         }
 
@@ -264,8 +265,8 @@
         private Label label5;
         private Label label4;
         private Label label3;
-        private PictureBox ptb_logo;
         private DataGridView dgvMainCart;
         private Button btn_Xoa;
+        private PictureBox ptb_Logo;
     }
 }

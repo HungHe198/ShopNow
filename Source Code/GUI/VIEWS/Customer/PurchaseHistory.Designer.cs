@@ -31,7 +31,6 @@
             lbNameShop = new Label();
             btn_Seach = new Button();
             textBox1 = new TextBox();
-            ptb_Logo = new PictureBox();
             dataGridView1 = new DataGridView();
             btn_ViewDetails = new Button();
             label5 = new Label();
@@ -43,9 +42,10 @@
             txt_Quantity = new TextBox();
             txt_Color = new TextBox();
             txt_Name = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
+            ptb_Logo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_productImage).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
             SuspendLayout();
             // 
             // lbNameShop
@@ -74,15 +74,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(1000, 34);
             textBox1.TabIndex = 5;
-            // 
-            // ptb_Logo
-            // 
-            ptb_Logo.BackColor = Color.Yellow;
-            ptb_Logo.Location = new Point(10, 8);
-            ptb_Logo.Name = "ptb_Logo";
-            ptb_Logo.Size = new Size(200, 106);
-            ptb_Logo.TabIndex = 4;
-            ptb_Logo.TabStop = false;
             // 
             // dataGridView1
             // 
@@ -180,11 +171,23 @@
             txt_Name.Size = new Size(203, 27);
             txt_Name.TabIndex = 34;
             // 
+            // ptb_Logo
+            // 
+            ptb_Logo.BackColor = Color.MistyRose;
+            ptb_Logo.Image = Properties.Resources.Logo;
+            ptb_Logo.Location = new Point(13, 12);
+            ptb_Logo.Name = "ptb_Logo";
+            ptb_Logo.Size = new Size(200, 84);
+            ptb_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptb_Logo.TabIndex = 41;
+            ptb_Logo.TabStop = false;
+            // 
             // PurchaseHistory
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1395, 775);
+            Controls.Add(ptb_Logo);
             Controls.Add(btn_ViewDetails);
             Controls.Add(label5);
             Controls.Add(label3);
@@ -199,13 +202,12 @@
             Controls.Add(lbNameShop);
             Controls.Add(btn_Seach);
             Controls.Add(textBox1);
-            Controls.Add(ptb_Logo);
             Name = "PurchaseHistory";
             Text = "PurchaseHistory";
             Load += PurchaseHistory_Load;
-            ((System.ComponentModel.ISupportInitialize)ptb_Logo).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_productImage).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Logo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -215,7 +217,6 @@
         private Label lbNameShop;
         private Button btn_Seach;
         private TextBox textBox1;
-        private PictureBox ptb_Logo;
         private DataGridView dataGridView1;
         private Button btn_ViewDetails;
         private Label label5;
@@ -227,5 +228,6 @@
         private TextBox txt_Quantity;
         private TextBox txt_Color;
         private TextBox txt_Name;
+        private PictureBox ptb_Logo;
     }
 }

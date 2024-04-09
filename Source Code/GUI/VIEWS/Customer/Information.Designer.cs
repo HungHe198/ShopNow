@@ -41,6 +41,7 @@
             btn_Save = new Button();
             pictureBox1 = new PictureBox();
             grb_infomation = new GroupBox();
+            Thoát = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             grb_infomation.SuspendLayout();
             SuspendLayout();
@@ -138,9 +139,10 @@
             // btn_Save
             // 
             btn_Save.BackColor = Color.Red;
+            btn_Save.Enabled = false;
             btn_Save.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btn_Save.ForeColor = Color.White;
-            btn_Save.Location = new Point(152, 426);
+            btn_Save.Location = new Point(461, 426);
             btn_Save.Name = "btn_Save";
             btn_Save.Size = new Size(143, 53);
             btn_Save.TabIndex = 3;
@@ -177,12 +179,26 @@
             grb_infomation.TabIndex = 5;
             grb_infomation.TabStop = false;
             // 
+            // Thoát
+            // 
+            Thoát.BackColor = Color.Red;
+            Thoát.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Thoát.ForeColor = SystemColors.Window;
+            Thoát.Location = new Point(191, 425);
+            Thoát.Name = "Thoát";
+            Thoát.Size = new Size(143, 53);
+            Thoát.TabIndex = 3;
+            Thoát.Text = "Thoát";
+            Thoát.UseVisualStyleBackColor = false;
+            Thoát.Click += Thoát_Click;
+            // 
             // Information
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 491);
             Controls.Add(grb_infomation);
+            Controls.Add(Thoát);
             Controls.Add(btn_Save);
             Name = "Information";
             Text = "Information";
@@ -208,5 +224,6 @@
         private Button btn_Save;
         private PictureBox pictureBox1;
         private GroupBox grb_infomation;
+        private Button Thoát;
     }
 }
