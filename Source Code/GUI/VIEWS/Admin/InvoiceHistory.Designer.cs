@@ -43,8 +43,10 @@
             btn_QLNH = new Button();
             btn_QLNV = new Button();
             btn_QLSP = new Button();
+            ptb_logo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             grb_Quanlinhanvien.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ptb_logo).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
@@ -153,7 +155,7 @@
             // 
             // btn_IH
             // 
-            btn_IH.Location = new Point(22, 525);
+            btn_IH.Location = new Point(12, 506);
             btn_IH.Name = "btn_IH";
             btn_IH.Size = new Size(205, 45);
             btn_IH.TabIndex = 21;
@@ -162,7 +164,7 @@
             // 
             // btn_Quanlithongke
             // 
-            btn_Quanlithongke.Location = new Point(22, 474);
+            btn_Quanlithongke.Location = new Point(12, 455);
             btn_Quanlithongke.Name = "btn_Quanlithongke";
             btn_Quanlithongke.Size = new Size(205, 45);
             btn_Quanlithongke.TabIndex = 22;
@@ -171,7 +173,7 @@
             // 
             // btn_Quanlicoso
             // 
-            btn_Quanlicoso.Location = new Point(22, 423);
+            btn_Quanlicoso.Location = new Point(12, 404);
             btn_Quanlicoso.Name = "btn_Quanlicoso";
             btn_Quanlicoso.Size = new Size(205, 45);
             btn_Quanlicoso.TabIndex = 23;
@@ -180,7 +182,7 @@
             // 
             // btn_QLGG
             // 
-            btn_QLGG.Location = new Point(22, 372);
+            btn_QLGG.Location = new Point(12, 353);
             btn_QLGG.Name = "btn_QLGG";
             btn_QLGG.Size = new Size(205, 45);
             btn_QLGG.TabIndex = 24;
@@ -189,7 +191,7 @@
             // 
             // btn_QLNH
             // 
-            btn_QLNH.Location = new Point(22, 321);
+            btn_QLNH.Location = new Point(12, 302);
             btn_QLNH.Name = "btn_QLNH";
             btn_QLNH.Size = new Size(205, 45);
             btn_QLNH.TabIndex = 25;
@@ -198,7 +200,7 @@
             // 
             // btn_QLNV
             // 
-            btn_QLNV.Location = new Point(22, 270);
+            btn_QLNV.Location = new Point(12, 251);
             btn_QLNV.Name = "btn_QLNV";
             btn_QLNV.Size = new Size(205, 45);
             btn_QLNV.TabIndex = 26;
@@ -207,18 +209,28 @@
             // 
             // btn_QLSP
             // 
-            btn_QLSP.Location = new Point(22, 219);
+            btn_QLSP.Location = new Point(12, 200);
             btn_QLSP.Name = "btn_QLSP";
             btn_QLSP.Size = new Size(205, 45);
             btn_QLSP.TabIndex = 27;
             btn_QLSP.Text = "Quản lí sản phẩm";
             btn_QLSP.UseVisualStyleBackColor = true;
             // 
+            // ptb_logo
+            // 
+            ptb_logo.BackColor = SystemColors.ControlDark;
+            ptb_logo.Location = new Point(12, 12);
+            ptb_logo.Name = "ptb_logo";
+            ptb_logo.Size = new Size(205, 168);
+            ptb_logo.TabIndex = 36;
+            ptb_logo.TabStop = false;
+            // 
             // InvoiceHistory
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1220, 778);
+            Controls.Add(ptb_logo);
             Controls.Add(grb_Quanlinhanvien);
             Controls.Add(btn_IH);
             Controls.Add(btn_Quanlithongke);
@@ -233,6 +245,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             grb_Quanlinhanvien.ResumeLayout(false);
             grb_Quanlinhanvien.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ptb_logo).EndInit();
             ResumeLayout(false);
         }
 
@@ -253,5 +266,6 @@
         private Button btn_QLNH;
         private Button btn_QLNV;
         private Button btn_QLSP;
+        private PictureBox ptb_logo;
     }
 }

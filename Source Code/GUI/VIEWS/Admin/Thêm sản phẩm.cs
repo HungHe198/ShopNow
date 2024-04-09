@@ -21,7 +21,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
         private void Thêm_sản_phẩm_Load(object sender, EventArgs e)
         {
             this.BackColor = ColorTranslator.FromHtml(ServicesGlobalVariables.GlobalBackColor);
-
+            // sau khi có sản phẩm mới được thêm sẽ được thêm vào bảng import history 
         }
     }
 }
