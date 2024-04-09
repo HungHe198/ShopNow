@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopNow.Source_Code.BUS.SERVICES;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
         public Information()
         {
             InitializeComponent();
+        }
+
+        private void Information_Load(object sender, EventArgs e)
+        {
+            this.BackColor = ColorTranslator.FromHtml(ServicesGlobalVariables.GlobalBackColor);
+
         }
     }
 }

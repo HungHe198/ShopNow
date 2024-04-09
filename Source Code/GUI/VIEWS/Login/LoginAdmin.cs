@@ -22,11 +22,6 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void LoginAdmin_Load(object sender, EventArgs e)
         {
@@ -39,22 +34,9 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
             Services.ShowForm(this, new ChoiceLogin());
         }
 
-        private void btn_loginAD_Click_Click(object sender, EventArgs e)
+        private void btn_loginAD_Click(object sender, EventArgs e)
         {
-            User users = new();
-            if (ServiceLoginADs.CheckLogin(txttk1.Text,txtmk1.Text))
-            {
-                users = ServiceLoginADs.checktk(txttk1.Text, txtmk1.Text).Find(x => x.Username == txttk1.Text && x.Password == txtmk1.Text);
-                if (users.IsInRole == "ADmin")
-                {
-                    Services.ShowForm(this, new ChoiceLogin());
-                }
-                else
-                {
-                    MessageBox.Show("Tài khoản hoặc mật khẩu không đúng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            
+
         }
 
         //private void txtUsername_Validating(object sender, CancelEventArgs e, ErrorProvider errorProvider)

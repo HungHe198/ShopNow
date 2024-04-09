@@ -202,6 +202,7 @@
             Controls.Add(ptb_Logo);
             Name = "PurchaseHistory";
             Text = "PurchaseHistory";
+            Load += PurchaseHistory_Load;
             ((System.ComponentModel.ISupportInitialize)ptb_Logo).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_productImage).EndInit();

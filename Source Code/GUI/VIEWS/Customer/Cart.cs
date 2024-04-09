@@ -30,6 +30,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
 
         private void Cart_Load(object sender, EventArgs e)
         {
+            this.BackColor = ColorTranslator.FromHtml(ServicesGlobalVariables.GlobalBackColor);
             //LoadDataGridView của giỏ hàng
             dgvMainCart.SelectionMode = (DataGridViewSelectionMode)SelectionMode.One;
 

@@ -31,7 +31,6 @@
             lb_Themsanpham = new Label();
             grb_Thongtin = new GroupBox();
             btn_Chonanh = new Button();
-
             cmb_Trangthai = new ComboBox();
             tb_Mota = new TextBox();
             tb_Gia = new TextBox();
@@ -43,7 +42,6 @@
             lb_Tensanpham = new Label();
             lb_Masanpham = new Label();
             grb_Thongtin.SuspendLayout();
-
             SuspendLayout();
             // 
             // lb_Themsanpham
@@ -59,7 +57,6 @@
             // grb_Thongtin
             // 
             grb_Thongtin.Controls.Add(btn_Chonanh);
-
             grb_Thongtin.Controls.Add(cmb_Trangthai);
             grb_Thongtin.Controls.Add(tb_Mota);
             grb_Thongtin.Controls.Add(tb_Gia);
@@ -85,8 +82,6 @@
             btn_Chonanh.TabIndex = 4;
             btn_Chonanh.Text = "Chọn ảnh";
             btn_Chonanh.UseVisualStyleBackColor = true;
-            // 
-
             // 
             // cmb_Trangthai
             // 
@@ -179,9 +174,9 @@
             Controls.Add(lb_Themsanpham);
             Name = "Thêm_sản_phẩm";
             Text = "Thêm_sản_phẩm";
+            Load += Thêm_sản_phẩm_Load;
             grb_Thongtin.ResumeLayout(false);
             grb_Thongtin.PerformLayout();
-
             ResumeLayout(false);
             PerformLayout();
         }
