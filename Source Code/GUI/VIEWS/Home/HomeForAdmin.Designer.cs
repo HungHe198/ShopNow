@@ -28,450 +28,326 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForAdmin));
-            pictureBox1 = new PictureBox();
-            comboBox3 = new ComboBox();
-            button3 = new Button();
-            comboBox1 = new ComboBox();
-            label2 = new Label();
-            groupBox2 = new GroupBox();
-            button15 = new Button();
-            button14 = new Button();
-            button13 = new Button();
-            button12 = new Button();
-            button11 = new Button();
-            button5 = new Button();
+            ptb_Logo = new PictureBox();
+            ptb_Banner = new PictureBox();
             textBox1 = new TextBox();
+            btn_Seach = new Button();
+            lbNameShop = new Label();
+            groupBox1 = new GroupBox();
+            btn_management = new Button();
+            btn_information = new Button();
+            ptb_admin = new PictureBox();
+            dgvMainShow = new DataGridView();
+            ptb_productImage = new PictureBox();
+            txt_Name = new TextBox();
+            txt_Color = new TextBox();
+            txt_Quantity = new TextBox();
+            txt_Ram = new TextBox();
+            txt_Display = new TextBox();
+            txt_SoucreImage = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
             button2 = new Button();
             button1 = new Button();
-            label1 = new Label();
-            textBox2 = new TextBox();
-            panel1 = new Panel();
-            CmbQLNV = new ComboBox();
-            CmbQLSN = new ComboBox();
-            CmbQLTK = new ComboBox();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            CmbQLSP = new ComboBox();
-            button9 = new Button();
-            CmbThongke = new ComboBox();
-            button10 = new Button();
-            LbName = new Label();
-            pictureBox4 = new PictureBox();
-            BtnAvatar = new PictureBox();
-            button4 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            groupBox2.SuspendLayout();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)BtnAvatar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Banner).BeginInit();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ptb_admin).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvMainShow).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_productImage).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // ptb_Logo
             // 
-            pictureBox1.ErrorImage = null;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.InitialImage = null;
-            pictureBox1.Location = new Point(242, 79);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(685, 261);
-            pictureBox1.TabIndex = 11;
-            pictureBox1.TabStop = false;
+            ptb_Logo.Location = new Point(25, 30);
+            ptb_Logo.Name = "ptb_Logo";
+            ptb_Logo.Size = new Size(215, 106);
+            ptb_Logo.TabIndex = 0;
+            ptb_Logo.TabStop = false;
             // 
-            // comboBox3
+            // ptb_Banner
             // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Series" });
-            comboBox3.Location = new Point(576, 23);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(103, 28);
-            comboBox3.TabIndex = 11;
-            comboBox3.Text = "Giá";
-            // 
-            // button3
-            // 
-            button3.Location = new Point(255, 523);
-            button3.Name = "button3";
-            button3.Size = new Size(198, 29);
-            button3.TabIndex = 9;
-            button3.Text = "Show more";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Series" });
-            comboBox1.Location = new Point(437, 23);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(103, 28);
-            comboBox1.TabIndex = 3;
-            comboBox1.Text = "Series";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(272, 23);
-            label2.Name = "label2";
-            label2.Size = new Size(120, 31);
-            label2.TabIndex = 0;
-            label2.Text = "Sản phẩm";
-            // 
-            // groupBox2
-            // 
-            groupBox2.BackColor = Color.MistyRose;
-            groupBox2.Controls.Add(button15);
-            groupBox2.Controls.Add(button14);
-            groupBox2.Controls.Add(button13);
-            groupBox2.Controls.Add(button12);
-            groupBox2.Controls.Add(button11);
-            groupBox2.Controls.Add(button5);
-            groupBox2.Controls.Add(comboBox3);
-            groupBox2.Controls.Add(button3);
-            groupBox2.Controls.Add(comboBox1);
-            groupBox2.Controls.Add(label2);
-            groupBox2.Location = new Point(242, 376);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(685, 558);
-            groupBox2.TabIndex = 17;
-            groupBox2.TabStop = false;
-           
-            // 
-            // button15
-            // 
-            button15.Location = new Point(60, 296);
-            button15.Name = "button15";
-            button15.Size = new Size(147, 177);
-            button15.TabIndex = 18;
-            button15.Text = "Ảnh sản phẩm ";
-            button15.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            button14.Location = new Point(490, 296);
-            button14.Name = "button14";
-            button14.Size = new Size(147, 177);
-            button14.TabIndex = 17;
-            button14.Text = "Ảnh sản phẩm ";
-            button14.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            button13.Location = new Point(490, 72);
-            button13.Name = "button13";
-            button13.Size = new Size(147, 177);
-            button13.TabIndex = 16;
-            button13.Text = "Ảnh sản phẩm ";
-            button13.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            button12.Location = new Point(281, 72);
-            button12.Name = "button12";
-            button12.Size = new Size(147, 177);
-            button12.TabIndex = 15;
-            button12.Text = "Ảnh sản phẩm ";
-            button12.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            button11.Location = new Point(281, 296);
-            button11.Name = "button11";
-            button11.Size = new Size(147, 177);
-            button11.TabIndex = 14;
-            button11.Text = "Ảnh sản phẩm ";
-            button11.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            button5.Location = new Point(60, 72);
-            button5.Name = "button5";
-            button5.Size = new Size(147, 177);
-            button5.TabIndex = 13;
-            button5.Text = "Ảnh sản phẩm ";
-            button5.UseVisualStyleBackColor = true;
+            ptb_Banner.Location = new Point(244, 142);
+            ptb_Banner.Name = "ptb_Banner";
+            ptb_Banner.Size = new Size(1139, 247);
+            ptb_Banner.TabIndex = 0;
+            ptb_Banner.TabStop = false;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(154, -157);
+            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(244, 102);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(266, 27);
-            textBox1.TabIndex = 16;
+            textBox1.Size = new Size(1000, 34);
+            textBox1.TabIndex = 1;
             // 
-            // button2
+            // btn_Seach
             // 
-            button2.Location = new Point(625, -157);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 15;
-            button2.Text = "My Cart";
-            button2.UseVisualStyleBackColor = true;
+            btn_Seach.Location = new Point(1255, 101);
+            btn_Seach.Name = "btn_Seach";
+            btn_Seach.Size = new Size(131, 36);
+            btn_Seach.TabIndex = 2;
+            btn_Seach.Text = "Seach";
+            btn_Seach.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // lbNameShop
             // 
-            button1.Location = new Point(475, -159);
-            button1.Name = "button1";
-            button1.Size = new Size(94, 29);
-            button1.TabIndex = 14;
-            button1.Text = "SIgn In";
-            button1.UseVisualStyleBackColor = true;
+            lbNameShop.AutoSize = true;
+            lbNameShop.Font = new Font("Segoe UI", 36F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lbNameShop.Location = new Point(632, 9);
+            lbNameShop.Name = "lbNameShop";
+            lbNameShop.Size = new Size(305, 81);
+            lbNameShop.TabIndex = 3;
+            lbNameShop.Text = "ShopNow";
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(btn_management);
+            groupBox1.Controls.Add(btn_information);
+            groupBox1.Controls.Add(ptb_admin);
+            groupBox1.Location = new Point(22, 140);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(215, 250);
+            groupBox1.TabIndex = 4;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Quản lí hệ thống";
+            // 
+            // btn_management
+            // 
+            btn_management.Location = new Point(22, 171);
+            btn_management.Name = "btn_management";
+            btn_management.Size = new Size(170, 54);
+            btn_management.TabIndex = 1;
+            btn_management.Text = "Hệ thống quản lí";
+            btn_management.UseVisualStyleBackColor = true;
+            // 
+            // btn_information
+            // 
+            btn_information.Location = new Point(22, 111);
+            btn_information.Name = "btn_information";
+            btn_information.Size = new Size(170, 54);
+            btn_information.TabIndex = 1;
+            btn_information.Text = "Thông tin cá nhân";
+            btn_information.UseVisualStyleBackColor = true;
+            // 
+            // ptb_admin
+            // 
+            ptb_admin.Location = new Point(54, 26);
+            ptb_admin.Name = "ptb_admin";
+            ptb_admin.Size = new Size(105, 79);
+            ptb_admin.TabIndex = 0;
+            ptb_admin.TabStop = false;
+            // 
+            // dgvMainShow
+            // 
+            dgvMainShow.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvMainShow.Location = new Point(244, 414);
+            dgvMainShow.Name = "dgvMainShow";
+            dgvMainShow.RowHeadersWidth = 51;
+            dgvMainShow.RowTemplate.Height = 29;
+            dgvMainShow.Size = new Size(1142, 629);
+            dgvMainShow.TabIndex = 5;
+            // 
+            // ptb_productImage
+            // 
+            ptb_productImage.Location = new Point(25, 414);
+            ptb_productImage.Name = "ptb_productImage";
+            ptb_productImage.Size = new Size(200, 200);
+            ptb_productImage.TabIndex = 6;
+            ptb_productImage.TabStop = false;
+            // 
+            // txt_Name
+            // 
+            txt_Name.Location = new Point(22, 643);
+            txt_Name.Name = "txt_Name";
+            txt_Name.Size = new Size(203, 27);
+            txt_Name.TabIndex = 7;
+            txt_Name.TextChanged += textBox2_TextChanged;
+            // 
+            // txt_Color
+            // 
+            txt_Color.Location = new Point(22, 698);
+            txt_Color.Name = "txt_Color";
+            txt_Color.Size = new Size(203, 27);
+            txt_Color.TabIndex = 7;
+            txt_Color.TextChanged += textBox2_TextChanged;
+            // 
+            // txt_Quantity
+            // 
+            txt_Quantity.Location = new Point(22, 753);
+            txt_Quantity.Name = "txt_Quantity";
+            txt_Quantity.ReadOnly = true;
+            txt_Quantity.Size = new Size(203, 27);
+            txt_Quantity.TabIndex = 7;
+            txt_Quantity.TextChanged += textBox2_TextChanged;
+            // 
+            // txt_Ram
+            // 
+            txt_Ram.Location = new Point(22, 810);
+            txt_Ram.Name = "txt_Ram";
+            txt_Ram.Size = new Size(203, 27);
+            txt_Ram.TabIndex = 7;
+            txt_Ram.TextChanged += textBox2_TextChanged;
+            // 
+            // txt_Display
+            // 
+            txt_Display.Location = new Point(22, 873);
+            txt_Display.Name = "txt_Display";
+            txt_Display.Size = new Size(203, 27);
+            txt_Display.TabIndex = 7;
+            txt_Display.TextChanged += textBox2_TextChanged;
+            // 
+            // txt_SoucreImage
+            // 
+            txt_SoucreImage.Location = new Point(22, 933);
+            txt_SoucreImage.Name = "txt_SoucreImage";
+            txt_SoucreImage.Size = new Size(203, 27);
+            txt_SoucreImage.TabIndex = 7;
+            txt_SoucreImage.TextChanged += textBox2_TextChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.ImageAlign = ContentAlignment.TopLeft;
-            label1.Location = new Point(44, -149);
+            label1.Location = new Point(35, 620);
             label1.Name = "label1";
-            label1.Size = new Size(78, 20);
-            label1.TabIndex = 13;
-            label1.Text = "Shop Now";
+            label1.Size = new Size(100, 20);
+            label1.TabIndex = 8;
+            label1.Text = "Tên sản phẩm";
             // 
-            // textBox2
+            // label2
             // 
-            textBox2.Location = new Point(242, 46);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(507, 27);
-            textBox2.TabIndex = 25;
+            label2.AutoSize = true;
+            label2.Location = new Point(35, 673);
+            label2.Name = "label2";
+            label2.Size = new Size(63, 20);
+            label2.TabIndex = 8;
+            label2.Text = "Màu sắc";
             // 
-            // panel1
+            // label3
             // 
-            panel1.BackColor = Color.FromArgb(255, 255, 128);
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(CmbQLNV);
-            panel1.Controls.Add(CmbQLSN);
-            panel1.Controls.Add(CmbQLTK);
-            panel1.Controls.Add(button6);
-            panel1.Controls.Add(button7);
-            panel1.Controls.Add(button8);
-            panel1.Controls.Add(CmbQLSP);
-            panel1.Controls.Add(button9);
-            panel1.Controls.Add(CmbThongke);
-            panel1.Controls.Add(button10);
-            panel1.Controls.Add(LbName);
-            panel1.Controls.Add(pictureBox4);
-            panel1.Controls.Add(BtnAvatar);
-            panel1.Location = new Point(12, 78);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(223, 262);
-            panel1.TabIndex = 38;
+            label3.AutoSize = true;
+            label3.Location = new Point(35, 728);
+            label3.Name = "label3";
+            label3.Size = new Size(117, 20);
+            label3.TabIndex = 8;
+            label3.Text = "Số lượng còn lại";
             // 
-            // CmbQLNV
+            // label4
             // 
-            CmbQLNV.BackColor = Color.FromArgb(255, 255, 128);
-            CmbQLNV.FlatStyle = FlatStyle.Popup;
-            CmbQLNV.Font = new Font("Cambria", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            CmbQLNV.FormattingEnabled = true;
-            CmbQLNV.Location = new Point(42, 224);
-            CmbQLNV.Name = "CmbQLNV";
-            CmbQLNV.Size = new Size(176, 25);
-            CmbQLNV.TabIndex = 12;
-            CmbQLNV.Text = "Quản lý nhân viên";
+            label4.AutoSize = true;
+            label4.Location = new Point(35, 783);
+            label4.Name = "label4";
+            label4.Size = new Size(39, 20);
+            label4.TabIndex = 8;
+            label4.Text = "Ram";
             // 
-            // CmbQLSN
+            // label5
             // 
-            CmbQLSN.BackColor = Color.FromArgb(255, 255, 128);
-            CmbQLSN.FlatStyle = FlatStyle.Popup;
-            CmbQLSN.Font = new Font("Cambria", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            CmbQLSN.FormattingEnabled = true;
-            CmbQLSN.Items.AddRange(new object[] { "Lịch sử hóa đơn" });
-            CmbQLSN.Location = new Point(42, 189);
-            CmbQLSN.Name = "CmbQLSN";
-            CmbQLSN.Size = new Size(176, 25);
-            CmbQLSN.TabIndex = 11;
-            CmbQLSN.Text = "Quản lý suất / nhập";
+            label5.AutoSize = true;
+            label5.Location = new Point(35, 850);
+            label5.Name = "label5";
+            label5.Size = new Size(144, 20);
+            label5.TabIndex = 8;
+            label5.Text = "Kích thước màn hình";
             // 
-            // CmbQLTK
+            // label6
             // 
-            CmbQLTK.BackColor = Color.FromArgb(255, 255, 128);
-            CmbQLTK.FlatStyle = FlatStyle.Popup;
-            CmbQLTK.Font = new Font("Cambria", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            CmbQLTK.FormattingEnabled = true;
-            CmbQLTK.Items.AddRange(new object[] { "Khách hàng", "Nhân viên" });
-            CmbQLTK.Location = new Point(42, 150);
-            CmbQLTK.Name = "CmbQLTK";
-            CmbQLTK.Size = new Size(176, 25);
-            CmbQLTK.TabIndex = 10;
-            CmbQLTK.Text = "Quản lý tài khoản";
+            label6.AutoSize = true;
+            label6.Location = new Point(35, 910);
+            label6.Name = "label6";
+            label6.Size = new Size(82, 20);
+            label6.TabIndex = 8;
+            label6.Text = "Source ảnh";
             // 
-            // button6
+            // button2
             // 
-            button6.FlatAppearance.BorderColor = Color.FromArgb(255, 255, 128);
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.Location = new Point(4, 220);
-            button6.Name = "button6";
-            button6.Size = new Size(39, 29);
-            button6.TabIndex = 9;
-            button6.UseVisualStyleBackColor = true;
+            button2.Location = new Point(22, 983);
+            button2.Name = "button2";
+            button2.Size = new Size(108, 60);
+            button2.TabIndex = 9;
+            button2.Text = "Xem chi tiết";
+            button2.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // button1
             // 
-            button7.FlatAppearance.BorderColor = Color.FromArgb(255, 255, 128);
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Image = (Image)resources.GetObject("button7.Image");
-            button7.Location = new Point(4, 185);
-            button7.Name = "button7";
-            button7.Size = new Size(39, 29);
-            button7.TabIndex = 8;
-            button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            button8.FlatAppearance.BorderColor = Color.FromArgb(255, 255, 128);
-            button8.FlatStyle = FlatStyle.Flat;
-            button8.Image = (Image)resources.GetObject("button8.Image");
-            button8.Location = new Point(4, 150);
-            button8.Name = "button8";
-            button8.Size = new Size(39, 29);
-            button8.TabIndex = 7;
-            button8.UseVisualStyleBackColor = true;
-            // 
-            // CmbQLSP
-            // 
-            CmbQLSP.BackColor = Color.FromArgb(255, 255, 128);
-            CmbQLSP.FlatStyle = FlatStyle.Popup;
-            CmbQLSP.Font = new Font("Cambria", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            CmbQLSP.FormattingEnabled = true;
-            CmbQLSP.Location = new Point(42, 119);
-            CmbQLSP.Name = "CmbQLSP";
-            CmbQLSP.Size = new Size(176, 25);
-            CmbQLSP.TabIndex = 6;
-            CmbQLSP.Text = "Quản lý sản phẩm";
-            // 
-            // button9
-            // 
-            button9.FlatAppearance.BorderColor = Color.FromArgb(255, 255, 128);
-            button9.FlatStyle = FlatStyle.Flat;
-            button9.Image = (Image)resources.GetObject("button9.Image");
-            button9.Location = new Point(4, 115);
-            button9.Name = "button9";
-            button9.Size = new Size(39, 29);
-            button9.TabIndex = 5;
-            button9.UseVisualStyleBackColor = true;
-            // 
-            // CmbThongke
-            // 
-            CmbThongke.BackColor = Color.FromArgb(255, 255, 128);
-            CmbThongke.FlatStyle = FlatStyle.Popup;
-            CmbThongke.Font = new Font("Cambria", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            CmbThongke.FormattingEnabled = true;
-            CmbThongke.Location = new Point(42, 84);
-            CmbThongke.Name = "CmbThongke";
-            CmbThongke.Size = new Size(176, 25);
-            CmbThongke.TabIndex = 4;
-            CmbThongke.Text = "Thống kê";
-            // 
-            // button10
-            // 
-            button10.FlatAppearance.BorderColor = Color.FromArgb(255, 255, 128);
-            button10.FlatStyle = FlatStyle.Flat;
-            button10.Image = (Image)resources.GetObject("button10.Image");
-            button10.Location = new Point(4, 80);
-            button10.Name = "button10";
-            button10.Size = new Size(39, 29);
-            button10.TabIndex = 3;
-            button10.UseVisualStyleBackColor = true;
-            // 
-            // LbName
-            // 
-            LbName.AutoSize = true;
-            LbName.Font = new Font("Cambria", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
-            LbName.Location = new Point(88, 24);
-            LbName.Name = "LbName";
-            LbName.Size = new Size(66, 21);
-            LbName.TabIndex = 2;
-            LbName.Text = "Admin";
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox4.Location = new Point(69, 0);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(154, 74);
-            pictureBox4.TabIndex = 1;
-            pictureBox4.TabStop = false;
-            // 
-            // BtnAvatar
-            // 
-            BtnAvatar.BorderStyle = BorderStyle.FixedSingle;
-            BtnAvatar.Image = (Image)resources.GetObject("BtnAvatar.Image");
-            BtnAvatar.Location = new Point(3, 3);
-            BtnAvatar.Name = "BtnAvatar";
-            BtnAvatar.Size = new Size(69, 71);
-            BtnAvatar.TabIndex = 0;
-            BtnAvatar.TabStop = false;
-            // 
-            // button4
-            // 
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(12, 12);
-            button4.Name = "button4";
-            button4.Size = new Size(224, 61);
-            button4.TabIndex = 39;
-            button4.UseVisualStyleBackColor = true;
+            button1.Location = new Point(136, 983);
+            button1.Name = "button1";
+            button1.Size = new Size(89, 60);
+            button1.TabIndex = 9;
+            button1.Text = "Lưu";
+            button1.UseVisualStyleBackColor = true;
             // 
             // HomeForAdmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 192);
-            ClientSize = new Size(949, 1055);
-            Controls.Add(button4);
-            Controls.Add(panel1);
-            Controls.Add(textBox2);
-            Controls.Add(pictureBox1);
-            Controls.Add(groupBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button2);
+            ClientSize = new Size(1395, 1055);
             Controls.Add(button1);
+            Controls.Add(button2);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(txt_SoucreImage);
+            Controls.Add(txt_Display);
+            Controls.Add(txt_Ram);
+            Controls.Add(txt_Quantity);
+            Controls.Add(txt_Color);
+            Controls.Add(txt_Name);
+            Controls.Add(ptb_productImage);
+            Controls.Add(dgvMainShow);
+            Controls.Add(groupBox1);
+            Controls.Add(lbNameShop);
+            Controls.Add(btn_Seach);
+            Controls.Add(textBox1);
+            Controls.Add(ptb_Banner);
+            Controls.Add(ptb_Logo);
             Name = "HomeForAdmin";
             Text = "Form1";
-            Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)BtnAvatar).EndInit();
+            Load += HomeForAdmin_Load;
+            ((System.ComponentModel.ISupportInitialize)ptb_Logo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Banner).EndInit();
+            groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)ptb_admin).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvMainShow).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_productImage).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private PictureBox pictureBox1;
-        private ComboBox comboBox3;
-        private Button button3;
-        private ComboBox comboBox1;
-        private Label label2;
-        private GroupBox groupBox2;
+
+        private PictureBox ptb_Logo;
+        private PictureBox ptb_Banner;
         private TextBox textBox1;
+        private Button btn_Seach;
+        private Label lbNameShop;
+        private GroupBox groupBox1;
+        private Button btn_management;
+        private Button btn_information;
+        private PictureBox ptb_admin;
+        private DataGridView dgvMainShow;
+        private PictureBox ptb_productImage;
+        private TextBox txt_Name;
+        private TextBox txt_Color;
+        private TextBox txt_Quantity;
+        private TextBox txt_Ram;
+        private TextBox txt_Display;
+        private TextBox txt_SoucreImage;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
         private Button button2;
         private Button button1;
-        private Label label1;
-        private TextBox textBox2;
-        private Panel panel1;
-        private ComboBox CmbQLNV;
-        private ComboBox CmbQLSN;
-        private ComboBox CmbQLTK;
-        private Button button6;
-        private Button button7;
-        private Button button8;
-        private ComboBox CmbQLSP;
-        private Button button9;
-        private ComboBox CmbThongke;
-        private Button button10;
-        private Label LbName;
-        private PictureBox pictureBox4;
-        private PictureBox BtnAvatar;
-        private Button button4;
-        private Button button15;
-        private Button button14;
-        private Button button13;
-        private Button button12;
-        private Button button11;
-        private Button button5;
     }
 }

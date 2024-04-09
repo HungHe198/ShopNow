@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Source Code\Image\" />
     <Folder Include="SQL\" />
   </ItemGroup>
 
