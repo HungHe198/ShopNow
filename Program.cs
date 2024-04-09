@@ -1,4 +1,7 @@
-﻿using ShopNow.Source_Code.GUI.VIEWS.Login;  
+﻿using ShopNow.Source_Code.GUI.Doanhthu;
+using ShopNow.Source_Code.GUI.VIEWS.Admin;
+using ShopNow.Source_Code.GUI.VIEWS.Customer;
+using ShopNow.Source_Code.GUI.VIEWS.Login;  
 namespace ShopNow
 {
     internal static class Program
@@ -12,7 +15,7 @@ namespace ShopNow
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new ChoiceLogin());
+            Application.Run(new ProductDetail());
         }
     }
 }
