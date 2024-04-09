@@ -168,9 +168,12 @@
             // 
             // ptb_Logo
             // 
+            ptb_Logo.BackColor = Color.MistyRose;
+            ptb_Logo.Image = Properties.Resources.Logo;
             ptb_Logo.Location = new Point(18, 31);
             ptb_Logo.Name = "ptb_Logo";
             ptb_Logo.Size = new Size(200, 105);
+            ptb_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
             ptb_Logo.TabIndex = 10;
             ptb_Logo.TabStop = false;
             // 

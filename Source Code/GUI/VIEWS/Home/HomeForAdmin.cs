@@ -27,6 +27,8 @@ namespace ShopNow.Source_Code.GUI.Thongke
         private void HomeForAdmin_Load(object sender, EventArgs e)
         {
             this.BackColor = ColorTranslator.FromHtml(ServicesGlobalVariables.GlobalBackColor);
+            ptb_Logo.BackColor = Color.Transparent;
+
         }
     }
 }

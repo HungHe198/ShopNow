@@ -25,6 +25,8 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Home
         private void HomeForCustomer_Load(object sender, EventArgs e)
         {
             this.BackColor = ColorTranslator.FromHtml(ServicesGlobalVariables.GlobalBackColor);
+            ptb_Logo.BackColor = Color.Transparent;
+
 
         }
     }
