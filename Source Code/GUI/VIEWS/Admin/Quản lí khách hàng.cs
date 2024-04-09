@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopNow.Source_Code.BUS.SERVICES;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +25,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
 
         private void Quản_lí_khách_hàng_Load(object sender, EventArgs e)
         {
+            this.BackColor = ColorTranslator.FromHtml(ServicesGlobalVariables.GlobalBackColor);
 
         }
     }

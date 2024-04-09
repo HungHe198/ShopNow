@@ -68,7 +68,6 @@
             dgv_Dulieu.RowTemplate.Height = 29;
             dgv_Dulieu.Size = new Size(628, 566);
             dgv_Dulieu.TabIndex = 0;
-            
             // 
             // button1
             // 
@@ -345,6 +344,7 @@
             Controls.Add(grb_Quanlisanpham);
             Name = "Quản_lí_sản_phẩm";
             Text = "Quản_lí_sản_phẩm";
+            Load += Quản_lí_sản_phẩm_Load;
             ((System.ComponentModel.ISupportInitialize)dgv_Dulieu).EndInit();
             grb_Quanlisanpham.ResumeLayout(false);
             grb_Quanlisanpham.PerformLayout();
