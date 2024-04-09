@@ -26,10 +26,8 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
         {
 
         }
-
-        private void btn_Login_Click(object sender, EventArgs e)
+        public void Login()
         {
-            //8C4B598F-6AF6-EE11-BCA0-103D1C86EA3D
             try
             {
                 string UserName = txt_UserName.Text;
@@ -48,12 +46,21 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
             {
                 MessageBox.Show("Đăng nhập không thành công");
             }
-           
+        }
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            //8C4B598F-6AF6-EE11-BCA0-103D1C86EA3D
+           Login();
         }
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
             Services.ShowForm(this, new ChoiceLogin());
+        }
+
+        private void txt_PassWord_Enter(object sender, EventArgs e)
+        {
+          
         }
     }
 }

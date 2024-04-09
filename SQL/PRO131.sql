@@ -454,6 +454,21 @@ GO
 INSERT INTO ROLES (NAME, DESCRIPTION, CREATED_TIME, CREATED_BY, DELETED, DELETED_TIME, DELETED_BY, MODIFIED_TIME, MODIFIED_BY)
 VALUES ('ADMIN', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL),
        ('CUSTOMER', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL);
-
+GO
+INSERT INTO [PRODUCTS] ([PRODUCT_NAME], [PRICE], [DESCRIPTION], [QUANTITY], [WARRANTY], [DISPLAY], [RAM], [ROM], [CREATED_TIME], [STATUS])
+VALUES
+('Iphone X', 10.00, 'Description 1', 100, 1.0, 5.5, 4, 64, GETDATE(), 1),
+('Iphone 11', 20.00, 'Description 2', 200, 2.0, 6.0, 8, 128, GETDATE(), 1),
+('Iphone 11 Pro', 30.00, 'Description 3', 300, 3.0, 6.5, 16, 256, GETDATE(), 1),
+('Iphone 11 ProMax', 40.00, 'Description 4', 400, 4.0, 6.5, 32, 512, GETDATE(), 1),
+('Iphone 13', 50.00, 'Description 5', 500, 5.0, 6.5, 64, 1024, GETDATE(), 1);
+GO
+INSERT INTO [PRODUCT_DETAIL] ([PRODUCT_ID], [CODE], [RAM], [DISPLAY], [CHIP], [CAMERA], [MEMORY], [PIN], [COLOR], [URL_IMAGE], [OPERATING_SYSTEM], [CREATED_TIME])
+VALUES
+('3D808CC1-85F6-EE11-BCA0-103D1C86EA3D', 'Code1', 4, 5.5, 'Chip1', 'Camera1', 'Memory1', 3000, 'Black', 'url_image1', 'OS1', GETDATE()),
+('3E808CC1-85F6-EE11-BCA0-103D1C86EA3D', 'Code2', 8, 6.0, 'Chip2', 'Camera2', 'Memory2', 3500, 'White', 'url_image2', 'OS2', GETDATE()),
+('3F808CC1-85F6-EE11-BCA0-103D1C86EA3D', 'Code3', 16, 6.5, 'Chip3', 'Camera3', 'Memory3', 4000, 'Blue', 'url_image3', 'OS3', GETDATE()),
+('40808CC1-85F6-EE11-BCA0-103D1C86EA3D', 'Code4', 32, 7.0, 'Chip4', 'Camera4', 'Memory4', 4500, 'Red', 'url_image4', 'OS4', GETDATE()),
+('41808CC1-85F6-EE11-BCA0-103D1C86EA3D', 'Code5', 64, 7.5, 'Chip5', 'Camera5', 'Memory5', 5000, 'Green', 'url_image5', 'OS5', GETDATE());
 --USE master
 --DROP DATABASE PRO131_EF

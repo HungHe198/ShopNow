@@ -90,6 +90,7 @@
             txt_Password.Name = "txt_Password";
             txt_Password.Size = new Size(278, 34);
             txt_Password.TabIndex = 11;
+            txt_Password.Enter += txt_Password_Enter;
             // 
             // linkLabel1
             // 
@@ -102,6 +103,7 @@
             linkLabel1.TabIndex = 12;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Quên mật khẩu";
+            linkLabel1.Enter += linkLabel1_Enter;
             // 
             // btn_loginAD
             // 

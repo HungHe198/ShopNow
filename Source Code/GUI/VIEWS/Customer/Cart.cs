@@ -33,6 +33,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
         {
             this.BackColor = ColorTranslator.FromHtml(ServicesGlobalVariables.GlobalBackColor);
             //LoadDataGridView của giỏ hàng
+            ptb_Logo.BackColor = Color.Transparent;
             dgvMainCart.SelectionMode = (DataGridViewSelectionMode)SelectionMode.One;
 
             operations.LoadCart(this.dgvMainCart, userId);

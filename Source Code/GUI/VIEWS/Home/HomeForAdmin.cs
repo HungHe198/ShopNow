@@ -21,7 +21,7 @@ namespace ShopNow.Source_Code.GUI.Thongke
             InitializeComponent();
         }
 
-
+        Services Services = new Services();
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -31,7 +31,7 @@ namespace ShopNow.Source_Code.GUI.Thongke
         {
             this.BackColor = ColorTranslator.FromHtml(ServicesGlobalVariables.GlobalBackColor);
             ptb_Logo.BackColor = Color.Transparent;
-
+            Services.LoadProduct(this.dgvMainShow, null);
         }
 
         private void btn_Logout_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace ShopNow.Source_Code.GUI.Thongke
 
             Services.ShowForm(this, new ChoiceLogin());
         }
-        
+
         private void btn_information_Click(object sender, EventArgs e)
         {
             //dùng showdialog thôi
@@ -53,6 +53,26 @@ namespace ShopNow.Source_Code.GUI.Thongke
         {
             InvoiceHistory invoiceHistory = new InvoiceHistory();
             invoiceHistory.ShowDialog();
+        }
+
+        private void ptb_Logo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Seach_TextChanged(object sender, EventArgs e)
+        {
+            Services.LoadProduct(this.dgvMainShow, txt_Seach.Text);
         }
     }
 }

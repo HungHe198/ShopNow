@@ -121,6 +121,7 @@
             txt_PassWord.Name = "txt_PassWord";
             txt_PassWord.Size = new Size(278, 34);
             txt_PassWord.TabIndex = 19;
+            txt_PassWord.Enter += txt_PassWord_Enter;
             // 
             // txt_UserName
             // 

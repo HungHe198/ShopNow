@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             ptb_Banner = new PictureBox();
-            textBox1 = new TextBox();
+            txt_Seach = new TextBox();
             btn_Seach = new Button();
             lbNameShop = new Label();
             groupBox1 = new GroupBox();
@@ -69,13 +69,14 @@
             ptb_Banner.TabIndex = 0;
             ptb_Banner.TabStop = false;
             // 
-            // textBox1
+            // txt_Seach
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(244, 90);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(1000, 34);
-            textBox1.TabIndex = 1;
+            txt_Seach.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Seach.Location = new Point(244, 90);
+            txt_Seach.Name = "txt_Seach";
+            txt_Seach.Size = new Size(1000, 34);
+            txt_Seach.TabIndex = 1;
+            txt_Seach.TextChanged += txt_Seach_TextChanged;
             // 
             // btn_Seach
             // 
@@ -107,6 +108,7 @@
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Quản lí hệ thống";
+            groupBox1.Enter += groupBox1_Enter_1;
             // 
             // btn_management
             // 
@@ -266,6 +268,7 @@
             ptb_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
             ptb_Logo.TabIndex = 33;
             ptb_Logo.TabStop = false;
+            ptb_Logo.Click += ptb_Logo_Click;
             // 
             // HomeForAdmin
             // 
@@ -290,7 +293,7 @@
             Controls.Add(groupBox1);
             Controls.Add(lbNameShop);
             Controls.Add(btn_Seach);
-            Controls.Add(textBox1);
+            Controls.Add(txt_Seach);
             Controls.Add(ptb_Banner);
             Name = "HomeForAdmin";
             Text = "Form1";
@@ -307,7 +310,7 @@
 
         #endregion
         private PictureBox ptb_Banner;
-        private TextBox textBox1;
+        private TextBox txt_Seach;
         private Button btn_Seach;
         private Label lbNameShop;
         private GroupBox groupBox1;

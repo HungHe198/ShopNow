@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            txt_Name = new TextBox();
             label1 = new Label();
-            textBox2 = new TextBox();
+            txt_Password = new TextBox();
             label2 = new Label();
-            textBox3 = new TextBox();
+            txt_PhoneNumber = new TextBox();
             label3 = new Label();
-            textBox4 = new TextBox();
+            txt_Address = new TextBox();
             label4 = new Label();
-            textBox5 = new TextBox();
+            txt_Email = new TextBox();
             label5 = new Label();
             btn_Save = new Button();
             pictureBox1 = new PictureBox();
@@ -46,13 +46,13 @@
             grb_infomation.SuspendLayout();
             SuspendLayout();
             // 
-            // textBox1
+            // txt_Name
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(28, 49);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(366, 34);
-            textBox1.TabIndex = 0;
+            txt_Name.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Name.Location = new Point(28, 49);
+            txt_Name.Name = "txt_Name";
+            txt_Name.Size = new Size(366, 34);
+            txt_Name.TabIndex = 0;
             // 
             // label1
             // 
@@ -64,13 +64,13 @@
             label1.TabIndex = 1;
             label1.Text = "User Name";
             // 
-            // textBox2
+            // txt_Password
             // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(28, 119);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(366, 34);
-            textBox2.TabIndex = 0;
+            txt_Password.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Password.Location = new Point(28, 119);
+            txt_Password.Name = "txt_Password";
+            txt_Password.Size = new Size(366, 34);
+            txt_Password.TabIndex = 0;
             // 
             // label2
             // 
@@ -82,13 +82,13 @@
             label2.TabIndex = 1;
             label2.Text = "Password";
             // 
-            // textBox3
+            // txt_PhoneNumber
             // 
-            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(28, 189);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(366, 34);
-            textBox3.TabIndex = 0;
+            txt_PhoneNumber.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_PhoneNumber.Location = new Point(28, 189);
+            txt_PhoneNumber.Name = "txt_PhoneNumber";
+            txt_PhoneNumber.Size = new Size(366, 34);
+            txt_PhoneNumber.TabIndex = 0;
             // 
             // label3
             // 
@@ -100,13 +100,13 @@
             label3.TabIndex = 1;
             label3.Text = "Số điện thoại";
             // 
-            // textBox4
+            // txt_Address
             // 
-            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(28, 264);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(366, 34);
-            textBox4.TabIndex = 0;
+            txt_Address.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Address.Location = new Point(28, 264);
+            txt_Address.Name = "txt_Address";
+            txt_Address.Size = new Size(366, 34);
+            txt_Address.TabIndex = 0;
             // 
             // label4
             // 
@@ -118,13 +118,13 @@
             label4.TabIndex = 1;
             label4.Text = "Địa chỉ";
             // 
-            // textBox5
+            // txt_Email
             // 
-            textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox5.Location = new Point(28, 339);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(366, 34);
-            textBox5.TabIndex = 0;
+            txt_Email.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Email.Location = new Point(28, 339);
+            txt_Email.Name = "txt_Email";
+            txt_Email.Size = new Size(366, 34);
+            txt_Email.TabIndex = 0;
             // 
             // label5
             // 
@@ -168,11 +168,11 @@
             grb_infomation.Controls.Add(label3);
             grb_infomation.Controls.Add(label2);
             grb_infomation.Controls.Add(label1);
-            grb_infomation.Controls.Add(textBox5);
-            grb_infomation.Controls.Add(textBox4);
-            grb_infomation.Controls.Add(textBox3);
-            grb_infomation.Controls.Add(textBox2);
-            grb_infomation.Controls.Add(textBox1);
+            grb_infomation.Controls.Add(txt_Email);
+            grb_infomation.Controls.Add(txt_Address);
+            grb_infomation.Controls.Add(txt_PhoneNumber);
+            grb_infomation.Controls.Add(txt_Password);
+            grb_infomation.Controls.Add(txt_Name);
             grb_infomation.Location = new Point(25, 21);
             grb_infomation.Name = "grb_infomation";
             grb_infomation.Size = new Size(755, 398);
@@ -211,15 +211,15 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox txt_Name;
         private Label label1;
-        private TextBox textBox2;
+        private TextBox txt_Password;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox txt_PhoneNumber;
         private Label label3;
-        private TextBox textBox4;
+        private TextBox txt_Address;
         private Label label4;
-        private TextBox textBox5;
+        private TextBox txt_Email;
         private Label label5;
         private Button btn_Save;
         private PictureBox pictureBox1;

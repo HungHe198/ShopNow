@@ -39,14 +39,14 @@
             dgvMainShow = new DataGridView();
             lbNameShop = new Label();
             btn_Seach = new Button();
-            textBox1 = new TextBox();
+            txt_Seach = new TextBox();
             ptb_Banner = new PictureBox();
             ptb_Logo = new PictureBox();
             txt_Color = new TextBox();
             txt_Quantity = new TextBox();
             btn_Logout = new Button();
             btn_Cart = new Button();
-            textBox2 = new TextBox();
+            txt_Price = new TextBox();
             label4 = new Label();
             groupBox1 = new GroupBox();
             btn_information = new Button();
@@ -68,6 +68,7 @@
             btn_ViewDetails.TabIndex = 30;
             btn_ViewDetails.Text = "Xem chi tiết";
             btn_ViewDetails.UseVisualStyleBackColor = true;
+            btn_ViewDetails.Click += btn_ViewDetails_Click;
             // 
             // label5
             // 
@@ -120,6 +121,7 @@
             txt_Name.ReadOnly = true;
             txt_Name.Size = new Size(203, 27);
             txt_Name.TabIndex = 18;
+            txt_Name.TextChanged += txt_Name_TextChanged;
             // 
             // ptb_productImage
             // 
@@ -159,13 +161,14 @@
             btn_Seach.Text = "Seach";
             btn_Seach.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txt_Seach
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(237, 103);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(874, 34);
-            textBox1.TabIndex = 12;
+            txt_Seach.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Seach.Location = new Point(237, 103);
+            txt_Seach.Name = "txt_Seach";
+            txt_Seach.Size = new Size(874, 34);
+            txt_Seach.TabIndex = 12;
+            txt_Seach.TextChanged += txt_Seach_TextChanged;
             // 
             // ptb_Banner
             // 
@@ -187,6 +190,7 @@
             ptb_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
             ptb_Logo.TabIndex = 10;
             ptb_Logo.TabStop = false;
+            ptb_Logo.Click += ptb_Logo_Click;
             // 
             // txt_Color
             // 
@@ -226,13 +230,13 @@
             btn_Cart.UseVisualStyleBackColor = true;
             btn_Cart.Click += btn_Cart_Click;
             // 
-            // textBox2
+            // txt_Price
             // 
-            textBox2.Location = new Point(12, 863);
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(203, 27);
-            textBox2.TabIndex = 23;
+            txt_Price.Location = new Point(12, 863);
+            txt_Price.Name = "txt_Price";
+            txt_Price.ReadOnly = true;
+            txt_Price.Size = new Size(203, 27);
+            txt_Price.TabIndex = 23;
             // 
             // label4
             // 
@@ -287,7 +291,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox2);
+            Controls.Add(txt_Price);
             Controls.Add(txt_Display);
             Controls.Add(ptb_productImage);
             Controls.Add(dgvMainShow);
@@ -297,7 +301,7 @@
             Controls.Add(lbNameShop);
             Controls.Add(btn_Cart);
             Controls.Add(btn_Seach);
-            Controls.Add(textBox1);
+            Controls.Add(txt_Seach);
             Controls.Add(ptb_Banner);
             Controls.Add(ptb_Logo);
             Name = "HomeForCustomer";
@@ -330,14 +334,14 @@
         private TextBox txt_Name;
         private Label lbNameShop;
         private Button btn_Seach;
-        private TextBox textBox1;
+        private TextBox txt_Seach;
         private PictureBox ptb_Banner;
         private PictureBox ptb_Logo;
         private TextBox txt_Color;
         private TextBox txt_Quantity;
         private Button btn_Logout;
         private Button btn_Cart;
-        private TextBox textBox2;
+        private TextBox txt_Price;
         private Label label4;
         private GroupBox groupBox1;
         private Button btn_information;

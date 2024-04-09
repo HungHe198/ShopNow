@@ -12,7 +12,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
         private void Quản_lí_sản_phẩm_Load(object sender, EventArgs e)
         {
             this.BackColor = ColorTranslator.FromHtml(ServicesGlobalVariables.GlobalBackColor);
-
+            ptb_Logo.BackColor = Color.Transparent;
         }
 
         private void btn_QLNV_Click(object sender, EventArgs e)
