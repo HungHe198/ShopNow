@@ -17,6 +17,7 @@ namespace ShopNow.Models
         public Guid? DeletedBy { get; set; }
         public DateTime? ModifiedTime { get; set; }
         public Guid? ModifiedBy { get; set; }
+        public string? Address { get; set; }
 
         public virtual Bill? Bill { get; set; }
         public virtual Product? Product { get; set; }

@@ -102,7 +102,7 @@ namespace ShopNow.Source_Code.BUS.SERVICES
             mainDGV.Columns["UrlImage"].Visible = false;
             mainDGV.Columns["ProductDetailId"].Visible = false;
             mainDGV.Columns["SoLuongConLai"].Visible = false;
-            
+
         }
         public string IsDelCartProduct(Guid cartId, Guid productId)
         {
@@ -157,5 +157,10 @@ namespace ShopNow.Source_Code.BUS.SERVICES
 
 
         }
+        public string Payment()
+        {
+            return "Succes";
+        }
     }
 }
+

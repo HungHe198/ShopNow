@@ -99,6 +99,10 @@ namespace ShopNow.Models
 
                 entity.ToTable("BILL_DETAIL");
 
+                entity.Property(e => e.Address)
+                    .HasMaxLength(255)
+                    .HasColumnName("ADDRESS");
+
                 entity.Property(e => e.BillId).HasColumnName("BILL_ID");
 
                 entity.Property(e => e.CreatedBy).HasColumnName("CREATED_BY");
