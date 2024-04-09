@@ -29,24 +29,23 @@
         private void InitializeComponent()
         {
             button2 = new Button();
-            label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
+            txt_Display = new TextBox();
+            txt_Name = new TextBox();
             ptb_productImage = new PictureBox();
             dgvMainShow = new DataGridView();
-            textBox2 = new TextBox();
             lbNameShop = new Label();
             btn_Seach = new Button();
             textBox1 = new TextBox();
             ptb_Banner = new PictureBox();
             ptb_Logo = new PictureBox();
+            txt_Color = new TextBox();
+            txt_Ram = new TextBox();
+            txt_Quantity = new TextBox();
             ((System.ComponentModel.ISupportInitialize)ptb_productImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvMainShow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Banner).BeginInit();
@@ -62,19 +61,10 @@
             button2.Text = "Xem chi tiết";
             button2.UseVisualStyleBackColor = true;
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(28, 911);
-            label6.Name = "label6";
-            label6.Size = new Size(82, 20);
-            label6.TabIndex = 29;
-            label6.Text = "Source ảnh";
-            // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(28, 851);
+            label5.Location = new Point(25, 873);
             label5.Name = "label5";
             label5.Size = new Size(144, 20);
             label5.TabIndex = 28;
@@ -83,7 +73,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(28, 784);
+            label4.Location = new Point(28, 809);
             label4.Name = "label4";
             label4.Size = new Size(39, 20);
             label4.TabIndex = 27;
@@ -92,7 +82,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(28, 729);
+            label3.Location = new Point(28, 743);
             label3.Name = "label3";
             label3.Size = new Size(117, 20);
             label3.TabIndex = 26;
@@ -116,34 +106,21 @@
             label1.TabIndex = 24;
             label1.Text = "Tên sản phẩm";
             // 
-            // textBox6
+            // txt_Display
             // 
-            textBox6.Location = new Point(15, 874);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(203, 27);
-            textBox6.TabIndex = 23;
+            txt_Display.Location = new Point(12, 896);
+            txt_Display.Name = "txt_Display";
+            txt_Display.ReadOnly = true;
+            txt_Display.Size = new Size(203, 27);
+            txt_Display.TabIndex = 23;
             // 
-            // textBox5
+            // txt_Name
             // 
-            textBox5.Location = new Point(15, 811);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(203, 27);
-            textBox5.TabIndex = 21;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(15, 754);
-            textBox4.Name = "textBox4";
-            textBox4.ReadOnly = true;
-            textBox4.Size = new Size(203, 27);
-            textBox4.TabIndex = 20;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(15, 699);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(203, 27);
-            textBox3.TabIndex = 19;
+            txt_Name.Location = new Point(15, 644);
+            txt_Name.Name = "txt_Name";
+            txt_Name.ReadOnly = true;
+            txt_Name.Size = new Size(203, 27);
+            txt_Name.TabIndex = 18;
             // 
             // ptb_productImage
             // 
@@ -162,13 +139,6 @@
             dgvMainShow.RowTemplate.Height = 29;
             dgvMainShow.Size = new Size(1142, 629);
             dgvMainShow.TabIndex = 16;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(15, 644);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(203, 27);
-            textBox2.TabIndex = 18;
             // 
             // lbNameShop
             // 
@@ -213,6 +183,30 @@
             ptb_Logo.TabIndex = 10;
             ptb_Logo.TabStop = false;
             // 
+            // txt_Color
+            // 
+            txt_Color.Location = new Point(18, 699);
+            txt_Color.Name = "txt_Color";
+            txt_Color.ReadOnly = true;
+            txt_Color.Size = new Size(203, 27);
+            txt_Color.TabIndex = 18;
+            // 
+            // txt_Ram
+            // 
+            txt_Ram.Location = new Point(15, 832);
+            txt_Ram.Name = "txt_Ram";
+            txt_Ram.ReadOnly = true;
+            txt_Ram.Size = new Size(203, 27);
+            txt_Ram.TabIndex = 18;
+            // 
+            // txt_Quantity
+            // 
+            txt_Quantity.Location = new Point(18, 768);
+            txt_Quantity.Name = "txt_Quantity";
+            txt_Quantity.ReadOnly = true;
+            txt_Quantity.Size = new Size(203, 27);
+            txt_Quantity.TabIndex = 18;
+            // 
             // HomeForCustomer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -220,19 +214,18 @@
             BackColor = Color.MistyRose;
             ClientSize = new Size(1395, 1055);
             Controls.Add(button2);
-            Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
+            Controls.Add(txt_Display);
             Controls.Add(ptb_productImage);
             Controls.Add(dgvMainShow);
-            Controls.Add(textBox2);
+            Controls.Add(txt_Quantity);
+            Controls.Add(txt_Ram);
+            Controls.Add(txt_Color);
+            Controls.Add(txt_Name);
             Controls.Add(lbNameShop);
             Controls.Add(btn_Seach);
             Controls.Add(textBox1);
@@ -258,17 +251,20 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private TextBox textBox6;
+        private TextBox txt_Display;
         private TextBox textBox5;
         private TextBox textBox4;
         private TextBox textBox3;
         private PictureBox ptb_productImage;
         private DataGridView dgvMainShow;
-        private TextBox textBox2;
+        private TextBox txt_Name;
         private Label lbNameShop;
         private Button btn_Seach;
         private TextBox textBox1;
         private PictureBox ptb_Banner;
         private PictureBox ptb_Logo;
+        private TextBox txt_Color;
+        private TextBox txt_Ram;
+        private TextBox txt_Quantity;
     }
 }

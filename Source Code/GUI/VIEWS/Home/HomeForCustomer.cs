@@ -19,10 +19,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Home
 
 
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void HomeForCustomer_Load(object sender, EventArgs e)
         {

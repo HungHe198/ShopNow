@@ -9,5 +9,7 @@ namespace ShopNow.Source_Code.BUS.SERVICES
     public static class ServicesGlobalVariables
     {
         public static Guid userId;
+
+
     }
 }
