@@ -1,4 +1,5 @@
-﻿using ShopNow.Source_Code.DAL.REPOSITORIES;
+﻿using ShopNow.Models;
+using ShopNow.Source_Code.DAL.REPOSITORIES;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +44,7 @@ namespace ShopNow.Source_Code.BUS.SERVICES
                              Display = p.Display,
                              Ram = p.Ram,
                              Rom = p.Rom,
-                             
+
                              Warranty = p.Warranty,
                              Description = p.Description,
                              UrlImage = pd.UrlImage,
@@ -51,7 +52,7 @@ namespace ShopNow.Source_Code.BUS.SERVICES
             dgv_Product.DataSource = result.ToList();
             dgv_Product.Columns["UrlImage"].Visible = false;
             dgv_Product.Columns["Id"].Visible = false;
-          
+
 
 
         }
@@ -74,6 +75,21 @@ namespace ShopNow.Source_Code.BUS.SERVICES
                 return false;
             }
         }
+        Cart_Product_Repository Cart_Product_Repository = new Cart_Product_Repository();
+        public string AddCartProduct(Guid ProductId, Guid CartId, int Quantity)
+        {
+            try
+            {
+                CartProduct cartProduct = new CartProduct() { CartId = CartId, ProductId = ProductId, Quantity = Quantity, Deleted = false };
+                if (Cart_Product_Repository.IsAddCart_Product(cartProduct))
+                {
+                    return "Success";
+                }
+                else { return "False"; }
+            }
+            catch (Exception ex) { return "False"; }
+        }
+
 
     }
 

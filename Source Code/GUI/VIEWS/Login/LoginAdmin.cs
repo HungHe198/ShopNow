@@ -16,8 +16,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
 {
     public partial class LoginAdmin : Form
     {
-        ServiceLoginAD ServiceLoginADs = new ServiceLoginAD();
-
+       
         public LoginAdmin()
         {
             InitializeComponent();
@@ -33,8 +32,10 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
         }
         private void btn_Back_Click(object sender, EventArgs e)
         {
+
             Services.ShowForm(this, new ChoiceLogin());
         }
+        GetById GetById = new GetById(); 
         public void Login()
         {
             try
@@ -43,6 +44,9 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
                 Password = txt_Password.Text;
                 if (Login_repo.IsLoggedInAdmin(UserName, Password))
                 {
+                    var User = GetById.GetUserByUserName(UserName);
+                    ServicesGlobalVariables.userId = User.Id;
+                    
                     Services.ShowForm(this, new HomeForAdmin());
                 }
                 else

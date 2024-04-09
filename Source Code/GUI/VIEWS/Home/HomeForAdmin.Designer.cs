@@ -149,6 +149,7 @@
             dgvMainShow.RowTemplate.Height = 29;
             dgvMainShow.Size = new Size(1142, 558);
             dgvMainShow.TabIndex = 5;
+            dgvMainShow.CellClick += dgvMainShow_CellClick;
             // 
             // ptb_productImage
             // 

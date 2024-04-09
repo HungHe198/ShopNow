@@ -33,6 +33,7 @@
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             ptb_Product = new PictureBox();
             groupBox1 = new GroupBox();
+            btn_AddWithCart = new Button();
             lb_describe = new Label();
             label5 = new Label();
             label7 = new Label();
@@ -69,6 +70,7 @@
             lb_Name.Size = new Size(1149, 41);
             lb_Name.TabIndex = 12;
             lb_Name.Text = "(No Name)";
+            lb_Name.Click += lb_Name_Click;
             // 
             // sqlCommand1
             // 
@@ -91,6 +93,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.FromArgb(255, 255, 128);
+            groupBox1.Controls.Add(btn_AddWithCart);
             groupBox1.Controls.Add(lb_describe);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label7);
@@ -111,11 +114,23 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Thông tin sản phẩm";
             // 
+            // btn_AddWithCart
+            // 
+            btn_AddWithCart.BackColor = Color.Red;
+            btn_AddWithCart.ForeColor = Color.White;
+            btn_AddWithCart.Location = new Point(414, 463);
+            btn_AddWithCart.Name = "btn_AddWithCart";
+            btn_AddWithCart.Size = new Size(168, 56);
+            btn_AddWithCart.TabIndex = 3;
+            btn_AddWithCart.Text = "Thêm vào giỏ";
+            btn_AddWithCart.UseVisualStyleBackColor = false;
+            btn_AddWithCart.Click += btn_AddWithCart_Click;
+            // 
             // lb_describe
             // 
             lb_describe.Location = new Point(62, 332);
             lb_describe.Name = "lb_describe";
-            lb_describe.Size = new Size(520, 195);
+            lb_describe.Size = new Size(520, 117);
             lb_describe.TabIndex = 2;
             lb_describe.Text = "Chi tiết mô tả";
             // 
@@ -277,5 +292,6 @@
         private Label lb_describe;
         private Label label1;
         private PictureBox ptb_Logo;
+        private Button btn_AddWithCart;
     }
 }

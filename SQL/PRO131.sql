@@ -470,5 +470,8 @@ VALUES
 ('3F808CC1-85F6-EE11-BCA0-103D1C86EA3D', 'Code3', 16, 6.5, 'Chip3', 'Camera3', 'Memory3', 4000, 'Blue', 'url_image3', 'OS3', GETDATE()),
 ('40808CC1-85F6-EE11-BCA0-103D1C86EA3D', 'Code4', 32, 7.0, 'Chip4', 'Camera4', 'Memory4', 4500, 'Red', 'url_image4', 'OS4', GETDATE()),
 ('41808CC1-85F6-EE11-BCA0-103D1C86EA3D', 'Code5', 64, 7.5, 'Chip5', 'Camera5', 'Memory5', 5000, 'Green', 'url_image5', 'OS5', GETDATE());
+GO
+
+update PRODUCT_DETAIL set URL_IMAGE = 'C:\Users\Admin\OneDrive\Máy tính\ShopNowFinal\Source Code\Image\Products\Iphone11Pro.jpg'
 --USE master
 --DROP DATABASE PRO131_EF

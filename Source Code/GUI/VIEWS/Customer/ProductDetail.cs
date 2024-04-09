@@ -1,5 +1,6 @@
 ﻿using ShopNow.Source_Code.BUS.SERVICES;
 using ShopNow.Source_Code.DAL.REPOSITORIES;
+using ShopNow.Source_Code.GUI.VIEWS.Customer;
 using ShopNow.Source_Code.GUI.VIEWS.Home;
 using System;
 using System.Collections.Generic;
@@ -34,10 +35,16 @@ namespace ShopNow.Source_Code.GUI.Doanhthu
                 lb_Name.Text = ServicesGlobalVariables.productName;
 
             }
-            if (ServicesGlobalVariables.UrlImage != null && Services.UrlFileExists(ServicesGlobalVariables.UrlImage))
-
+            if (ServicesGlobalVariables.UrlImage != null)
+            //&& Services.UrlFileExists(ServicesGlobalVariables.UrlImage)
             {
-                ptb_Product.Load(ServicesGlobalVariables.UrlImage);
+                try
+                {
+
+                    ptb_Product.Load(ServicesGlobalVariables.UrlImage);
+                    ptb_Product.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+                catch (Exception ex) { }
             }
             txt_Color.Text = ServicesGlobalVariables.color;
             txt_Display.Text = ServicesGlobalVariables.display.ToString();
@@ -48,25 +55,37 @@ namespace ShopNow.Source_Code.GUI.Doanhthu
             var Product = GetById.GetProductDetailById(ServicesGlobalVariables.productId);
             txt_Memory.Text = Product.Memory.ToString();
 
-            ServicesGlobalVariables.UrlImage = null;
+            //ServicesGlobalVariables.UrlImage = null;
 
-            ServicesGlobalVariables.productName = "";
-            ServicesGlobalVariables.color = "";
-            ServicesGlobalVariables.price = 0;
-            ServicesGlobalVariables.quantity = 0;
-            ServicesGlobalVariables.display = 0;
-            ServicesGlobalVariables.ram = 0;
-            ServicesGlobalVariables.rom = 0;
-            ServicesGlobalVariables.memory = 0;
-            ServicesGlobalVariables.warranty = 0;
-            ServicesGlobalVariables.description = "";
-            ServicesGlobalVariables.UrlImage = "";
+            //ServicesGlobalVariables.productName = "";
+            //ServicesGlobalVariables.color = "";
+            //ServicesGlobalVariables.price = 0;
+            //ServicesGlobalVariables.quantity = 0;
+            //ServicesGlobalVariables.display = 0;
+            //ServicesGlobalVariables.ram = 0;
+            //ServicesGlobalVariables.rom = 0;
+            //ServicesGlobalVariables.memory = 0;
+            //ServicesGlobalVariables.warranty = 0;
+            //ServicesGlobalVariables.description = "";
+            //ServicesGlobalVariables.UrlImage = "";
 
         }
 
+        private void lb_Name_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        Services Services = new Services();
+        private void button1_Click(object sender, EventArgs e)
+        {
 
+        }
 
+        private void btn_AddWithCart_Click(object sender, EventArgs e)
+        {
+            AddProductWithCart addProduct = new AddProductWithCart();
+            addProduct.ShowDialog();
+        }
     }
 }

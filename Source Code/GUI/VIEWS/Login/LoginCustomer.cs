@@ -26,6 +26,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
         {
 
         }
+        GetById GetById = new GetById();    
         public void Login()
         {
             try
@@ -34,6 +35,8 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
                 string Password = txt_PassWord.Text;
                 if (login_Repo.IsLoggedInCustomer(UserName, Password))
                 {
+                    var User = GetById.GetUserByUserName(UserName);
+                    ServicesGlobalVariables.userId = User.Id;
                     Services.ShowForm(this, new HomeForCustomer());
                 }
                 else
