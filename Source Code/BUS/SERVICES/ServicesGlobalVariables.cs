@@ -10,6 +10,6 @@ namespace ShopNow.Source_Code.BUS.SERVICES
     {
         public static Guid userId;
 
-
+        public static string GlobalBackColor = "#ffbe98";
     }
 }

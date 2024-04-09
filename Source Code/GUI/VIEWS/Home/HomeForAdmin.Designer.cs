@@ -42,14 +42,10 @@
             txt_Name = new TextBox();
             txt_Color = new TextBox();
             txt_Quantity = new TextBox();
-            txt_Ram = new TextBox();
-            txt_Display = new TextBox();
             txt_SoucreImage = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
             label6 = new Label();
             button2 = new Button();
             button1 = new Button();
@@ -63,7 +59,8 @@
             // 
             // ptb_Logo
             // 
-            ptb_Logo.Location = new Point(25, 30);
+            ptb_Logo.BackColor = Color.Yellow;
+            ptb_Logo.Location = new Point(23, 18);
             ptb_Logo.Name = "ptb_Logo";
             ptb_Logo.Size = new Size(215, 106);
             ptb_Logo.TabIndex = 0;
@@ -71,23 +68,26 @@
             // 
             // ptb_Banner
             // 
-            ptb_Banner.Location = new Point(244, 142);
+            ptb_Banner.BackColor = Color.WhiteSmoke;
+            ptb_Banner.Image = Properties.Resources.banner;
+            ptb_Banner.Location = new Point(244, 130);
             ptb_Banner.Name = "ptb_Banner";
-            ptb_Banner.Size = new Size(1139, 247);
+            ptb_Banner.Size = new Size(1139, 266);
+            ptb_Banner.SizeMode = PictureBoxSizeMode.StretchImage;
             ptb_Banner.TabIndex = 0;
             ptb_Banner.TabStop = false;
             // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(244, 102);
+            textBox1.Location = new Point(244, 90);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(1000, 34);
             textBox1.TabIndex = 1;
             // 
             // btn_Seach
             // 
-            btn_Seach.Location = new Point(1255, 101);
+            btn_Seach.Location = new Point(1255, 88);
             btn_Seach.Name = "btn_Seach";
             btn_Seach.Size = new Size(131, 36);
             btn_Seach.TabIndex = 2;
@@ -98,7 +98,7 @@
             // 
             lbNameShop.AutoSize = true;
             lbNameShop.Font = new Font("Segoe UI", 36F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            lbNameShop.Location = new Point(632, 9);
+            lbNameShop.Location = new Point(632, -3);
             lbNameShop.Name = "lbNameShop";
             lbNameShop.Size = new Size(305, 81);
             lbNameShop.TabIndex = 3;
@@ -136,24 +136,27 @@
             // 
             // ptb_admin
             // 
-            ptb_admin.Location = new Point(54, 26);
+            ptb_admin.Image = Properties.Resources.Admin;
+            ptb_admin.Location = new Point(72, 26);
             ptb_admin.Name = "ptb_admin";
-            ptb_admin.Size = new Size(105, 79);
+            ptb_admin.Size = new Size(76, 79);
+            ptb_admin.SizeMode = PictureBoxSizeMode.StretchImage;
             ptb_admin.TabIndex = 0;
             ptb_admin.TabStop = false;
             // 
             // dgvMainShow
             // 
             dgvMainShow.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvMainShow.Location = new Point(244, 414);
+            dgvMainShow.Location = new Point(244, 402);
             dgvMainShow.Name = "dgvMainShow";
             dgvMainShow.RowHeadersWidth = 51;
             dgvMainShow.RowTemplate.Height = 29;
-            dgvMainShow.Size = new Size(1142, 629);
+            dgvMainShow.Size = new Size(1142, 558);
             dgvMainShow.TabIndex = 5;
             // 
             // ptb_productImage
             // 
+            ptb_productImage.BackColor = Color.FromArgb(0, 0, 192);
             ptb_productImage.Location = new Point(25, 414);
             ptb_productImage.Name = "ptb_productImage";
             ptb_productImage.Size = new Size(200, 200);
@@ -185,25 +188,9 @@
             txt_Quantity.TabIndex = 7;
             txt_Quantity.TextChanged += textBox2_TextChanged;
             // 
-            // txt_Ram
-            // 
-            txt_Ram.Location = new Point(22, 810);
-            txt_Ram.Name = "txt_Ram";
-            txt_Ram.Size = new Size(203, 27);
-            txt_Ram.TabIndex = 7;
-            txt_Ram.TextChanged += textBox2_TextChanged;
-            // 
-            // txt_Display
-            // 
-            txt_Display.Location = new Point(22, 873);
-            txt_Display.Name = "txt_Display";
-            txt_Display.Size = new Size(203, 27);
-            txt_Display.TabIndex = 7;
-            txt_Display.TextChanged += textBox2_TextChanged;
-            // 
             // txt_SoucreImage
             // 
-            txt_SoucreImage.Location = new Point(22, 933);
+            txt_SoucreImage.Location = new Point(22, 817);
             txt_SoucreImage.Name = "txt_SoucreImage";
             txt_SoucreImage.Size = new Size(203, 27);
             txt_SoucreImage.TabIndex = 7;
@@ -236,28 +223,10 @@
             label3.TabIndex = 8;
             label3.Text = "Số lượng còn lại";
             // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(35, 783);
-            label4.Name = "label4";
-            label4.Size = new Size(39, 20);
-            label4.TabIndex = 8;
-            label4.Text = "Ram";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(35, 850);
-            label5.Name = "label5";
-            label5.Size = new Size(144, 20);
-            label5.TabIndex = 8;
-            label5.Text = "Kích thước màn hình";
-            // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(35, 910);
+            label6.Location = new Point(35, 794);
             label6.Name = "label6";
             label6.Size = new Size(82, 20);
             label6.TabIndex = 8;
@@ -265,18 +234,18 @@
             // 
             // button2
             // 
-            button2.Location = new Point(22, 983);
+            button2.Location = new Point(35, 873);
             button2.Name = "button2";
-            button2.Size = new Size(108, 60);
+            button2.Size = new Size(106, 60);
             button2.TabIndex = 9;
             button2.Text = "Xem chi tiết";
             button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            button1.Location = new Point(136, 983);
+            button1.Location = new Point(146, 873);
             button1.Name = "button1";
-            button1.Size = new Size(89, 60);
+            button1.Size = new Size(68, 60);
             button1.TabIndex = 9;
             button1.Text = "Lưu";
             button1.UseVisualStyleBackColor = true;
@@ -290,14 +259,10 @@
             Controls.Add(button1);
             Controls.Add(button2);
             Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txt_SoucreImage);
-            Controls.Add(txt_Display);
-            Controls.Add(txt_Ram);
             Controls.Add(txt_Quantity);
             Controls.Add(txt_Color);
             Controls.Add(txt_Name);
@@ -338,14 +303,10 @@
         private TextBox txt_Name;
         private TextBox txt_Color;
         private TextBox txt_Quantity;
-        private TextBox txt_Ram;
-        private TextBox txt_Display;
         private TextBox txt_SoucreImage;
         private Label label1;
         private Label label2;
         private Label label3;
-        private Label label4;
-        private Label label5;
         private Label label6;
         private Button button2;
         private Button button1;
