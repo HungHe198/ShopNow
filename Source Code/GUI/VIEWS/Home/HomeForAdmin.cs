@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopNow.Source_Code.BUS.SERVICES;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,15 @@ namespace ShopNow.Source_Code.GUI.Thongke
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+       
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void HomeForAdmin_Load(object sender, EventArgs e)
+        {
+            this.BackColor = ColorTranslator.FromHtml(ServicesGlobalVariables.GlobalBackColor);
         }
     }
 }
