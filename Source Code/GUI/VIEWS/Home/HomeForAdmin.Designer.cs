@@ -59,10 +59,12 @@
             // 
             // ptb_Logo
             // 
-            ptb_Logo.BackColor = Color.Yellow;
-            ptb_Logo.Location = new Point(23, 18);
+            ptb_Logo.BackColor = Color.MistyRose;
+            ptb_Logo.Image = Properties.Resources.Logo;
+            ptb_Logo.Location = new Point(12, 18);
             ptb_Logo.Name = "ptb_Logo";
-            ptb_Logo.Size = new Size(215, 106);
+            ptb_Logo.Size = new Size(226, 106);
+            ptb_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
             ptb_Logo.TabIndex = 0;
             ptb_Logo.TabStop = false;
             // 
@@ -156,7 +158,7 @@
             // 
             // ptb_productImage
             // 
-            ptb_productImage.BackColor = Color.FromArgb(0, 0, 192);
+            ptb_productImage.BackColor = Color.MistyRose;
             ptb_productImage.Location = new Point(25, 414);
             ptb_productImage.Name = "ptb_productImage";
             ptb_productImage.Size = new Size(200, 200);

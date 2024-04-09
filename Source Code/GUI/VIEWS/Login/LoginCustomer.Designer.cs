@@ -31,7 +31,6 @@
             Label acb;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginCustomer));
             btn_loginCustom = new Button();
-            linkLabel1 = new LinkLabel();
             txtmk2 = new TextBox();
             txttk2 = new TextBox();
             label3 = new Label();
@@ -62,16 +61,6 @@
             btn_loginCustom.Text = "Đăng nhập";
             btn_loginCustom.UseVisualStyleBackColor = true;
             btn_loginCustom.Click += btn_loginCustom_Click_Click;
-            // 
-            // linkLabel1
-            // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(1178, 463);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(109, 20);
-            linkLabel1.TabIndex = 20;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Quên mật khẩu";
             // 
             // txtmk2
             // 
@@ -122,7 +111,7 @@
             // btn_Back
             // 
             btn_Back.AutoSize = true;
-            btn_Back.Location = new Point(1159, 535);
+            btn_Back.Location = new Point(1152, 535);
             btn_Back.Margin = new Padding(3, 4, 3, 4);
             btn_Back.Name = "btn_Back";
             btn_Back.Size = new Size(91, 33);
@@ -139,7 +128,6 @@
             ClientSize = new Size(1395, 775);
             Controls.Add(btn_Back);
             Controls.Add(btn_loginCustom);
-            Controls.Add(linkLabel1);
             Controls.Add(txtmk2);
             Controls.Add(txttk2);
             Controls.Add(label3);
@@ -158,7 +146,6 @@
         #endregion
 
         private Button btn_loginCustom;
-        private LinkLabel linkLabel1;
         private TextBox txtmk2;
         private TextBox txttk2;
         private Label label3;
