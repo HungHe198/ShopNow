@@ -1,4 +1,5 @@
 ﻿using ShopNow.Source_Code.BUS.SERVICES;
+using ShopNow.Source_Code.GUI.VIEWS.Login;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +21,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Home
 
 
 
-       
+
 
         private void HomeForCustomer_Load(object sender, EventArgs e)
         {
@@ -28,6 +29,11 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Home
             ptb_Logo.BackColor = Color.Transparent;
 
 
+        }
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
+            Services.ShowForm(this, new ChoiceLogin());
         }
     }
 }

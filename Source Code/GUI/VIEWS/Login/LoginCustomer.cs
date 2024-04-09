@@ -24,14 +24,14 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
 
         }
 
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            Services.ShowForm(this, new HomeForCustomer());
+        }
+
         private void btn_Back_Click(object sender, EventArgs e)
         {
             Services.ShowForm(this, new ChoiceLogin());
-        }
-
-        private void btn_loginCustom_Click_Click(object sender, EventArgs e)
-        {
-            Services.ShowForm(this, new HomeForCustomer());
         }
     }
 }

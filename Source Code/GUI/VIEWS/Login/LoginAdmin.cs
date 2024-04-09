@@ -27,8 +27,6 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
         {
 
         }
-
-
         private void btn_Back_Click(object sender, EventArgs e)
         {
             Services.ShowForm(this, new ChoiceLogin());
@@ -36,34 +34,10 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
 
         private void btn_loginAD_Click(object sender, EventArgs e)
         {
-
+            Services.ShowForm(this, new HomeForAdmin());
         }
 
-        //private void txtUsername_Validating(object sender, CancelEventArgs e, ErrorProvider errorProvider)
-        //{
-        //    if (string.IsNullOrEmpty(txttk1.Text))
-        //    {
-        //        e.Cancel = true;
-        //        errorProvider.SetError(txttk1, "Vui lòng nhập tên người dùng!");
-        //    }
-        //    else
-        //    {
-        //        errorProvider.Clear();
-        //    }
-        //}
-
-        //private void txtPassword_Validating(object sender, CancelEventArgs e)
-        //{
-        //    if (string.IsNullOrEmpty(txtmk1.Text))
-        //    {
-        //        e.Cancel = true;
-        //        errorProvider.SetError(txttk1, "Vui lòng nhập mật khẩu!");
-        //    }
-        //    else
-        //    {
-        //        errorProvider1.Clear();
-        //    }
-        //}
+        
     }
 }
     

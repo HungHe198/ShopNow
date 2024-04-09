@@ -44,6 +44,7 @@
             ptb_Logo = new PictureBox();
             txt_Color = new TextBox();
             txt_Quantity = new TextBox();
+            btn_Logout = new Button();
             ((System.ComponentModel.ISupportInitialize)ptb_productImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvMainShow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Banner).BeginInit();
@@ -193,12 +194,25 @@
             txt_Quantity.Size = new Size(203, 27);
             txt_Quantity.TabIndex = 18;
             // 
+            // btn_Logout
+            // 
+            btn_Logout.BackColor = Color.Red;
+            btn_Logout.ForeColor = Color.White;
+            btn_Logout.Location = new Point(1287, 12);
+            btn_Logout.Name = "btn_Logout";
+            btn_Logout.Size = new Size(92, 32);
+            btn_Logout.TabIndex = 31;
+            btn_Logout.Text = "Đăng xuất";
+            btn_Logout.UseVisualStyleBackColor = false;
+            btn_Logout.Click += btn_Logout_Click;
+            // 
             // HomeForCustomer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
             ClientSize = new Size(1422, 1055);
+            Controls.Add(btn_Logout);
             Controls.Add(button2);
             Controls.Add(label5);
             Controls.Add(label3);
@@ -248,5 +262,6 @@
         private PictureBox ptb_Logo;
         private TextBox txt_Color;
         private TextBox txt_Quantity;
+        private Button btn_Logout;
     }
 }

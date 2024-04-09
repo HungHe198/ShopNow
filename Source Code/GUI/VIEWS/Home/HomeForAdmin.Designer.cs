@@ -49,6 +49,7 @@
             label6 = new Label();
             button2 = new Button();
             button1 = new Button();
+            btn_Logout = new Button();
             ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Banner).BeginInit();
             groupBox1.SuspendLayout();
@@ -126,6 +127,7 @@
             btn_management.TabIndex = 1;
             btn_management.Text = "Hệ thống quản lí";
             btn_management.UseVisualStyleBackColor = true;
+            btn_management.Click += btn_management_Click;
             // 
             // btn_information
             // 
@@ -135,6 +137,7 @@
             btn_information.TabIndex = 1;
             btn_information.Text = "Thông tin cá nhân";
             btn_information.UseVisualStyleBackColor = true;
+            btn_information.Click += btn_information_Click;
             // 
             // ptb_admin
             // 
@@ -252,12 +255,25 @@
             button1.Text = "Lưu";
             button1.UseVisualStyleBackColor = true;
             // 
+            // btn_Logout
+            // 
+            btn_Logout.BackColor = Color.Red;
+            btn_Logout.ForeColor = Color.White;
+            btn_Logout.Location = new Point(1294, 18);
+            btn_Logout.Name = "btn_Logout";
+            btn_Logout.Size = new Size(92, 32);
+            btn_Logout.TabIndex = 32;
+            btn_Logout.Text = "Đăng xuất";
+            btn_Logout.UseVisualStyleBackColor = false;
+            btn_Logout.Click += btn_Logout_Click;
+            // 
             // HomeForAdmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 192);
             ClientSize = new Size(1395, 1055);
+            Controls.Add(btn_Logout);
             Controls.Add(button1);
             Controls.Add(button2);
             Controls.Add(label6);
@@ -312,5 +328,6 @@
         private Label label6;
         private Button button2;
         private Button button1;
+        private Button btn_Logout;
     }
 }
