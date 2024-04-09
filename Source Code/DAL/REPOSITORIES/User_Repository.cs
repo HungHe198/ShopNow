@@ -12,6 +12,10 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
     class User_Repository
     {
         PRO131_EFContext context = new PRO131_EFContext();
+        public List<User> getallUser()
+        {
+            return context.Users.ToList();
+        }
         public bool IsAddUser(User user)
         {
             try
@@ -63,5 +67,10 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
                 return false;
             }
         }
+        public List<User> CheckLogin(string Usernames, string password)
+        {
+            return context.Users.Where(x => x.Username == Usernames && x.Password == password).ToList();
+        }
+
     }
 }
