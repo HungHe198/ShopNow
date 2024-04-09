@@ -28,271 +28,300 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductDetail));
-            dataGridView1 = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
-            Column9 = new DataGridViewTextBoxColumn();
-            Column10 = new DataGridViewTextBoxColumn();
-            Column11 = new DataGridViewTextBoxColumn();
-            Column12 = new DataGridViewTextBoxColumn();
-            button5 = new Button();
-            button4 = new Button();
+            lbNameShop = new Label();
+            btn_Seach = new Button();
             textBox1 = new TextBox();
-            button2 = new Button();
-            button1 = new Button();
-            panel1 = new Panel();
-            textBox2 = new TextBox();
-            button6 = new Button();
-            button3 = new Button();
-            button7 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel1.SuspendLayout();
+            ptb_Logo = new PictureBox();
+            lb_Name = new Label();
+            sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            pictureBox1 = new PictureBox();
+            groupBox1 = new GroupBox();
+            lb_describe = new Label();
+            label5 = new Label();
+            label7 = new Label();
+            label1 = new Label();
+            label6 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            textBox6 = new TextBox();
+            textBox8 = new TextBox();
+            textBox7 = new TextBox();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
-            // dataGridView1
+            // lbNameShop
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8, Column9, Column10, Column11, Column12 });
-            dataGridView1.Location = new Point(459, 110);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(468, 602);
-            dataGridView1.TabIndex = 40;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick_1;
+            lbNameShop.AutoSize = true;
+            lbNameShop.Font = new Font("Segoe UI", 36F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lbNameShop.Location = new Point(609, -7);
+            lbNameShop.Name = "lbNameShop";
+            lbNameShop.Size = new Size(305, 81);
+            lbNameShop.TabIndex = 11;
+            lbNameShop.Text = "ShopNow";
             // 
-            // Column1
+            // btn_Seach
             // 
-            Column1.HeaderText = "Màn hình";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.Width = 125;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Camera sau ";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.Width = 125;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Camera selfie";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "RAM";
-            Column4.MinimumWidth = 6;
-            Column4.Name = "Column4";
-            Column4.Width = 125;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "ROM";
-            Column5.MinimumWidth = 6;
-            Column5.Name = "Column5";
-            Column5.Width = 125;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "CPU";
-            Column6.MinimumWidth = 6;
-            Column6.Name = "Column6";
-            Column6.Width = 125;
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "GPU";
-            Column7.MinimumWidth = 6;
-            Column7.Name = "Column7";
-            Column7.Width = 125;
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Dung lượng pin ";
-            Column8.MinimumWidth = 6;
-            Column8.Name = "Column8";
-            Column8.Width = 125;
-            // 
-            // Column9
-            // 
-            Column9.HeaderText = "Thẻ sim";
-            Column9.MinimumWidth = 6;
-            Column9.Name = "Column9";
-            Column9.Width = 125;
-            // 
-            // Column10
-            // 
-            Column10.HeaderText = "Hệ điều hành ";
-            Column10.MinimumWidth = 6;
-            Column10.Name = "Column10";
-            Column10.Width = 125;
-            // 
-            // Column11
-            // 
-            Column11.HeaderText = "Xuất sứ ";
-            Column11.MinimumWidth = 6;
-            Column11.Name = "Column11";
-            Column11.Width = 125;
-            // 
-            // Column12
-            // 
-            Column12.HeaderText = "Năm sx";
-            Column12.MinimumWidth = 6;
-            Column12.Name = "Column12";
-            Column12.Width = 125;
-            // 
-            // button5
-            // 
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.Location = new Point(655, 52);
-            button5.Name = "button5";
-            button5.Size = new Size(48, 29);
-            button5.TabIndex = 45;
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(29, 31);
-            button4.Name = "button4";
-            button4.Size = new Size(196, 50);
-            button4.TabIndex = 44;
-            button4.UseVisualStyleBackColor = true;
+            btn_Seach.Location = new Point(1232, 75);
+            btn_Seach.Name = "btn_Seach";
+            btn_Seach.Size = new Size(131, 36);
+            btn_Seach.TabIndex = 10;
+            btn_Seach.Text = "Seach";
+            btn_Seach.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(252, 54);
+            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(221, 77);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(376, 27);
-            textBox1.TabIndex = 43;
+            textBox1.Size = new Size(1000, 34);
+            textBox1.TabIndex = 9;
             // 
-            // button2
+            // ptb_Logo
             // 
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(821, 52);
-            button2.Name = "button2";
-            button2.Size = new Size(106, 29);
-            button2.TabIndex = 42;
-            button2.Text = "My Cart";
-            button2.TextAlign = ContentAlignment.MiddleRight;
-            button2.UseVisualStyleBackColor = true;
+            ptb_Logo.BackColor = Color.Yellow;
+            ptb_Logo.Location = new Point(12, 5);
+            ptb_Logo.Name = "ptb_Logo";
+            ptb_Logo.Size = new Size(200, 106);
+            ptb_Logo.TabIndex = 8;
+            ptb_Logo.TabStop = false;
             // 
-            // button1
+            // lb_Name
             // 
-            button1.BackColor = Color.Transparent;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(709, 52);
-            button1.Name = "button1";
-            button1.Size = new Size(106, 29);
-            button1.TabIndex = 41;
-            button1.Text = "SIgn In";
-            button1.TextAlign = ContentAlignment.MiddleRight;
-            button1.UseVisualStyleBackColor = false;
+            lb_Name.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_Name.Location = new Point(221, 149);
+            lb_Name.Name = "lb_Name";
+            lb_Name.Size = new Size(1149, 41);
+            lb_Name.TabIndex = 12;
+            lb_Name.Text = "(No Name)";
             // 
-            // panel1
+            // sqlCommand1
             // 
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(button6);
-            panel1.Controls.Add(button3);
-            panel1.Location = new Point(29, 110);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(424, 454);
-            panel1.TabIndex = 46;
+            sqlCommand1.CommandTimeout = 30;
+            sqlCommand1.Connection = null;
+            sqlCommand1.Notification = null;
+            sqlCommand1.Transaction = null;
             // 
-            // textBox2
+            // pictureBox1
             // 
-            textBox2.Location = new Point(14, 17);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(353, 27);
-            textBox2.TabIndex = 2;
+            pictureBox1.BackColor = Color.MediumAquamarine;
+            pictureBox1.Image = Properties.Resources.Iphone11Pro;
+            pictureBox1.Location = new Point(221, 193);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(475, 549);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 13;
+            pictureBox1.TabStop = false;
             // 
-            // button6
+            // groupBox1
             // 
-            button6.Location = new Point(14, 50);
-            button6.Name = "button6";
-            button6.Size = new Size(353, 388);
-            button6.TabIndex = 1;
-            button6.Text = "Ảnh sản phẩm";
-            button6.UseVisualStyleBackColor = true;
+            groupBox1.BackColor = Color.FromArgb(255, 255, 128);
+            groupBox1.Controls.Add(lb_describe);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(label7);
+            groupBox1.Controls.Add(label1);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Controls.Add(textBox6);
+            groupBox1.Controls.Add(textBox8);
+            groupBox1.Controls.Add(textBox7);
+            groupBox1.Controls.Add(textBox5);
+            groupBox1.Controls.Add(textBox4);
+            groupBox1.Controls.Add(textBox3);
+            groupBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox1.Location = new Point(754, 190);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(616, 552);
+            groupBox1.TabIndex = 14;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Thông tin sản phẩm";
             // 
-            // button3
+            // lb_describe
             // 
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.Location = new Point(373, 205);
-            button3.Name = "button3";
-            button3.Size = new Size(48, 45);
-            button3.TabIndex = 0;
-            button3.UseVisualStyleBackColor = true;
+            lb_describe.Location = new Point(37, 427);
+            lb_describe.Name = "lb_describe";
+            lb_describe.Size = new Size(545, 98);
+            lb_describe.TabIndex = 2;
+            lb_describe.Text = "Chi tiết mô tả";
             // 
-            // button7
+            // label5
             // 
-            button7.Location = new Point(32, 570);
-            button7.Name = "button7";
-            button7.Size = new Size(418, 29);
-            button7.TabIndex = 47;
-            button7.Text = "Mua ngay";
-            button7.UseVisualStyleBackColor = true;
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(330, 210);
+            label5.Name = "label5";
+            label5.Size = new Size(51, 28);
+            label5.TabIndex = 1;
+            label5.Text = "Ram";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Location = new Point(330, 302);
+            label7.Name = "label7";
+            label7.Size = new Size(154, 28);
+            label7.TabIndex = 1;
+            label7.Text = "Số lượng còn lại";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(35, 388);
+            label1.Name = "label1";
+            label1.Size = new Size(64, 28);
+            label1.TabIndex = 1;
+            label1.Text = "Mô tả";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.Location = new Point(37, 302);
+            label6.Name = "label6";
+            label6.Size = new Size(191, 28);
+            label6.TabIndex = 1;
+            label6.Text = "Kích thước màn hình";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(37, 210);
+            label4.Name = "label4";
+            label4.Size = new Size(185, 28);
+            label4.TabIndex = 1;
+            label4.Text = "Dung lượng bộ nhớ";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(35, 125);
+            label3.Name = "label3";
+            label3.Size = new Size(52, 28);
+            label3.TabIndex = 1;
+            label3.Text = "Chip";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(39, 37);
+            label2.Name = "label2";
+            label2.Size = new Size(83, 28);
+            label2.TabIndex = 1;
+            label2.Text = "Màu sắc";
+            // 
+            // textBox6
+            // 
+            textBox6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox6.Location = new Point(330, 244);
+            textBox6.Name = "textBox6";
+            textBox6.ReadOnly = true;
+            textBox6.Size = new Size(252, 34);
+            textBox6.TabIndex = 0;
+            // 
+            // textBox8
+            // 
+            textBox8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox8.Location = new Point(330, 336);
+            textBox8.Name = "textBox8";
+            textBox8.ReadOnly = true;
+            textBox8.Size = new Size(252, 34);
+            textBox8.TabIndex = 0;
+            // 
+            // textBox7
+            // 
+            textBox7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox7.Location = new Point(37, 336);
+            textBox7.Name = "textBox7";
+            textBox7.ReadOnly = true;
+            textBox7.Size = new Size(252, 34);
+            textBox7.TabIndex = 0;
+            // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox5.Location = new Point(37, 244);
+            textBox5.Name = "textBox5";
+            textBox5.ReadOnly = true;
+            textBox5.Size = new Size(252, 34);
+            textBox5.TabIndex = 0;
+            // 
+            // textBox4
+            // 
+            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox4.Location = new Point(35, 156);
+            textBox4.Name = "textBox4";
+            textBox4.ReadOnly = true;
+            textBox4.Size = new Size(547, 34);
+            textBox4.TabIndex = 0;
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox3.Location = new Point(37, 71);
+            textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
+            textBox3.Size = new Size(545, 34);
+            textBox3.TabIndex = 0;
             // 
             // ProductDetail
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 192);
-            ClientSize = new Size(939, 724);
-            Controls.Add(button7);
-            Controls.Add(panel1);
-            Controls.Add(button5);
-            Controls.Add(button4);
+            ClientSize = new Size(1395, 775);
+            Controls.Add(groupBox1);
+            Controls.Add(pictureBox1);
+            Controls.Add(lb_Name);
+            Controls.Add(lbNameShop);
+            Controls.Add(btn_Seach);
             Controls.Add(textBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(dataGridView1);
+            Controls.Add(ptb_Logo);
             Name = "ProductDetail";
-            Text = "  ";
+            Text = " ";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)ptb_Logo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
-        private DataGridViewTextBoxColumn Column8;
-        private DataGridViewTextBoxColumn Column9;
-        private DataGridViewTextBoxColumn Column10;
-        private DataGridViewTextBoxColumn Column11;
-        private DataGridViewTextBoxColumn Column12;
-        private Button button5;
-        private Button button4;
+
+        private Label lbNameShop;
+        private Button btn_Seach;
         private TextBox textBox1;
-        private Button button2;
-        private Button button1;
-        private Panel panel1;
-        private Button button6;
-        private Button button3;
-        private Button button7;
-        private TextBox textBox2;
+        private PictureBox ptb_Logo;
+        private Label lb_Name;
+        private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
+        private PictureBox pictureBox1;
+        private GroupBox groupBox1;
+        private Label label5;
+        private Label label7;
+        private Label label6;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private TextBox textBox6;
+        private TextBox textBox8;
+        private TextBox textBox7;
+        private TextBox textBox5;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private Label lb_describe;
+        private Label label1;
     }
 }

@@ -21,6 +21,11 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
         private void Information_Load(object sender, EventArgs e)
         {
             this.BackColor = ColorTranslator.FromHtml(ServicesGlobalVariables.GlobalBackColor);
+            btn_Save.Enabled = false;
+        }
+
+        private void ptb_avatar_Click(object sender, EventArgs e)
+        {
 
         }
     }

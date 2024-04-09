@@ -32,6 +32,7 @@
             tb_Timkiem = new TextBox();
             dgvMainCart = new DataGridView();
             grb_Quanlinhanvien = new GroupBox();
+            btnRefresh = new Button();
             label1 = new Label();
             groupBox1 = new GroupBox();
             button2 = new Button();
@@ -45,11 +46,12 @@
             txt_Price = new TextBox();
             pictureBox1 = new PictureBox();
             txt_Name = new TextBox();
-            btnRefresh = new Button();
+            ptb_logo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dgvMainCart).BeginInit();
             grb_Quanlinhanvien.SuspendLayout();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_logo).BeginInit();
             SuspendLayout();
             // 
             // btn_Xoa
@@ -90,7 +92,6 @@
             dgvMainCart.Size = new Size(1092, 609);
             dgvMainCart.TabIndex = 0;
             dgvMainCart.CellClick += dgvMainCart_CellClick;
-            
             // 
             // grb_Quanlinhanvien
             // 
@@ -105,6 +106,16 @@
             grb_Quanlinhanvien.Size = new Size(1104, 743);
             grb_Quanlinhanvien.TabIndex = 28;
             grb_Quanlinhanvien.TabStop = false;
+            // 
+            // btnRefresh
+            // 
+            btnRefresh.Location = new Point(866, 79);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(100, 32);
+            btnRefresh.TabIndex = 11;
+            btnRefresh.Text = "Refresh";
+            btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // label1
             // 
@@ -129,9 +140,9 @@
             groupBox1.Controls.Add(txt_Price);
             groupBox1.Controls.Add(pictureBox1);
             groupBox1.Controls.Add(txt_Name);
-            groupBox1.Location = new Point(12, 140);
+            groupBox1.Location = new Point(14, 203);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(259, 615);
+            groupBox1.Size = new Size(259, 546);
             groupBox1.TabIndex = 29;
             groupBox1.TabStop = false;
             // 
@@ -218,6 +229,7 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BackColor = SystemColors.ControlDark;
             pictureBox1.Location = new Point(18, 27);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(222, 189);
@@ -232,21 +244,21 @@
             txt_Name.Size = new Size(222, 27);
             txt_Name.TabIndex = 33;
             // 
-            // btnRefresh
+            // ptb_logo
             // 
-            btnRefresh.Location = new Point(866, 79);
-            btnRefresh.Name = "btnRefresh";
-            btnRefresh.Size = new Size(100, 32);
-            btnRefresh.TabIndex = 11;
-            btnRefresh.Text = "Refresh";
-            btnRefresh.UseVisualStyleBackColor = true;
-            btnRefresh.Click += btnRefresh_Click;
+            ptb_logo.BackColor = SystemColors.ControlDark;
+            ptb_logo.Location = new Point(37, 12);
+            ptb_logo.Name = "ptb_logo";
+            ptb_logo.Size = new Size(205, 168);
+            ptb_logo.TabIndex = 36;
+            ptb_logo.TabStop = false;
             // 
             // Cart
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1395, 775);
+            Controls.Add(ptb_logo);
             Controls.Add(groupBox1);
             Controls.Add(grb_Quanlinhanvien);
             Name = "Cart";
@@ -258,6 +270,7 @@
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_logo).EndInit();
             ResumeLayout(false);
         }
 
@@ -280,5 +293,6 @@
         private Label label4;
         private Label label3;
         private Button btnRefresh;
+        private PictureBox ptb_logo;
     }
 }

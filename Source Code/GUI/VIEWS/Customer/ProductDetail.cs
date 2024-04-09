@@ -28,5 +28,10 @@ namespace ShopNow.Source_Code.GUI.Doanhthu
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
