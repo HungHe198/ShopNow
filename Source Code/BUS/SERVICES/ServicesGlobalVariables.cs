@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopNow.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,10 +24,12 @@ namespace ShopNow.Source_Code.BUS.SERVICES
         public static int rom;
         public static string memory;
         public static float warranty;
+        public static decimal TotalPrice;
         public static string? description;
         public static string? UrlImage;
 
         public static Guid productId;
         public static Guid productDetailId;
+        public static List<Product> productSaved;
     }
 }

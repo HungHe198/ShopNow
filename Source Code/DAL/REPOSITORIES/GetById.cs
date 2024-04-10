@@ -36,7 +36,7 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
 
         public Customer GetCustomerById(Guid guid)
         {
-            var Record = context.Customers.FirstOrDefault(bd => bd.Id == guid);
+            var Record = context.Customers.FirstOrDefault(bd => bd.UserId == guid);
             return Record == null ? null : Record;
         }
 
@@ -68,7 +68,7 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
             var Record = context.ImportHistories.FirstOrDefault(bd => bd.Id == guid);
             return Record == null ? null : Record;
         }
-        public Product GetProductById(Guid guid)
+        public Product GetProductById(Guid? guid)
         {
             var Record = context.Products.FirstOrDefault(bd => bd.Id == guid);
             return Record == null ? null : Record;

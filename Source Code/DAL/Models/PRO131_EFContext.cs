@@ -95,9 +95,11 @@ namespace ShopNow.Models
 
             modelBuilder.Entity<BillDetail>(entity =>
             {
-                entity.HasNoKey();
-
                 entity.ToTable("BILL_DETAIL");
+
+                entity.Property(e => e.Id)
+                    .HasColumnName("ID")
+                    .HasDefaultValueSql("(newsequentialid())");
 
                 entity.Property(e => e.Address)
                     .HasMaxLength(255)
@@ -121,10 +123,6 @@ namespace ShopNow.Models
                     .HasColumnType("datetime")
                     .HasColumnName("DELETED_TIME");
 
-                entity.Property(e => e.Id)
-                    .HasColumnName("ID")
-                    .HasDefaultValueSql("(newsequentialid())");
-
                 entity.Property(e => e.ModifiedBy).HasColumnName("MODIFIED_BY");
 
                 entity.Property(e => e.ModifiedTime)
@@ -138,16 +136,6 @@ namespace ShopNow.Models
                 entity.Property(e => e.ProductId).HasColumnName("PRODUCT_ID");
 
                 entity.Property(e => e.Quantity).HasColumnName("QUANTITY");
-
-                entity.HasOne(d => d.Bill)
-                    .WithMany()
-                    .HasForeignKey(d => d.BillId)
-                    .HasConstraintName("FK_BD_BILL_ID");
-
-                entity.HasOne(d => d.Product)
-                    .WithMany()
-                    .HasForeignKey(d => d.ProductId)
-                    .HasConstraintName("FK_BD_PRODUCTS_ID");
             });
 
             modelBuilder.Entity<Cart>(entity =>

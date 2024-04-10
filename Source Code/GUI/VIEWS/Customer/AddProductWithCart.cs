@@ -37,6 +37,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
 
                     var result = Services.AddCartProduct(ServicesGlobalVariables.productId, ServicesGlobalVariables.cartId, Convert.ToInt32(txt_Quantity.Text));
                     MessageBox.Show(result);
+                    this.Close();
                 }
                 else
                 {

@@ -45,7 +45,6 @@
             // btn_Confirm
             // 
             btn_Confirm.BackColor = Color.Red;
-            btn_Confirm.Enabled = false;
             btn_Confirm.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btn_Confirm.ForeColor = Color.White;
             btn_Confirm.Location = new Point(458, 429);
