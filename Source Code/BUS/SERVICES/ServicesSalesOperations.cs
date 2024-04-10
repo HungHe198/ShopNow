@@ -224,7 +224,11 @@ namespace ShopNow.Source_Code.BUS.SERVICES
                             var cartproduct = getById.GetCartProductById(ServicesGlobalVariables.cartId, product.Id);
                             cartproduct.Deleted = true;
                         }
+
+                        var cartProduct = getById.GetCartProductById(ServicesGlobalVariables.cartId, product.Id);
+                        Cart_Product_Repository.isDelCartProduct(cartProduct);
                     }
+                    
                     return "Đặt thành công";
                 }
                 else { return "Đặt thất bại"; }

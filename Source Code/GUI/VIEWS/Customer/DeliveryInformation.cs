@@ -37,7 +37,6 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
         private void btn_Confirm_Click(object sender, EventArgs e)
         {
             MessageBox.Show(ServicesSalesOperations.Payment());
-            
             this.Close();
         }
         GetById getById = new GetById();

@@ -166,5 +166,10 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
         {
 
         }
+
+        private void btn_PH_Click(object sender, EventArgs e)
+        {
+            BUS.SERVICES.Services.ShowForm(this, new PurchaseHistory());
+        }
     }
 }

@@ -52,15 +52,14 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
         {
             try
             {
-                obj.Deleted = true;
-                context.CartProducts.Update(obj);
-                int result = context.SaveChanges();
+
+
+                context.CartProducts.Remove(obj);
+                context.SaveChanges();
                 return true;
             }
-            catch (Exception ex)
-            {
-                return false;
-            }
+            catch(Exception ex) { return false; }
+
         }
     }
 }
