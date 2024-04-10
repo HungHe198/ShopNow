@@ -47,6 +47,7 @@
             pictureBox1 = new PictureBox();
             txt_Name = new TextBox();
             ptb_Logo = new PictureBox();
+            btn_PH = new Button();
             grb_Quanlinhanvien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMainCart).BeginInit();
             groupBox1.SuspendLayout();
@@ -273,11 +274,22 @@
             ptb_Logo.TabStop = false;
             ptb_Logo.Click += ptb_Logo_Click_1;
             // 
+            // btn_PH
+            // 
+            btn_PH.Location = new Point(37, 754);
+            btn_PH.Name = "btn_PH";
+            btn_PH.Size = new Size(210, 54);
+            btn_PH.TabIndex = 45;
+            btn_PH.Text = "Lịch sử mua hàng";
+            btn_PH.UseVisualStyleBackColor = true;
+            btn_PH.Click += btn_PH_Click;
+            // 
             // Cart
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1395, 1055);
+            Controls.Add(btn_PH);
             Controls.Add(ptb_Logo);
             Controls.Add(groupBox1);
             Controls.Add(grb_Quanlinhanvien);
@@ -314,5 +326,6 @@
         private PictureBox ptb_Logo;
         private Button btn_buy;
         private Button btn_DelAll;
+        private Button btn_PH;
     }
 }
