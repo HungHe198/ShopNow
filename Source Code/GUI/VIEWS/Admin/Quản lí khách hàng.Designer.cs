@@ -125,6 +125,7 @@
             btn_Them.TabIndex = 9;
             btn_Them.Text = "Thêm ";
             btn_Them.UseVisualStyleBackColor = false;
+            btn_Them.Click += btn_Them_Click;
             // 
             // tb_Timkiem
             // 

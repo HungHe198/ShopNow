@@ -66,5 +66,11 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
 
             Services.ShowForm(this, new Quản_lí_sản_phẩm());
         }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            AddCustomer addCustomer = new AddCustomer();
+            addCustomer.ShowDialog();
+        }
     }
 }
