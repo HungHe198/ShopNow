@@ -21,6 +21,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
         private void PurchaseHistory_Load(object sender, EventArgs e)
         {
             this.BackColor = ColorTranslator.FromHtml(ServicesGlobalVariables.GlobalBackColor);
+            ptb_Logo.BackColor = Color.Transparent;
 
         }
     }

@@ -30,13 +30,13 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
 
         public Cart GetCartById(Guid guid)
         {
-            var Record = context.Carts.FirstOrDefault(bd => bd.Id == guid);
+            var Record = context.Carts.FirstOrDefault(bd => bd.UserId == guid);
             return Record == null ? null : Record;
         }
 
         public Customer GetCustomerById(Guid guid)
         {
-            var Record = context.Customers.FirstOrDefault(bd => bd.Id == guid);
+            var Record = context.Customers.FirstOrDefault(bd => bd.UserId == guid);
             return Record == null ? null : Record;
         }
 
@@ -68,7 +68,7 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
             var Record = context.ImportHistories.FirstOrDefault(bd => bd.Id == guid);
             return Record == null ? null : Record;
         }
-        public Product GetProductById(Guid guid)
+        public Product GetProductById(Guid? guid)
         {
             var Record = context.Products.FirstOrDefault(bd => bd.Id == guid);
             return Record == null ? null : Record;
@@ -92,6 +92,11 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
         {
             var Record = context.Users.FirstOrDefault(bd => bd.Id == guid);
             return Record == null ? null : Record;
+        }
+        public User GetUserByUserName(string UserName)
+        {
+            var User = context.Users.FirstOrDefault(u => u.Username == UserName && u.Deleted == false) ;
+            return User == null ? null : User;
         }
 
 

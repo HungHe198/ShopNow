@@ -15,14 +15,16 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
             try
             {
                 // Thêm user vào context
-                context.Add( cartProduct);
+                context.CartProducts.Add(cartProduct);
+                MessageBox.Show(cartProduct.ToString());
                 // Lưu thay đổi vào cơ sở dữ liệu
-                int result = context.SaveChanges();
+                context.SaveChanges();
                 // Trả về true nếu có ít nhất một bản ghi được thêm vào
-                return result > 0;
+                return true;
             }
             catch (Exception ex)
             {
+                MessageBox.Show("2");
                 // Xử lý ngoại lệ tại đây
                 return false;
             }
@@ -33,7 +35,7 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
             try
             {
                 // Thêm user vào context
-                context.Update(obj);
+                context.CartProducts.Update(obj);
                 // Lưu thay đổi vào cơ sở dữ liệu
                 int result = context.SaveChanges();
                 // Trả về true nếu có ít nhất một bản ghi được thêm vào
@@ -51,7 +53,7 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
             try
             {
                 obj.Deleted = true;
-                context.Update(obj);
+                context.CartProducts.Update(obj);
                 int result = context.SaveChanges();
                 return true;
             }

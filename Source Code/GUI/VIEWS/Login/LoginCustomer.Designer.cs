@@ -30,13 +30,14 @@
         {
             Label acb;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginCustomer));
-            btn_loginCustom = new Button();
-            txtmk2 = new TextBox();
-            txttk2 = new TextBox();
-            label3 = new Label();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             btn_Back = new Button();
+            btn_Login = new Button();
+            linkLabel1 = new LinkLabel();
+            txt_PassWord = new TextBox();
+            txt_UserName = new TextBox();
+            label3 = new Label();
             acb = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -44,48 +45,12 @@
             // acb
             // 
             acb.AutoSize = true;
-            acb.Location = new Point(966, 275);
+            acb.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            acb.Location = new Point(1005, 252);
             acb.Name = "acb";
-            acb.Size = new Size(71, 20);
+            acb.Size = new Size(94, 28);
             acb.TabIndex = 16;
             acb.Text = "Tài khoản";
-            // 
-            // btn_loginCustom
-            // 
-            btn_loginCustom.AutoSize = true;
-            btn_loginCustom.Location = new Point(967, 535);
-            btn_loginCustom.Margin = new Padding(3, 4, 3, 4);
-            btn_loginCustom.Name = "btn_loginCustom";
-            btn_loginCustom.Size = new Size(92, 33);
-            btn_loginCustom.TabIndex = 21;
-            btn_loginCustom.Text = "Đăng nhập";
-            btn_loginCustom.UseVisualStyleBackColor = true;
-            btn_loginCustom.Click += btn_loginCustom_Click_Click;
-            // 
-            // txtmk2
-            // 
-            txtmk2.Location = new Point(965, 392);
-            txtmk2.Margin = new Padding(3, 4, 3, 4);
-            txtmk2.Name = "txtmk2";
-            txtmk2.Size = new Size(278, 27);
-            txtmk2.TabIndex = 19;
-            // 
-            // txttk2
-            // 
-            txttk2.Location = new Point(965, 312);
-            txttk2.Margin = new Padding(3, 4, 3, 4);
-            txttk2.Name = "txttk2";
-            txttk2.Size = new Size(278, 27);
-            txttk2.TabIndex = 18;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(967, 365);
-            label3.Name = "label3";
-            label3.Size = new Size(70, 20);
-            label3.TabIndex = 17;
-            label3.Text = "Mật khẩu";
             // 
             // label1
             // 
@@ -101,35 +66,93 @@
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.Location = new Point(-1, 1);
+            pictureBox1.Location = new Point(-1, 2);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(894, 771);
+            pictureBox1.Size = new Size(830, 1058);
             pictureBox1.TabIndex = 14;
             pictureBox1.TabStop = false;
             // 
             // btn_Back
             // 
             btn_Back.AutoSize = true;
-            btn_Back.Location = new Point(1152, 535);
+            btn_Back.BackColor = Color.FromArgb(255, 255, 128);
+            btn_Back.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_Back.Location = new Point(1181, 494);
             btn_Back.Margin = new Padding(3, 4, 3, 4);
             btn_Back.Name = "btn_Back";
-            btn_Back.Size = new Size(91, 33);
+            btn_Back.Size = new Size(93, 38);
             btn_Back.TabIndex = 22;
             btn_Back.Text = "Quay lại";
-            btn_Back.UseVisualStyleBackColor = true;
+            btn_Back.UseVisualStyleBackColor = false;
             btn_Back.Click += btn_Back_Click;
+            // 
+            // btn_Login
+            // 
+            btn_Login.AutoSize = true;
+            btn_Login.BackColor = Color.FromArgb(255, 255, 128);
+            btn_Login.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_Login.Location = new Point(1006, 494);
+            btn_Login.Margin = new Padding(3, 4, 3, 4);
+            btn_Login.Name = "btn_Login";
+            btn_Login.Size = new Size(118, 38);
+            btn_Login.TabIndex = 21;
+            btn_Login.Text = "Đăng nhập";
+            btn_Login.UseVisualStyleBackColor = false;
+            btn_Login.Click += btn_Login_Click;
+            // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            linkLabel1.LinkColor = Color.FromArgb(255, 255, 128);
+            linkLabel1.Location = new Point(1138, 420);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(145, 28);
+            linkLabel1.TabIndex = 20;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Quên mật khẩu";
+            // 
+            // txt_PassWord
+            // 
+            txt_PassWord.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_PassWord.Location = new Point(1005, 364);
+            txt_PassWord.Margin = new Padding(3, 4, 3, 4);
+            txt_PassWord.Name = "txt_PassWord";
+            txt_PassWord.Size = new Size(278, 34);
+            txt_PassWord.TabIndex = 19;
+            txt_PassWord.Enter += txt_PassWord_Enter;
+            // 
+            // txt_UserName
+            // 
+            txt_UserName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_UserName.Location = new Point(1005, 284);
+            txt_UserName.Margin = new Padding(3, 4, 3, 4);
+            txt_UserName.Name = "txt_UserName";
+            txt_UserName.Size = new Size(278, 34);
+            txt_UserName.TabIndex = 18;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(1005, 332);
+            label3.Name = "label3";
+            label3.Size = new Size(94, 28);
+            label3.TabIndex = 17;
+            label3.Text = "Mật khẩu";
             // 
             // LoginCustomer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.MenuHighlight;
-            ClientSize = new Size(1395, 775);
+            ClientSize = new Size(1395, 1055);
             Controls.Add(btn_Back);
-            Controls.Add(btn_loginCustom);
-            Controls.Add(txtmk2);
-            Controls.Add(txttk2);
+            Controls.Add(btn_Login);
+            Controls.Add(linkLabel1);
+            Controls.Add(txt_PassWord);
+            Controls.Add(txt_UserName);
             Controls.Add(label3);
             Controls.Add(acb);
             Controls.Add(label1);
@@ -144,13 +167,13 @@
         }
 
         #endregion
-
-        private Button btn_loginCustom;
-        private TextBox txtmk2;
-        private TextBox txttk2;
-        private Label label3;
         private Label label1;
         private PictureBox pictureBox1;
         private Button btn_Back;
+        private Button btn_Login;
+        private LinkLabel linkLabel1;
+        private TextBox txt_PassWord;
+        private TextBox txt_UserName;
+        private Label label3;
     }
 }

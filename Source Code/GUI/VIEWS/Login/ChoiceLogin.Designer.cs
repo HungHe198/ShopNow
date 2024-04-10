@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChoiceLogin));
             label1 = new Label();
             label5 = new Label();
-            pictureBox2 = new PictureBox();
             btn_Customer = new Button();
             btn_admin = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -59,21 +59,12 @@
             label5.Text = "LOGIN";
             label5.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox2
-            // 
-            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
-            pictureBox2.Location = new Point(0, 0);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(901, 779);
-            pictureBox2.TabIndex = 22;
-            pictureBox2.TabStop = false;
-            // 
             // btn_Customer
             // 
+            btn_Customer.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             btn_Customer.Location = new Point(1001, 460);
             btn_Customer.Name = "btn_Customer";
-            btn_Customer.Size = new Size(337, 76);
+            btn_Customer.Size = new Size(337, 86);
             btn_Customer.TabIndex = 24;
             btn_Customer.Text = "Khách hàng";
             btn_Customer.UseVisualStyleBackColor = true;
@@ -81,37 +72,49 @@
             // 
             // btn_admin
             // 
+            btn_admin.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point);
             btn_admin.Location = new Point(1001, 316);
             btn_admin.Name = "btn_admin";
-            btn_admin.Size = new Size(337, 76);
+            btn_admin.Size = new Size(337, 87);
             btn_admin.TabIndex = 24;
             btn_admin.Text = "Quản trị viên";
             btn_admin.UseVisualStyleBackColor = true;
             btn_admin.Click += btn_admin_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.Location = new Point(-3, -2);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(830, 1058);
+            pictureBox1.TabIndex = 25;
+            pictureBox1.TabStop = false;
             // 
             // ChoiceLogin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.MenuHighlight;
-            ClientSize = new Size(1395, 775);
+            ClientSize = new Size(1395, 1055);
+            Controls.Add(pictureBox1);
             Controls.Add(btn_admin);
             Controls.Add(btn_Customer);
             Controls.Add(label5);
-            Controls.Add(pictureBox2);
             Controls.Add(label1);
+            Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Name = "ChoiceLogin";
-            Text = "ChoiceLogin";
+            Text = "Shop Now";
             Load += ChoiceLogin_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
         private Label label1;
         private Label label5;
-        private PictureBox pictureBox2;
         private Button btn_Customer;
         private Button btn_admin;
+        private PictureBox pictureBox1;
     }
 }

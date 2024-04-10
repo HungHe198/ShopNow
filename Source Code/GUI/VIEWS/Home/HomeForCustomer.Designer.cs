@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button2 = new Button();
+            btn_ViewDetails = new Button();
             label5 = new Label();
             label3 = new Label();
             label2 = new Label();
@@ -39,30 +39,41 @@
             dgvMainShow = new DataGridView();
             lbNameShop = new Label();
             btn_Seach = new Button();
-            textBox1 = new TextBox();
+            txt_Seach = new TextBox();
             ptb_Banner = new PictureBox();
             ptb_Logo = new PictureBox();
             txt_Color = new TextBox();
             txt_Quantity = new TextBox();
+            btn_Logout = new Button();
+            btn_Cart = new Button();
+            txt_Price = new TextBox();
+            label4 = new Label();
+            groupBox1 = new GroupBox();
+            btn_information = new Button();
+            ptb_admin = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)ptb_productImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvMainShow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Banner).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ptb_admin).BeginInit();
             SuspendLayout();
             // 
-            // button2
+            // btn_ViewDetails
             // 
-            button2.Location = new Point(45, 839);
-            button2.Name = "button2";
-            button2.Size = new Size(111, 66);
-            button2.TabIndex = 30;
-            button2.Text = "Xem chi tiết";
-            button2.UseVisualStyleBackColor = true;
+            btn_ViewDetails.Enabled = false;
+            btn_ViewDetails.Location = new Point(45, 896);
+            btn_ViewDetails.Name = "btn_ViewDetails";
+            btn_ViewDetails.Size = new Size(111, 66);
+            btn_ViewDetails.TabIndex = 30;
+            btn_ViewDetails.Text = "Xem chi tiết";
+            btn_ViewDetails.UseVisualStyleBackColor = true;
+            btn_ViewDetails.Click += btn_ViewDetails_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(12, 783);
+            label5.Location = new Point(12, 775);
             label5.Name = "label5";
             label5.Size = new Size(144, 20);
             label5.TabIndex = 28;
@@ -71,7 +82,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 725);
+            label3.Location = new Point(12, 717);
             label3.Name = "label3";
             label3.Size = new Size(117, 20);
             label3.TabIndex = 26;
@@ -97,7 +108,7 @@
             // 
             // txt_Display
             // 
-            txt_Display.Location = new Point(12, 806);
+            txt_Display.Location = new Point(12, 798);
             txt_Display.Name = "txt_Display";
             txt_Display.ReadOnly = true;
             txt_Display.Size = new Size(203, 27);
@@ -110,6 +121,7 @@
             txt_Name.ReadOnly = true;
             txt_Name.Size = new Size(203, 27);
             txt_Name.TabIndex = 18;
+            txt_Name.TextChanged += txt_Name_TextChanged;
             // 
             // ptb_productImage
             // 
@@ -128,6 +140,7 @@
             dgvMainShow.RowTemplate.Height = 29;
             dgvMainShow.Size = new Size(1142, 562);
             dgvMainShow.TabIndex = 16;
+            dgvMainShow.CellClick += dgvMainShow_CellClick;
             // 
             // lbNameShop
             // 
@@ -148,13 +161,14 @@
             btn_Seach.Text = "Seach";
             btn_Seach.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txt_Seach
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(237, 103);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(1000, 34);
-            textBox1.TabIndex = 12;
+            txt_Seach.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Seach.Location = new Point(237, 103);
+            txt_Seach.Name = "txt_Seach";
+            txt_Seach.Size = new Size(874, 34);
+            txt_Seach.TabIndex = 12;
+            txt_Seach.TextChanged += txt_Seach_TextChanged;
             // 
             // ptb_Banner
             // 
@@ -170,12 +184,13 @@
             // 
             ptb_Logo.BackColor = Color.MistyRose;
             ptb_Logo.Image = Properties.Resources.Logo;
-            ptb_Logo.Location = new Point(18, 31);
+            ptb_Logo.Location = new Point(18, 12);
             ptb_Logo.Name = "ptb_Logo";
-            ptb_Logo.Size = new Size(200, 105);
+            ptb_Logo.Size = new Size(200, 84);
             ptb_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
             ptb_Logo.TabIndex = 10;
             ptb_Logo.TabStop = false;
+            ptb_Logo.Click += ptb_Logo_Click;
             // 
             // txt_Color
             // 
@@ -187,11 +202,80 @@
             // 
             // txt_Quantity
             // 
-            txt_Quantity.Location = new Point(12, 748);
+            txt_Quantity.Location = new Point(12, 740);
             txt_Quantity.Name = "txt_Quantity";
             txt_Quantity.ReadOnly = true;
             txt_Quantity.Size = new Size(203, 27);
             txt_Quantity.TabIndex = 18;
+            // 
+            // btn_Logout
+            // 
+            btn_Logout.BackColor = Color.Red;
+            btn_Logout.ForeColor = Color.White;
+            btn_Logout.Location = new Point(1287, 12);
+            btn_Logout.Name = "btn_Logout";
+            btn_Logout.Size = new Size(92, 32);
+            btn_Logout.TabIndex = 31;
+            btn_Logout.Text = "Đăng xuất";
+            btn_Logout.UseVisualStyleBackColor = false;
+            btn_Logout.Click += btn_Logout_Click;
+            // 
+            // btn_Cart
+            // 
+            btn_Cart.Location = new Point(1117, 102);
+            btn_Cart.Name = "btn_Cart";
+            btn_Cart.Size = new Size(125, 36);
+            btn_Cart.TabIndex = 13;
+            btn_Cart.Text = "Giỏ hàng";
+            btn_Cart.UseVisualStyleBackColor = true;
+            btn_Cart.Click += btn_Cart_Click;
+            // 
+            // txt_Price
+            // 
+            txt_Price.Location = new Point(12, 863);
+            txt_Price.Name = "txt_Price";
+            txt_Price.ReadOnly = true;
+            txt_Price.Size = new Size(203, 27);
+            txt_Price.TabIndex = 23;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(12, 840);
+            label4.Name = "label4";
+            label4.Size = new Size(31, 20);
+            label4.TabIndex = 28;
+            label4.Text = "Giá";
+            // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(btn_information);
+            groupBox1.Controls.Add(ptb_admin);
+            groupBox1.Location = new Point(18, 144);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(194, 250);
+            groupBox1.TabIndex = 32;
+            groupBox1.TabStop = false;
+            // 
+            // btn_information
+            // 
+            btn_information.Location = new Point(27, 138);
+            btn_information.Name = "btn_information";
+            btn_information.Size = new Size(136, 54);
+            btn_information.TabIndex = 1;
+            btn_information.Text = "Thông tin cá nhân";
+            btn_information.UseVisualStyleBackColor = true;
+            btn_information.Click += btn_information_Click;
+            // 
+            // ptb_admin
+            // 
+            ptb_admin.Image = Properties.Resources.Customer;
+            ptb_admin.Location = new Point(61, 35);
+            ptb_admin.Name = "ptb_admin";
+            ptb_admin.Size = new Size(76, 79);
+            ptb_admin.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptb_admin.TabIndex = 0;
+            ptb_admin.TabStop = false;
             // 
             // HomeForCustomer
             // 
@@ -199,11 +283,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.MistyRose;
             ClientSize = new Size(1422, 1055);
-            Controls.Add(button2);
+            Controls.Add(groupBox1);
+            Controls.Add(btn_Logout);
+            Controls.Add(btn_ViewDetails);
+            Controls.Add(label4);
             Controls.Add(label5);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Controls.Add(txt_Price);
             Controls.Add(txt_Display);
             Controls.Add(ptb_productImage);
             Controls.Add(dgvMainShow);
@@ -211,8 +299,9 @@
             Controls.Add(txt_Color);
             Controls.Add(txt_Name);
             Controls.Add(lbNameShop);
+            Controls.Add(btn_Cart);
             Controls.Add(btn_Seach);
-            Controls.Add(textBox1);
+            Controls.Add(txt_Seach);
             Controls.Add(ptb_Banner);
             Controls.Add(ptb_Logo);
             Name = "HomeForCustomer";
@@ -222,13 +311,15 @@
             ((System.ComponentModel.ISupportInitialize)dgvMainShow).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Banner).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Logo).EndInit();
+            groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)ptb_admin).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button2;
+        private Button btn_ViewDetails;
         private Label label6;
         private Label label5;
         private Label label3;
@@ -243,10 +334,17 @@
         private TextBox txt_Name;
         private Label lbNameShop;
         private Button btn_Seach;
-        private TextBox textBox1;
+        private TextBox txt_Seach;
         private PictureBox ptb_Banner;
         private PictureBox ptb_Logo;
         private TextBox txt_Color;
         private TextBox txt_Quantity;
+        private Button btn_Logout;
+        private Button btn_Cart;
+        private TextBox txt_Price;
+        private Label label4;
+        private GroupBox groupBox1;
+        private Button btn_information;
+        private PictureBox ptb_admin;
     }
 }

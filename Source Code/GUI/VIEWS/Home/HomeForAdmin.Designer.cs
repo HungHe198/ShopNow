@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ptb_Logo = new PictureBox();
             ptb_Banner = new PictureBox();
-            textBox1 = new TextBox();
+            txt_Seach = new TextBox();
             btn_Seach = new Button();
             lbNameShop = new Label();
             groupBox1 = new GroupBox();
@@ -49,24 +48,15 @@
             label6 = new Label();
             button2 = new Button();
             button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
+            btn_Logout = new Button();
+            ptb_Logo = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)ptb_Banner).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptb_admin).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dgvMainShow).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_productImage).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
             SuspendLayout();
-            // 
-            // ptb_Logo
-            // 
-            ptb_Logo.BackColor = Color.MistyRose;
-            ptb_Logo.Image = Properties.Resources.Logo;
-            ptb_Logo.Location = new Point(12, 18);
-            ptb_Logo.Name = "ptb_Logo";
-            ptb_Logo.Size = new Size(226, 106);
-            ptb_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
-            ptb_Logo.TabIndex = 0;
-            ptb_Logo.TabStop = false;
             // 
             // ptb_Banner
             // 
@@ -79,13 +69,14 @@
             ptb_Banner.TabIndex = 0;
             ptb_Banner.TabStop = false;
             // 
-            // textBox1
+            // txt_Seach
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(244, 90);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(1000, 34);
-            textBox1.TabIndex = 1;
+            txt_Seach.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Seach.Location = new Point(244, 90);
+            txt_Seach.Name = "txt_Seach";
+            txt_Seach.Size = new Size(1000, 34);
+            txt_Seach.TabIndex = 1;
+            txt_Seach.TextChanged += txt_Seach_TextChanged;
             // 
             // btn_Seach
             // 
@@ -117,6 +108,7 @@
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             groupBox1.Text = "Quản lí hệ thống";
+            groupBox1.Enter += groupBox1_Enter_1;
             // 
             // btn_management
             // 
@@ -126,6 +118,7 @@
             btn_management.TabIndex = 1;
             btn_management.Text = "Hệ thống quản lí";
             btn_management.UseVisualStyleBackColor = true;
+            btn_management.Click += btn_management_Click;
             // 
             // btn_information
             // 
@@ -135,6 +128,7 @@
             btn_information.TabIndex = 1;
             btn_information.Text = "Thông tin cá nhân";
             btn_information.UseVisualStyleBackColor = true;
+            btn_information.Click += btn_information_Click;
             // 
             // ptb_admin
             // 
@@ -155,6 +149,7 @@
             dgvMainShow.RowTemplate.Height = 29;
             dgvMainShow.Size = new Size(1142, 558);
             dgvMainShow.TabIndex = 5;
+            dgvMainShow.CellClick += dgvMainShow_CellClick;
             // 
             // ptb_productImage
             // 
@@ -252,12 +247,38 @@
             button1.Text = "Lưu";
             button1.UseVisualStyleBackColor = true;
             // 
+            // btn_Logout
+            // 
+            btn_Logout.BackColor = Color.Red;
+            btn_Logout.ForeColor = Color.White;
+            btn_Logout.Location = new Point(1294, 18);
+            btn_Logout.Name = "btn_Logout";
+            btn_Logout.Size = new Size(92, 32);
+            btn_Logout.TabIndex = 32;
+            btn_Logout.Text = "Đăng xuất";
+            btn_Logout.UseVisualStyleBackColor = false;
+            btn_Logout.Click += btn_Logout_Click;
+            // 
+            // ptb_Logo
+            // 
+            ptb_Logo.BackColor = Color.MistyRose;
+            ptb_Logo.Image = Properties.Resources.Logo;
+            ptb_Logo.Location = new Point(22, 12);
+            ptb_Logo.Name = "ptb_Logo";
+            ptb_Logo.Size = new Size(200, 84);
+            ptb_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
+            ptb_Logo.TabIndex = 33;
+            ptb_Logo.TabStop = false;
+            ptb_Logo.Click += ptb_Logo_Click;
+            // 
             // HomeForAdmin
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 192);
             ClientSize = new Size(1395, 1055);
+            Controls.Add(ptb_Logo);
+            Controls.Add(btn_Logout);
             Controls.Add(button1);
             Controls.Add(button2);
             Controls.Add(label6);
@@ -273,27 +294,24 @@
             Controls.Add(groupBox1);
             Controls.Add(lbNameShop);
             Controls.Add(btn_Seach);
-            Controls.Add(textBox1);
+            Controls.Add(txt_Seach);
             Controls.Add(ptb_Banner);
-            Controls.Add(ptb_Logo);
             Name = "HomeForAdmin";
             Text = "Form1";
             Load += HomeForAdmin_Load;
-            ((System.ComponentModel.ISupportInitialize)ptb_Logo).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Banner).EndInit();
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)ptb_admin).EndInit();
             ((System.ComponentModel.ISupportInitialize)dgvMainShow).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_productImage).EndInit();
+            ((System.ComponentModel.ISupportInitialize)ptb_Logo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private PictureBox ptb_Logo;
         private PictureBox ptb_Banner;
-        private TextBox textBox1;
+        private TextBox txt_Seach;
         private Button btn_Seach;
         private Label lbNameShop;
         private GroupBox groupBox1;
@@ -312,5 +330,7 @@
         private Label label6;
         private Button button2;
         private Button button1;
+        private Button btn_Logout;
+        private PictureBox ptb_Logo;
     }
 }

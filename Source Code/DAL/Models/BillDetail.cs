@@ -10,6 +10,7 @@ namespace ShopNow.Models
         public Guid? BillId { get; set; }
         public int? Quantity { get; set; }
         public decimal? Price { get; set; }
+        public string? Address { get; set; }
         public DateTime? CreatedTime { get; set; }
         public Guid? CreatedBy { get; set; }
         public bool? Deleted { get; set; }
@@ -17,8 +18,5 @@ namespace ShopNow.Models
         public Guid? DeletedBy { get; set; }
         public DateTime? ModifiedTime { get; set; }
         public Guid? ModifiedBy { get; set; }
-
-        public virtual Bill? Bill { get; set; }
-        public virtual Product? Product { get; set; }
     }
 }
