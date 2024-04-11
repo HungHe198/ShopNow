@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
-using ShopNow.Source_Code.BUS.SERVICES;
+﻿using ShopNow.Source_Code.BUS.SERVICES;
 using ShopNow.Source_Code.DAL.REPOSITORIES;
 using ShopNow.Source_Code.GUI.Thongke;
 using System;
@@ -11,44 +10,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ShopNow.Source_Code.GUI.VIEWS.Login
 {
-    public partial class LoginAdmin : Form
+    public partial class LoginStaff : Form
     {
-       
-        public LoginAdmin()
+        public LoginStaff()
         {
             InitializeComponent();
         }
-
-        Login_repo Login_repo = new Login_repo();
-        public string UserName;
-        public string Password;
-        public Guid UserId;
-        private void LoginAdmin_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void btn_Back_Click(object sender, EventArgs e)
-        {
-
-            Services.ShowForm(this, new ChoiceLogin());
-        }
-        GetById GetById = new GetById(); 
-        public void Login()
+        Login_repo Login_Repo = new Login_repo();
+        GetById GetById = new GetById();
+        public void Login(Login_repo login_repo)
         {
             try
             {
-                UserName = txt_UserName.Text;
-                Password = txt_Password.Text;
-               
-                if (Login_repo.IsLoggedInAdmin(UserName, Password))
+                string UserName = txt_UserName.Text;
+                string Password = txt_Password.Text;
+
+                if (login_repo.IsLoggedInStaff(UserName, Password))
                 {
 
                     var User = GetById.GetUserByUserName(UserName);
                     ServicesGlobalVariables.userId = User.Id;
-                    
+
                     Services.ShowForm(this, new HomeForAdmin());
                 }
                 else
@@ -63,24 +49,13 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Login
             }
         }
         private void btn_loginAD_Click(object sender, EventArgs e)
-
         {
-            //8B4B598F-6AF6-EE11-BCA0-103D1C86EA3D
-            Login();
-        }
-        private void txt_Password_Enter(object sender, EventArgs e)
-        {
-            
 
         }
 
-        private void linkLabel1_Enter(object sender, EventArgs e)
+        private void btn_Back_Click(object sender, EventArgs e)
         {
-            
+
         }
     }
-
-
 }
-
-

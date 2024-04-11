@@ -60,7 +60,7 @@
             label1.Name = "label1";
             label1.Size = new Size(341, 67);
             label1.TabIndex = 7;
-            label1.Text = "LOGIN";
+            label1.Text = "ADmin";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label3

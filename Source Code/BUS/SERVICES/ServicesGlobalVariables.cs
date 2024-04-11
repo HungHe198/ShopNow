@@ -12,6 +12,7 @@ namespace ShopNow.Source_Code.BUS.SERVICES
         public static Guid userId;
         public static Guid cartId;
         public static Guid Admin = new Guid("984386D1-A3F6-EE11-BCA0-103D1C86EA3D");
+        public static Guid Staff = new Guid("984386D1-A3F6-EE11-BCA0-103D1C86EA3D");
         public static Guid Customer = new Guid("994386D1-A3F6-EE11-BCA0-103D1C86EA3D");
         public static string GlobalBackColor = "#ffbe98";
 
