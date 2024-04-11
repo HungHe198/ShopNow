@@ -57,6 +57,28 @@ namespace ShopNow.Source_Code.BUS.SERVICES
             }
             catch (Exception ex) { return ex.ToString(); }
         }
+        Repo_GetAll getAll = new Repo_GetAll();
+        public void LoadKH(DataGridView dgv,string? name )
+        {
+            var result = from c in getAll.GetAllCustomers(name) 
+                         select new
+                         {Id = c.Id,
+                         User = c.Name,
+                         Phone= c.PhoneNumber,
+                         Email = c.Email,
+                         Diachi= c.Address
+                         };
+            dgv.DataSource = result.ToList();
+        }
+        public string xoacustomer(Customer customer)
+        {
+            if (Customer_Repository.isDelCustomer(customer))
+            {
+                return "Succes";
+            }
+            else
+            { return "Fail"; }
+        }
     }
 }
 

@@ -33,6 +33,7 @@ namespace ShopNow.Source_Code.BUS.SERVICES
         public static Guid productDetailId;
         public static List<Product> productSaved;
         public static Guid billId;
+        public static Guid customerid;
 
     }
 }
