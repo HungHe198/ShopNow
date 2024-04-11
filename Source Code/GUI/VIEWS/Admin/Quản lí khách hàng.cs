@@ -1,4 +1,5 @@
 ﻿using ShopNow.Source_Code.BUS.SERVICES;
+using ShopNow.Source_Code.DAL.REPOSITORIES;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,6 +28,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
         {
             this.BackColor = ColorTranslator.FromHtml(ServicesGlobalVariables.GlobalBackColor);
             ptb_Logo.BackColor = Color.Transparent;
+            sv.LoadKH(dataGridView1, null);
         }
 
         private void btn_QLNV_Click(object sender, EventArgs e)
@@ -76,6 +78,34 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
         private void button1_Click(object sender, EventArgs e)
         {
             Services.ShowForm(this, new GioHangCho());
+        }
+        GetById getById = new GetById();
+        private void btn_Xoa_Click(object sender, EventArgs e)
+        {
+            if (ServicesGlobalVariables.customerid == null)
+            {
+                MessageBox.Show("Xoa khong thanh cong");
+            }
+            else
+            {
+                sv.xoacustomer(getById.GetCustomerById1(ServicesGlobalVariables.customerid));
+            }
+        }
+        QuanlikhachhangServices sv = new QuanlikhachhangServices();
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+            ServicesGlobalVariables.customerid = Guid.Parse(row.Cells["Id"].Value.ToString());
+        }
+        private void tb_Timkiem_TextChanged(object sender, EventArgs e)
+        {
+            sv.LoadKH(dataGridView1, tb_Timkiem.Text);
+        }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+            AddCustomer cus = new AddCustomer();
+            cus.ShowDialog();
         }
     }
 }

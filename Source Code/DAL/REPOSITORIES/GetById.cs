@@ -39,6 +39,11 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
             var Record = context.Customers.FirstOrDefault(bd => bd.UserId == guid);
             return Record == null ? null : Record;
         }
+        public Customer GetCustomerById1(Guid guid)
+        {
+            var Record = context.Customers.FirstOrDefault(bd => bd.Id == guid);
+            return Record == null ? null : Record;
+        }
 
         public CustomerType GetCustomerTypeById(Guid guid)
         {
