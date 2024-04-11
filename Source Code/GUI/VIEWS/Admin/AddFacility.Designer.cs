@@ -116,7 +116,6 @@
             tb_Gia.Name = "tb_Gia";
             tb_Gia.Size = new Size(361, 27);
             tb_Gia.TabIndex = 1;
-            tb_Gia.TextChanged += this.tb_Gia_TextChanged;
             // 
             // button1
             // 
