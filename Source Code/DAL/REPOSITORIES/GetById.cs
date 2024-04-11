@@ -14,7 +14,7 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
 
         public BillDetail GetBillDetailById(Guid guid)
         {
-            var Record = context.BillDetails.FirstOrDefault(bd => bd.Id == guid);
+            var Record = context.BillDetails.FirstOrDefault(bd => bd.BillId == guid);
             return Record == null ? null : Record;
         }
         public Bill GetBillById(Guid guid)

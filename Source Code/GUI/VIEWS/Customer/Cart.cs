@@ -155,6 +155,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Customer
         private void btn_buy_Click(object sender, EventArgs e)
         {
             DeliveryInformation deliveryInformation = new DeliveryInformation();
+            operations.LoadCart(dgvMainCart, ServicesGlobalVariables.userId);
             deliveryInformation.ShowDialog();
         }
         private void btn_Xoa_Click(object sender, EventArgs e)

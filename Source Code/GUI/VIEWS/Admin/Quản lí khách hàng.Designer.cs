@@ -44,6 +44,8 @@
             btn_QLNV = new Button();
             btn_QLSP = new Button();
             ptb_Logo = new PictureBox();
+            button1 = new Button();
+            btn_QuanLiKhachHang = new Button();
             grb_Quanlinhanvien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
@@ -186,7 +188,7 @@
             // 
             // btn_QLGG
             // 
-            btn_QLGG.Location = new Point(12, 353);
+            btn_QLGG.Location = new Point(12, 608);
             btn_QLGG.Name = "btn_QLGG";
             btn_QLGG.Size = new Size(205, 45);
             btn_QLGG.TabIndex = 44;
@@ -235,15 +237,37 @@
             ptb_Logo.TabIndex = 48;
             ptb_Logo.TabStop = false;
             // 
+            // button1
+            // 
+            button1.Location = new Point(12, 557);
+            button1.Name = "button1";
+            button1.Size = new Size(205, 45);
+            button1.TabIndex = 49;
+            button1.Text = "Đơn hàng cần xác nhận";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // btn_QuanLiKhachHang
+            // 
+            btn_QuanLiKhachHang.Location = new Point(12, 353);
+            btn_QuanLiKhachHang.Name = "btn_QuanLiKhachHang";
+            btn_QuanLiKhachHang.Size = new Size(205, 45);
+            btn_QuanLiKhachHang.TabIndex = 44;
+            btn_QuanLiKhachHang.Text = "Quản lí giảm giá";
+            btn_QuanLiKhachHang.UseVisualStyleBackColor = true;
+            btn_QuanLiKhachHang.Click += btn_QLGG_Click;
+            // 
             // Quản_lí_khách_hàng
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1221, 779);
+            Controls.Add(button1);
             Controls.Add(ptb_Logo);
             Controls.Add(btn_IH);
             Controls.Add(btn_Quanlithongke);
             Controls.Add(btn_Quanlicoso);
+            Controls.Add(btn_QuanLiKhachHang);
             Controls.Add(btn_QLGG);
             Controls.Add(btn_QLNH);
             Controls.Add(btn_QLNV);
@@ -277,5 +301,7 @@
         private Button btn_QLNV;
         private Button btn_QLSP;
         private PictureBox ptb_Logo;
+        private Button button1;
+        private Button btn_QuanLiKhachHang;
     }
 }

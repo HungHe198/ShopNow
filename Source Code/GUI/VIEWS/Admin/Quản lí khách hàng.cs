@@ -72,5 +72,10 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
             AddCustomer addCustomer = new AddCustomer();
             addCustomer.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Services.ShowForm(this, new GioHangCho());
+        }
     }
 }

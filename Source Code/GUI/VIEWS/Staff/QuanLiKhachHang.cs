@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ShopNow.Source_Code.GUI.VIEWS.Admin
+namespace ShopNow.Source_Code.GUI.VIEWS.Staff
 {
-    public partial class AddFacility : Form
+    public partial class QuanLiKhachHang : Form
     {
-        public AddFacility()
+        public QuanLiKhachHang()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

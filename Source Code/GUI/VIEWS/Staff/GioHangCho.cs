@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ShopNow.Source_Code.GUI.VIEWS.Admin
+namespace ShopNow.Source_Code.GUI.VIEWS.Staff
 {
-    public partial class AddFacility : Form
+    public partial class GioHangCho : Form
     {
-        public AddFacility()
+        public GioHangCho()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

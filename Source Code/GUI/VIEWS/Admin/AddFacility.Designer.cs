@@ -78,7 +78,6 @@
             label2.Size = new Size(97, 20);
             label2.TabIndex = 0;
             label2.Text = "Số điện thoại";
-            label2.Click += label2_Click;
             // 
             // label4
             // 
@@ -116,7 +115,6 @@
             tb_Gia.Name = "tb_Gia";
             tb_Gia.Size = new Size(361, 27);
             tb_Gia.TabIndex = 1;
-            tb_Gia.TextChanged += this.tb_Gia_TextChanged;
             // 
             // button1
             // 

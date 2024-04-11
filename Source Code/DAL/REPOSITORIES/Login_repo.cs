@@ -37,6 +37,31 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
                 return false;
             }
         }
+        public bool IsLoggedInStaff(string UserName, string Password)
+        {
+            try
+            {
+                Guid RoleId = ServicesGlobalVariables.Admin;
+                Guid RoleId1 = ServicesGlobalVariables.Staff;
+                
+                var User = GetById.GetUserByUserName(UserName);
+                if (User != null && ( (User.RoleId == RoleId )||( User.RoleId == RoleId1)))
+                {
+                    if (Password == User.Password)
+                    {
+                        ServicesGlobalVariables.userId = User.Id;
+                        return true;
+                    }
+                    else { return false; }
+                }
+                else
+                    return false;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
         public bool IsLoggedInCustomer(string UserName, string Password)
         {
             try
