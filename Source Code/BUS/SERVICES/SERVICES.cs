@@ -88,9 +88,42 @@ namespace ShopNow.Source_Code.BUS.SERVICES
                 {
                     return "Success";
                 }
-                else { return "False 1"; }
+                else { return "Đơn hàng đã tồn tại, vào giỏ để thay đổi số lượng"; }
             }
             catch (Exception ex) { return "False"; }
+        }
+        Bill_Repository Bill_Repository = new Bill_Repository();
+        Bill_Detail_Repository Bill_Detail_Repository = new Bill_Detail_Repository(); 
+        GetById GetById = new GetById();
+        public string DeleteBillAndBillDetail(Guid ProductId) {
+            try
+            {
+                var bill = GetById.GetBillById(ServicesGlobalVariables.billId);
+                if (bill == null)
+                {
+                    return "Xóa không thành công";
+                }
+                else
+                { 
+                    while (GetById.GetBillDetailById(bill.Id) != null)
+                    {
+                        var billDetail = GetById.GetBillDetailById(bill.Id);
+                        if (Bill_Detail_Repository.isDelBillDetail(billDetail))
+                        {
+                            break;
+                        }
+                        else return "Xóa thất bại";
+
+                    }
+                    if (Bill_Repository.isDelBill(bill))
+                    {
+                        return "Đã xóa hết bill";
+                    }
+                    else return "không thể xóa";
+                       
+                }    
+            }
+            catch { return "False"; }
         }
 
 

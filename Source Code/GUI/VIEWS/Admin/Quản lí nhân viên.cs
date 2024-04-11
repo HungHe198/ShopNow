@@ -61,5 +61,10 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
 
             Services.ShowForm(this, new Quản_lí_sản_phẩm());
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Services.ShowForm(this, new GioHangCho());
+        }
     }
 }

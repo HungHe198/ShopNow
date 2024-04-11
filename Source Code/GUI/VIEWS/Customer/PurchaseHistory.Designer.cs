@@ -181,6 +181,7 @@
             ptb_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
             ptb_Logo.TabIndex = 41;
             ptb_Logo.TabStop = false;
+            ptb_Logo.Click += ptb_Logo_Click;
             // 
             // PurchaseHistory
             // 

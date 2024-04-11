@@ -1,6 +1,6 @@
 ﻿namespace ShopNow.Source_Code.GUI.VIEWS.Admin
 {
-    partial class InvoiceHistory
+    partial class GioHangCho
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
             grb_Quanlinhanvien = new GroupBox();
             label1 = new Label();
-            btn_Sua = new Button();
             btn_Xoa = new Button();
             btn_Them = new Button();
             tb_Timkiem = new TextBox();
             cmb_Sapxep = new ComboBox();
+            dataGridView1 = new DataGridView();
+            ptb_Logo = new PictureBox();
             btn_IH = new Button();
             btn_Quanlithongke = new Button();
             btn_Quanlicoso = new Button();
@@ -43,37 +43,25 @@
             btn_QLNH = new Button();
             btn_QLNV = new Button();
             btn_QLSP = new Button();
-            ptb_Logo = new PictureBox();
             button1 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             grb_Quanlinhanvien.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(6, 184);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 29;
-            dataGridView1.Size = new Size(954, 557);
-            dataGridView1.TabIndex = 0;
             // 
             // grb_Quanlinhanvien
             // 
             grb_Quanlinhanvien.Controls.Add(label1);
-            grb_Quanlinhanvien.Controls.Add(btn_Sua);
             grb_Quanlinhanvien.Controls.Add(btn_Xoa);
             grb_Quanlinhanvien.Controls.Add(btn_Them);
             grb_Quanlinhanvien.Controls.Add(tb_Timkiem);
             grb_Quanlinhanvien.Controls.Add(cmb_Sapxep);
             grb_Quanlinhanvien.Controls.Add(dataGridView1);
             grb_Quanlinhanvien.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            grb_Quanlinhanvien.Location = new Point(233, 16);
+            grb_Quanlinhanvien.Location = new Point(238, 18);
             grb_Quanlinhanvien.Name = "grb_Quanlinhanvien";
             grb_Quanlinhanvien.Size = new Size(966, 747);
-            grb_Quanlinhanvien.TabIndex = 20;
+            grb_Quanlinhanvien.TabIndex = 38;
             grb_Quanlinhanvien.TabStop = false;
             // 
             // label1
@@ -82,26 +70,9 @@
             label1.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(6, 21);
             label1.Name = "label1";
-            label1.Size = new Size(173, 25);
+            label1.Size = new Size(250, 25);
             label1.TabIndex = 10;
-            label1.Text = "Lịch sử hóa đơn";
-            // 
-            // btn_Sua
-            // 
-            btn_Sua.AutoSize = true;
-            btn_Sua.BackColor = Color.Tan;
-            btn_Sua.FlatAppearance.BorderColor = SystemColors.ActiveCaptionText;
-            btn_Sua.FlatAppearance.MouseDownBackColor = Color.Black;
-            btn_Sua.FlatAppearance.MouseOverBackColor = Color.Yellow;
-            btn_Sua.FlatStyle = FlatStyle.Flat;
-            btn_Sua.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_Sua.ForeColor = Color.White;
-            btn_Sua.Location = new Point(773, 134);
-            btn_Sua.Name = "btn_Sua";
-            btn_Sua.Size = new Size(77, 38);
-            btn_Sua.TabIndex = 9;
-            btn_Sua.Text = "Sửa";
-            btn_Sua.UseVisualStyleBackColor = false;
+            label1.Text = "Đơn hàng cần xác nhận";
             // 
             // btn_Xoa
             // 
@@ -119,6 +90,7 @@
             btn_Xoa.TabIndex = 9;
             btn_Xoa.Text = "Xóa";
             btn_Xoa.UseVisualStyleBackColor = false;
+            btn_Xoa.Click += btn_Xoa_Click;
             // 
             // btn_Them
             // 
@@ -130,12 +102,13 @@
             btn_Them.FlatStyle = FlatStyle.Flat;
             btn_Them.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             btn_Them.ForeColor = Color.White;
-            btn_Them.Location = new Point(661, 134);
+            btn_Them.Location = new Point(774, 134);
             btn_Them.Name = "btn_Them";
-            btn_Them.Size = new Size(77, 38);
+            btn_Them.Size = new Size(88, 38);
             btn_Them.TabIndex = 9;
-            btn_Them.Text = "Thêm ";
+            btn_Them.Text = "Xác nhận";
             btn_Them.UseVisualStyleBackColor = false;
+            btn_Them.Click += btn_Them_Click;
             // 
             // tb_Timkiem
             // 
@@ -154,105 +127,109 @@
             cmb_Sapxep.Size = new Size(151, 25);
             cmb_Sapxep.TabIndex = 7;
             // 
-            // btn_IH
+            // dataGridView1
             // 
-            btn_IH.Location = new Point(12, 506);
-            btn_IH.Name = "btn_IH";
-            btn_IH.Size = new Size(205, 45);
-            btn_IH.TabIndex = 21;
-            btn_IH.Text = "Lịch sử hóa đơn";
-            btn_IH.UseVisualStyleBackColor = true;
-            btn_IH.Click += btn_IH_Click;
-            // 
-            // btn_Quanlithongke
-            // 
-            btn_Quanlithongke.Location = new Point(12, 455);
-            btn_Quanlithongke.Name = "btn_Quanlithongke";
-            btn_Quanlithongke.Size = new Size(205, 45);
-            btn_Quanlithongke.TabIndex = 22;
-            btn_Quanlithongke.Text = "Quản lí thống kê";
-            btn_Quanlithongke.UseVisualStyleBackColor = true;
-            btn_Quanlithongke.Click += btn_Quanlithongke_Click;
-            // 
-            // btn_Quanlicoso
-            // 
-            btn_Quanlicoso.Location = new Point(12, 404);
-            btn_Quanlicoso.Name = "btn_Quanlicoso";
-            btn_Quanlicoso.Size = new Size(205, 45);
-            btn_Quanlicoso.TabIndex = 23;
-            btn_Quanlicoso.Text = "Quản lí cơ sở";
-            btn_Quanlicoso.UseVisualStyleBackColor = true;
-            btn_Quanlicoso.Click += btn_Quanlicoso_Click;
-            // 
-            // btn_QLGG
-            // 
-            btn_QLGG.Location = new Point(12, 353);
-            btn_QLGG.Name = "btn_QLGG";
-            btn_QLGG.Size = new Size(205, 45);
-            btn_QLGG.TabIndex = 24;
-            btn_QLGG.Text = "Quản lí giảm giá";
-            btn_QLGG.UseVisualStyleBackColor = true;
-            btn_QLGG.Click += btn_QLGG_Click;
-            // 
-            // btn_QLNH
-            // 
-            btn_QLNH.Location = new Point(12, 302);
-            btn_QLNH.Name = "btn_QLNH";
-            btn_QLNH.Size = new Size(205, 45);
-            btn_QLNH.TabIndex = 25;
-            btn_QLNH.Text = "Quản lí nhập hàng";
-            btn_QLNH.UseVisualStyleBackColor = true;
-            btn_QLNH.Click += btn_QLNH_Click;
-            // 
-            // btn_QLNV
-            // 
-            btn_QLNV.Location = new Point(12, 251);
-            btn_QLNV.Name = "btn_QLNV";
-            btn_QLNV.Size = new Size(205, 45);
-            btn_QLNV.TabIndex = 26;
-            btn_QLNV.Text = "Quản lí nhân viên";
-            btn_QLNV.UseVisualStyleBackColor = true;
-            btn_QLNV.Click += btn_QLNV_Click;
-            // 
-            // btn_QLSP
-            // 
-            btn_QLSP.Location = new Point(12, 200);
-            btn_QLSP.Name = "btn_QLSP";
-            btn_QLSP.Size = new Size(205, 45);
-            btn_QLSP.TabIndex = 27;
-            btn_QLSP.Text = "Quản lí sản phẩm";
-            btn_QLSP.UseVisualStyleBackColor = true;
-            btn_QLSP.Click += btn_QLSP_Click;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(6, 184);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(954, 557);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             // 
             // ptb_Logo
             // 
             ptb_Logo.BackColor = Color.MistyRose;
             ptb_Logo.Image = Properties.Resources.Logo;
-            ptb_Logo.Location = new Point(12, 12);
+            ptb_Logo.Location = new Point(17, 14);
             ptb_Logo.Name = "ptb_Logo";
             ptb_Logo.Size = new Size(200, 84);
             ptb_Logo.SizeMode = PictureBoxSizeMode.StretchImage;
-            ptb_Logo.TabIndex = 11;
+            ptb_Logo.TabIndex = 37;
             ptb_Logo.TabStop = false;
+            // 
+            // btn_IH
+            // 
+            btn_IH.Location = new Point(17, 508);
+            btn_IH.Name = "btn_IH";
+            btn_IH.Size = new Size(205, 45);
+            btn_IH.TabIndex = 39;
+            btn_IH.Text = "Lịch sử hóa đơn";
+            btn_IH.UseVisualStyleBackColor = true;
+            // 
+            // btn_Quanlithongke
+            // 
+            btn_Quanlithongke.Location = new Point(17, 457);
+            btn_Quanlithongke.Name = "btn_Quanlithongke";
+            btn_Quanlithongke.Size = new Size(205, 45);
+            btn_Quanlithongke.TabIndex = 40;
+            btn_Quanlithongke.Text = "Quản lí thống kê";
+            btn_Quanlithongke.UseVisualStyleBackColor = true;
+            // 
+            // btn_Quanlicoso
+            // 
+            btn_Quanlicoso.Location = new Point(17, 406);
+            btn_Quanlicoso.Name = "btn_Quanlicoso";
+            btn_Quanlicoso.Size = new Size(205, 45);
+            btn_Quanlicoso.TabIndex = 41;
+            btn_Quanlicoso.Text = "Quản lí cơ sở";
+            btn_Quanlicoso.UseVisualStyleBackColor = true;
+            // 
+            // btn_QLGG
+            // 
+            btn_QLGG.Location = new Point(17, 355);
+            btn_QLGG.Name = "btn_QLGG";
+            btn_QLGG.Size = new Size(205, 45);
+            btn_QLGG.TabIndex = 42;
+            btn_QLGG.Text = "Quản lí giảm giá";
+            btn_QLGG.UseVisualStyleBackColor = true;
+            // 
+            // btn_QLNH
+            // 
+            btn_QLNH.Location = new Point(17, 304);
+            btn_QLNH.Name = "btn_QLNH";
+            btn_QLNH.Size = new Size(205, 45);
+            btn_QLNH.TabIndex = 43;
+            btn_QLNH.Text = "Quản lí nhập hàng";
+            btn_QLNH.UseVisualStyleBackColor = true;
+            // 
+            // btn_QLNV
+            // 
+            btn_QLNV.Location = new Point(17, 253);
+            btn_QLNV.Name = "btn_QLNV";
+            btn_QLNV.Size = new Size(205, 45);
+            btn_QLNV.TabIndex = 44;
+            btn_QLNV.Text = "Quản lí nhân viên";
+            btn_QLNV.UseVisualStyleBackColor = true;
+            // 
+            // btn_QLSP
+            // 
+            btn_QLSP.Location = new Point(17, 202);
+            btn_QLSP.Name = "btn_QLSP";
+            btn_QLSP.Size = new Size(205, 45);
+            btn_QLSP.TabIndex = 45;
+            btn_QLSP.Text = "Quản lí sản phẩm";
+            btn_QLSP.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            button1.Location = new Point(12, 557);
+            button1.Location = new Point(17, 559);
             button1.Name = "button1";
             button1.Size = new Size(205, 45);
-            button1.TabIndex = 40;
+            button1.TabIndex = 39;
             button1.Text = "Đơn hàng cần xác nhận";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // InvoiceHistory
+            // GioHangCho
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1220, 778);
-            Controls.Add(button1);
-            Controls.Add(ptb_Logo);
             Controls.Add(grb_Quanlinhanvien);
+            Controls.Add(ptb_Logo);
+            Controls.Add(button1);
             Controls.Add(btn_IH);
             Controls.Add(btn_Quanlithongke);
             Controls.Add(btn_Quanlicoso);
@@ -260,26 +237,26 @@
             Controls.Add(btn_QLNH);
             Controls.Add(btn_QLNV);
             Controls.Add(btn_QLSP);
-            Name = "InvoiceHistory";
-            Text = "InvoiceHistory";
-            Load += InvoiceHistory_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Name = "GioHangCho";
+            Text = "GioHangCho";
+            Load += GioHangCho_Load;
             grb_Quanlinhanvien.ResumeLayout(false);
             grb_Quanlinhanvien.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Logo).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
         private GroupBox grb_Quanlinhanvien;
         private Label label1;
-        private Button btn_Sua;
         private Button btn_Xoa;
         private Button btn_Them;
         private TextBox tb_Timkiem;
         private ComboBox cmb_Sapxep;
+        private DataGridView dataGridView1;
+        private PictureBox ptb_Logo;
         private Button btn_IH;
         private Button btn_Quanlithongke;
         private Button btn_Quanlicoso;
@@ -287,7 +264,6 @@
         private Button btn_QLNH;
         private Button btn_QLNV;
         private Button btn_QLSP;
-        private PictureBox ptb_Logo;
         private Button button1;
     }
 }

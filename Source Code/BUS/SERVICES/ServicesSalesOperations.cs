@@ -119,8 +119,8 @@ namespace ShopNow.Source_Code.BUS.SERVICES
                                                         Id = x.ProductId,
                                                         ProductName = x.ProductName,
                                                         Price = x.Price,
-                                                        Quantity = x.SoLuongConLai,
-                                                        
+                                                        Quantity = (int)x.Quantity,// lỗi đây này
+
                                                     }).ToList();
         }
         public string IsDelCartProduct(Guid cartId, Guid productId)
@@ -189,7 +189,7 @@ namespace ShopNow.Source_Code.BUS.SERVICES
             var customer = getById.GetCustomerById(ServicesGlobalVariables.userId);
             try
             {
-                Bill bill = new Bill() { Id = BillId, CustomerId = customer.Id, NameCustomer = customer.Name, Status = 1, TotalPrice = ServicesGlobalVariables.TotalPrice };
+                Bill bill = new Bill() { Id = BillId, CustomerId = customer.Id, NameCustomer = customer.Name, Status = 0, TotalPrice = ServicesGlobalVariables.TotalPrice, };
                 if (Bill_Repository.IsAddBill(bill))
                 {
                     foreach (var product in ServicesGlobalVariables.productSaved)
@@ -199,7 +199,7 @@ namespace ShopNow.Source_Code.BUS.SERVICES
                         billDetail.ProductId = product.Id;
 
                         billDetail.BillId = bill.Id;
-                        billDetail.Quantity = product.Quantity;
+                        billDetail.Quantity = product.Quantity;// đổi thành biến số lượng ở trong cp
                         billDetail.Price = product.Price;
                         billDetail.CreatedTime = DateTime.Now;
                         if (!Bill_Detail_Repository.IsAddBillDetail(billDetail))
@@ -210,7 +210,7 @@ namespace ShopNow.Source_Code.BUS.SERVICES
                         else
                         {
                             var product1 = getById.GetProductById(billDetail.ProductId);
-                            product1.Quantity = product1.Quantity - 
+                            product1.Quantity = product1.Quantity -
                                                 Convert.ToInt32(getById.GetCartProductById(ServicesGlobalVariables.cartId, product.Id).Quantity);
                             if (product1.Quantity == 0)
                             {
@@ -228,7 +228,7 @@ namespace ShopNow.Source_Code.BUS.SERVICES
                         var cartProduct = getById.GetCartProductById(ServicesGlobalVariables.cartId, product.Id);
                         Cart_Product_Repository.isDelCartProduct(cartProduct);
                     }
-                    
+
                     return "Đặt thành công";
                 }
                 else { return "Đặt thất bại"; }
@@ -237,6 +237,65 @@ namespace ShopNow.Source_Code.BUS.SERVICES
             {
                 { return "Đặt thất bại"; }
             }
+        }
+
+        public void LoadHoaDon(DataGridView dataGridView1, byte status)
+
+        {
+            var groupedResult = from b in getAll.GetAllBill()
+                                join bd in getAll.GetAllBillDetail()
+                                on b.Id equals bd.BillId
+                                join p in getAll.GetAllProducts(null)
+                                on bd.ProductId equals p.Id
+                                
+
+                                group new { b, bd, p } by b.Id into g
+                                select new
+                                {
+                                    Id = g.Key,
+                                    TenNguoiNhan = g.First().b.NameCustomer,
+                                    TenSanPham = string.Join(", ", g.Select(x => x.p.ProductName)), // Join the product names
+                                    SoLuong = g.Sum(x => x.bd.Quantity),
+                                    TongTien = g.First().b.TotalPrice,
+                                    TrangThai = (bool)g.First().b.Deleted && g.First().b.Status == 0 ? "Đã hủy" :
+                                                (bool)!g.First().b.Deleted && g.First().b.Status == 0 ? "Đang chờ" :
+                                                (bool)!g.First().b.Deleted && g.First().b.Status == 1 ? "Thành công" :
+                                    "Không xác định"
+                                };
+
+            dataGridView1.DataSource = groupedResult.ToList();
+            dataGridView1.Columns["Id"].Visible = false;
+            dataGridView1.Columns["TenNguoiNhan"].Width = 200;
+            dataGridView1.Columns["TenSanPham"].Width = dataGridView1.Size.Width - 200 - 100 * 2 - 50;
+            dataGridView1.Columns["SoLuong"].Width = 100;
+            dataGridView1.Columns["TongTien"].Width = 100;
+
+
+        }
+
+
+
+        public string XacNhanDon(Guid billId)
+        {
+            try
+            {
+                var bill = getById.GetBillById(billId);
+                if (bill == null)
+                {
+                    return "Xác nhận thất bại lỗi 1";
+                }
+                else
+                {
+                    bill.Status = 1;
+                    if (Bill_Repository.IsUpdateBill(bill))
+                    {
+                        return "Xác nhận thành công";
+                    }
+                    else { return "Không thể xác nhận đơn hàng"; }
+                }
+            }
+
+            catch (Exception ex) { return ex.ToString(); }
         }
     }
 }

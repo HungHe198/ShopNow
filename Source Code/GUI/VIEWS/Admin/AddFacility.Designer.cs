@@ -78,7 +78,6 @@
             label2.Size = new Size(97, 20);
             label2.TabIndex = 0;
             label2.Text = "Số điện thoại";
-            label2.Click += label2_Click;
             // 
             // label4
             // 

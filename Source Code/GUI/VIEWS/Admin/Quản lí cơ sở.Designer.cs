@@ -44,6 +44,7 @@
             btn_QLNH = new Button();
             btn_QLNV = new Button();
             btn_QLSP = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             grb_Quanlinhanvien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
@@ -234,11 +235,22 @@
             btn_QLSP.UseVisualStyleBackColor = true;
             btn_QLSP.Click += btn_QLSP_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(12, 557);
+            button1.Name = "button1";
+            button1.Size = new Size(205, 45);
+            button1.TabIndex = 43;
+            button1.Text = "Đơn hàng cần xác nhận";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Quản_lí_cơ_sở
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1220, 778);
+            Controls.Add(button1);
             Controls.Add(btn_IH);
             Controls.Add(btn_Quanlithongke);
             Controls.Add(btn_Quanlicoso);
@@ -276,5 +288,6 @@
         private Button btn_QLNH;
         private Button btn_QLNV;
         private Button btn_QLSP;
+        private Button button1;
     }
 }

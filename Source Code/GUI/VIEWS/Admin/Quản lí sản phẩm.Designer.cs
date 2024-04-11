@@ -54,6 +54,7 @@
             btn_QLNV = new Button();
             btn_QLSP = new Button();
             ptb_Logo = new PictureBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgv_Dulieu).BeginInit();
             grb_Quanlisanpham.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -331,11 +332,22 @@
             ptb_Logo.TabIndex = 35;
             ptb_Logo.TabStop = false;
             // 
+            // button1
+            // 
+            button1.Location = new Point(12, 564);
+            button1.Name = "button1";
+            button1.Size = new Size(205, 45);
+            button1.TabIndex = 40;
+            button1.Text = "Đơn hàng cần xác nhận";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Quản_lí_sản_phẩm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1248, 776);
+            Controls.Add(button1);
             Controls.Add(ptb_Logo);
             Controls.Add(btn_IH);
             Controls.Add(btn_Quanlithongke);
@@ -387,5 +399,6 @@
         private Button btn_QLNV;
         private Button btn_QLSP;
         private PictureBox ptb_Logo;
+        private Button button1;
     }
 }
