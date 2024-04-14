@@ -246,6 +246,7 @@ namespace ShopNow.Source_Code.BUS.SERVICES
                                 join bd in getAll.GetAllBillDetail()
                                 on b.Id equals bd.BillId
                                 join p in getAll.GetAllProducts(null)
+                               
                                 on bd.ProductId equals p.Id
                                 
 

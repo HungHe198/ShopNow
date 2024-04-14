@@ -52,7 +52,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
                 if (dataGridView1.CurrentCell != null && dataGridView1.CurrentCell.Value != null)
                 {
                     // Lấy hàng đầu tiên được chọn
-                   
+
                     // Giả sử cột chứa billId có tên là "Id"
                     ServicesGlobalVariables.billId = Guid.Parse(dataGridView1.CurrentRow.Cells["Id"].Value.ToString());
                 }
@@ -61,12 +61,31 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-
+            var bill = GetById.GetBillById(ServicesGlobalVariables.billId);
+            if (bill.Status == 1)
+            {
+                MessageBox.Show("Bạn đã chọn đơn hàng không hợp lệ\n(Đơn hàng có thể đã được xác nhận hoặc bạn chưa chọn đơn hàng)");
+            }
+            else
+            {
+                DialogResult = MessageBox.Show("Bạn chắc chắn chứ? (y/n)", , MessageBoxButtons.YesNo);
+                if (DialogResult == DialogResult.Yes)
+                {
+                    bill.Status = 0;
+                    bill.Deleted = true;
+                    operations.LoadHoaDon(this.dataGridView1, 0);
+                }
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Services.ShowForm(this, new GioHangCho());
+        }
+
+        private void grb_Quanlinhanvien_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

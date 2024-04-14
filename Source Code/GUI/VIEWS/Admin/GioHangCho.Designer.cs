@@ -63,6 +63,7 @@
             grb_Quanlinhanvien.Size = new Size(966, 747);
             grb_Quanlinhanvien.TabIndex = 38;
             grb_Quanlinhanvien.TabStop = false;
+            grb_Quanlinhanvien.Enter += grb_Quanlinhanvien_Enter;
             // 
             // label1
             // 
