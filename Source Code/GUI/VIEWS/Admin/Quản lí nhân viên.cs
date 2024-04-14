@@ -1,4 +1,5 @@
-﻿using ShopNow.Source_Code.BUS.SERVICES;
+﻿using ShopNow.Models;
+using ShopNow.Source_Code.BUS.SERVICES;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -65,6 +66,17 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
         private void button1_Click(object sender, EventArgs e)
         {
             Services.ShowForm(this, new GioHangCho());
+        }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+
+        }
+        NhanVienServices NhanVienServices = new NhanVienServices();
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+            //Employee employee = new Employee() { Id = Guid.NewGuid(), Name = };
+            //NhanVienServices.addNhanVien();
         }
     }
 }

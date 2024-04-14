@@ -68,7 +68,7 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
             }
             else
             {
-                DialogResult = MessageBox.Show("Bạn chắc chắn chứ? (y/n)", , MessageBoxButtons.YesNo);
+                DialogResult = MessageBox.Show("Bạn chắc chắn chứ? (y/n)", null, MessageBoxButtons.YesNo);
                 if (DialogResult == DialogResult.Yes)
                 {
                     bill.Status = 0;

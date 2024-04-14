@@ -39,9 +39,9 @@
             btn_Huy = new Button();
             btn_Capnhat = new Button();
             cmb_Trangthai = new ComboBox();
-            tb_Gia = new TextBox();
-            tb_Tensanpham = new TextBox();
-            tb_Masanpham = new TextBox();
+            txt_Price = new TextBox();
+            txt_Name = new TextBox();
+            txt_Code = new TextBox();
             lb_Trangthai = new Label();
             label2 = new Label();
             lb_Tensanpham = new Label();
@@ -70,6 +70,7 @@
             dgv_Dulieu.RowTemplate.Height = 29;
             dgv_Dulieu.Size = new Size(628, 566);
             dgv_Dulieu.TabIndex = 0;
+            dgv_Dulieu.CellClick += dgv_Dulieu_CellClick;
             // 
             // grb_Quanlisanpham
             // 
@@ -129,6 +130,7 @@
             btn_Themsanpham.TabIndex = 6;
             btn_Themsanpham.Text = "Thêm";
             btn_Themsanpham.UseVisualStyleBackColor = false;
+            btn_Themsanpham.Click += btn_Themsanpham_Click;
             // 
             // tb_Timkiem
             // 
@@ -154,9 +156,9 @@
             groupBox2.Controls.Add(btn_Huy);
             groupBox2.Controls.Add(btn_Capnhat);
             groupBox2.Controls.Add(cmb_Trangthai);
-            groupBox2.Controls.Add(tb_Gia);
-            groupBox2.Controls.Add(tb_Tensanpham);
-            groupBox2.Controls.Add(tb_Masanpham);
+            groupBox2.Controls.Add(txt_Price);
+            groupBox2.Controls.Add(txt_Name);
+            groupBox2.Controls.Add(txt_Code);
             groupBox2.Controls.Add(lb_Trangthai);
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(lb_Tensanpham);
@@ -194,26 +196,26 @@
             cmb_Trangthai.Size = new Size(270, 28);
             cmb_Trangthai.TabIndex = 10;
             // 
-            // tb_Gia
+            // txt_Price
             // 
-            tb_Gia.Location = new Point(19, 189);
-            tb_Gia.Name = "tb_Gia";
-            tb_Gia.Size = new Size(270, 27);
-            tb_Gia.TabIndex = 7;
+            txt_Price.Location = new Point(19, 189);
+            txt_Price.Name = "txt_Price";
+            txt_Price.Size = new Size(270, 27);
+            txt_Price.TabIndex = 7;
             // 
-            // tb_Tensanpham
+            // txt_Name
             // 
-            tb_Tensanpham.Location = new Point(19, 124);
-            tb_Tensanpham.Name = "tb_Tensanpham";
-            tb_Tensanpham.Size = new Size(270, 27);
-            tb_Tensanpham.TabIndex = 8;
+            txt_Name.Location = new Point(19, 124);
+            txt_Name.Name = "txt_Name";
+            txt_Name.Size = new Size(270, 27);
+            txt_Name.TabIndex = 8;
             // 
-            // tb_Masanpham
+            // txt_Code
             // 
-            tb_Masanpham.Location = new Point(19, 60);
-            tb_Masanpham.Name = "tb_Masanpham";
-            tb_Masanpham.Size = new Size(270, 27);
-            tb_Masanpham.TabIndex = 9;
+            txt_Code.Location = new Point(19, 60);
+            txt_Code.Name = "txt_Code";
+            txt_Code.Size = new Size(270, 27);
+            txt_Code.TabIndex = 9;
             // 
             // lb_Trangthai
             // 
@@ -382,9 +384,9 @@
         private Button btn_Huy;
         private Button btn_Capnhat;
         private ComboBox cmb_Trangthai;
-        private TextBox tb_Gia;
-        private TextBox tb_Tensanpham;
-        private TextBox tb_Masanpham;
+        private TextBox txt_Price;
+        private TextBox txt_Name;
+        private TextBox txt_Code;
         private Label lb_Trangthai;
         private Label label2;
         private Label lb_Tensanpham;

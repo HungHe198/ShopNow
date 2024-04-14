@@ -15,7 +15,7 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
             try
             {
                 // Thêm user vào context
-                context.Add(employee);
+                context.Employees.Add(employee);
                 // Lưu thay đổi vào cơ sở dữ liệu
                 int result = context.SaveChanges();
                 // Trả về true nếu có ít nhất một bản ghi được thêm vào
@@ -33,7 +33,7 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
             try
             {
                 // Thêm user vào context
-                context.Update(obj);
+                context.Employees.Update(obj);
                 // Lưu thay đổi vào cơ sở dữ liệu
                 int result = context.SaveChanges();
                 // Trả về true nếu có ít nhất một bản ghi được thêm vào
@@ -51,7 +51,7 @@ namespace ShopNow.Source_Code.DAL.REPOSITORIES
             try
             {
                 obj.Deleted = true;
-                context.Update(obj);
+                context.Employees.Update(obj);
                 int result = context.SaveChanges();
                 return true;
             }

@@ -28,117 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            grb_Thongtin = new GroupBox();
-            button1 = new Button();
-            tb_Mota = new TextBox();
-            tb_Gia = new TextBox();
-            txt_CustomerName = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
-            txt_Username = new TextBox();
+            lb_Themsanpham = new Label();
             label5 = new Label();
+            txt_password = new TextBox();
+            btn_luu = new Button();
+            tb_Mota = new TextBox();
+            txt_sdt = new TextBox();
+            txt_CustomerName = new TextBox();
+            txt_diachi = new TextBox();
+            txt_email = new TextBox();
+            txt_Username = new TextBox();
             label1 = new Label();
             label4 = new Label();
             label2 = new Label();
             label3 = new Label();
             lb_Tensanpham = new Label();
             lb_Masanpham = new Label();
-            lb_Themsanpham = new Label();
+            grb_Thongtin = new GroupBox();
             grb_Thongtin.SuspendLayout();
             SuspendLayout();
             // 
-            // grb_Thongtin
+            // lb_Themsanpham
             // 
-            grb_Thongtin.Controls.Add(button1);
-            grb_Thongtin.Controls.Add(tb_Mota);
-            grb_Thongtin.Controls.Add(tb_Gia);
-            grb_Thongtin.Controls.Add(txt_CustomerName);
-            grb_Thongtin.Controls.Add(textBox3);
-            grb_Thongtin.Controls.Add(textBox2);
-            grb_Thongtin.Controls.Add(textBox1);
-            grb_Thongtin.Controls.Add(txt_Username);
-            grb_Thongtin.Controls.Add(label5);
-            grb_Thongtin.Controls.Add(label1);
-            grb_Thongtin.Controls.Add(label4);
-            grb_Thongtin.Controls.Add(label2);
-            grb_Thongtin.Controls.Add(label3);
-            grb_Thongtin.Controls.Add(lb_Tensanpham);
-            grb_Thongtin.Controls.Add(lb_Masanpham);
-            grb_Thongtin.Location = new Point(55, 79);
-            grb_Thongtin.Name = "grb_Thongtin";
-            grb_Thongtin.Size = new Size(955, 525);
-            grb_Thongtin.TabIndex = 5;
-            grb_Thongtin.TabStop = false;
-            grb_Thongtin.Text = "Thông tin";
+            lb_Themsanpham.AutoSize = true;
+            lb_Themsanpham.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_Themsanpham.Location = new Point(368, 20);
+            lb_Themsanpham.Name = "lb_Themsanpham";
+            lb_Themsanpham.Size = new Size(272, 41);
+            lb_Themsanpham.TabIndex = 4;
+            lb_Themsanpham.Text = "Thêm người dùng";
             // 
-            // button1
+            // label5
             // 
-            button1.Location = new Point(184, 447);
-            button1.Name = "button1";
-            button1.Size = new Size(485, 55);
-            button1.TabIndex = 2;
-            button1.Text = "Lưu";
-            button1.UseVisualStyleBackColor = true;
+            label5.AutoSize = true;
+            label5.Location = new Point(501, 44);
+            label5.Name = "label5";
+            label5.Size = new Size(70, 20);
+            label5.TabIndex = 4;
+            label5.Text = "Password";
+            // 
+            // txt_password
+            // 
+            txt_password.Location = new Point(501, 68);
+            txt_password.Margin = new Padding(3, 4, 3, 4);
+            txt_password.Name = "txt_password";
+            txt_password.Size = new Size(364, 27);
+            txt_password.TabIndex = 3;
+            // 
+            // btn_luu
+            // 
+            btn_luu.Location = new Point(184, 447);
+            btn_luu.Name = "btn_luu";
+            btn_luu.Size = new Size(485, 55);
+            btn_luu.TabIndex = 2;
+            btn_luu.Text = "Lưu";
+            btn_luu.UseVisualStyleBackColor = true;
+            btn_luu.Click += btn_luu_Click;
             // 
             // tb_Mota
             // 
             tb_Mota.Location = new Point(48, 268);
             tb_Mota.Multiline = true;
             tb_Mota.Name = "tb_Mota";
-            tb_Mota.Size = new Size(832, 165);
+            tb_Mota.Size = new Size(831, 165);
             tb_Mota.TabIndex = 1;
             // 
-            // tb_Gia
+            // txt_sdt
             // 
-            tb_Gia.Location = new Point(59, 199);
-            tb_Gia.Name = "tb_Gia";
-            tb_Gia.Size = new Size(361, 27);
-            tb_Gia.TabIndex = 1;
+            txt_sdt.Location = new Point(59, 199);
+            txt_sdt.Name = "txt_sdt";
+            txt_sdt.Size = new Size(361, 27);
+            txt_sdt.TabIndex = 1;
             // 
             // txt_CustomerName
             // 
-            txt_CustomerName.Location = new Point(59, 134);
+            txt_CustomerName.Location = new Point(59, 133);
             txt_CustomerName.Name = "txt_CustomerName";
             txt_CustomerName.Size = new Size(361, 27);
             txt_CustomerName.TabIndex = 1;
             // 
-            // textBox3
+            // txt_diachi
             // 
-            textBox3.Location = new Point(504, 199);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(361, 27);
-            textBox3.TabIndex = 1;
+            txt_diachi.Location = new Point(504, 133);
+            txt_diachi.Name = "txt_diachi";
+            txt_diachi.Size = new Size(361, 27);
+            txt_diachi.TabIndex = 1;
             // 
-            // textBox2
+            // txt_email
             // 
-            textBox2.Location = new Point(504, 134);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(361, 27);
-            textBox2.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(504, 70);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(361, 27);
-            textBox1.TabIndex = 1;
+            txt_email.Location = new Point(504, 199);
+            txt_email.Name = "txt_email";
+            txt_email.Size = new Size(361, 27);
+            txt_email.TabIndex = 1;
             // 
             // txt_Username
             // 
-            txt_Username.Location = new Point(59, 70);
+            txt_Username.Location = new Point(59, 69);
             txt_Username.Name = "txt_Username";
             txt_Username.Size = new Size(361, 27);
             txt_Username.TabIndex = 1;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(504, 176);
-            label5.Name = "label5";
-            label5.Size = new Size(82, 20);
-            label5.TabIndex = 0;
-            label5.Text = "Source ảnh";
             // 
             // label1
             // 
@@ -170,7 +158,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(504, 47);
+            label3.Location = new Point(504, 176);
             label3.Name = "label3";
             label3.Size = new Size(46, 20);
             label3.TabIndex = 0;
@@ -194,23 +182,37 @@
             lb_Masanpham.TabIndex = 0;
             lb_Masanpham.Text = "UserName";
             // 
-            // lb_Themsanpham
+            // grb_Thongtin
             // 
-            lb_Themsanpham.AutoSize = true;
-            lb_Themsanpham.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_Themsanpham.Location = new Point(368, 20);
-            lb_Themsanpham.Name = "lb_Themsanpham";
-            lb_Themsanpham.Size = new Size(272, 41);
-            lb_Themsanpham.TabIndex = 4;
-            lb_Themsanpham.Text = "Thêm người dùng";
+            grb_Thongtin.Controls.Add(label5);
+            grb_Thongtin.Controls.Add(txt_password);
+            grb_Thongtin.Controls.Add(btn_luu);
+            grb_Thongtin.Controls.Add(tb_Mota);
+            grb_Thongtin.Controls.Add(txt_sdt);
+            grb_Thongtin.Controls.Add(txt_CustomerName);
+            grb_Thongtin.Controls.Add(txt_diachi);
+            grb_Thongtin.Controls.Add(txt_email);
+            grb_Thongtin.Controls.Add(txt_Username);
+            grb_Thongtin.Controls.Add(label1);
+            grb_Thongtin.Controls.Add(label4);
+            grb_Thongtin.Controls.Add(label2);
+            grb_Thongtin.Controls.Add(label3);
+            grb_Thongtin.Controls.Add(lb_Tensanpham);
+            grb_Thongtin.Controls.Add(lb_Masanpham);
+            grb_Thongtin.Location = new Point(55, 79);
+            grb_Thongtin.Name = "grb_Thongtin";
+            grb_Thongtin.Size = new Size(955, 525);
+            grb_Thongtin.TabIndex = 5;
+            grb_Thongtin.TabStop = false;
+            grb_Thongtin.Text = "Thông tin";
             // 
             // AddCustomer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1065, 624);
-            Controls.Add(grb_Thongtin);
             Controls.Add(lb_Themsanpham);
+            Controls.Add(grb_Thongtin);
             Name = "AddCustomer";
             Text = "AddCustomer";
             grb_Thongtin.ResumeLayout(false);
@@ -221,22 +223,22 @@
 
         #endregion
 
-        private GroupBox grb_Thongtin;
-        private Button button1;
-        private TextBox tb_Mota;
-        private TextBox tb_Gia;
-        private TextBox txt_CustomerName;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private TextBox txt_Username;
+        private Label lb_Themsanpham;
         private Label label5;
+        private TextBox txt_password;
+        private Button btn_luu;
+        private TextBox tb_Mota;
+        private TextBox txt_sdt;
+        private TextBox txt_CustomerName;
+        private TextBox txt_diachi;
+        private TextBox txt_email;
+        private TextBox txt_Username;
         private Label label1;
         private Label label4;
         private Label label2;
         private Label label3;
         private Label lb_Tensanpham;
         private Label lb_Masanpham;
-        private Label lb_Themsanpham;
+        private GroupBox grb_Thongtin;
     }
 }

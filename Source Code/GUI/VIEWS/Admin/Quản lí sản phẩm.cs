@@ -57,5 +57,16 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
         {
             Services.ShowForm(this, new GioHangCho());
         }
+
+        private void btn_Themsanpham_Click(object sender, EventArgs e)
+        {
+            Thêm_sản_phẩm AddProduct = new Thêm_sản_phẩm();
+            AddProduct.ShowDialog();
+        }
+
+        private void dgv_Dulieu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

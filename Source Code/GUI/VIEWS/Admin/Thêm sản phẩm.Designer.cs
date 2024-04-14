@@ -30,21 +30,19 @@
         {
             lb_Themsanpham = new Label();
             grb_Thongtin = new GroupBox();
-            btn_Chonanh = new Button();
-            cmb_Trangthai = new ComboBox();
+            Btn_Save = new Button();
             tb_Mota = new TextBox();
-            tb_Gia = new TextBox();
-            tb_Tensanpham = new TextBox();
-            tb_Masanpham = new TextBox();
+            txt_Gia = new TextBox();
+            txt_Tensanpham = new TextBox();
+            txtChip = new TextBox();
+            txt_quantity = new TextBox();
+            txt_Masanpham = new TextBox();
             label1 = new Label();
-            lb_Trangthai = new Label();
+            Chip = new Label();
             label2 = new Label();
+            label3 = new Label();
             lb_Tensanpham = new Label();
             lb_Masanpham = new Label();
-            label3 = new Label();
-            textBox1 = new TextBox();
-            label4 = new Label();
-            textBox2 = new TextBox();
             grb_Thongtin.SuspendLayout();
             SuspendLayout();
             // 
@@ -60,17 +58,15 @@
             // 
             // grb_Thongtin
             // 
-            grb_Thongtin.Controls.Add(btn_Chonanh);
-            grb_Thongtin.Controls.Add(cmb_Trangthai);
+            grb_Thongtin.Controls.Add(Btn_Save);
             grb_Thongtin.Controls.Add(tb_Mota);
-            grb_Thongtin.Controls.Add(tb_Gia);
-            grb_Thongtin.Controls.Add(tb_Tensanpham);
-            grb_Thongtin.Controls.Add(textBox2);
-            grb_Thongtin.Controls.Add(textBox1);
-            grb_Thongtin.Controls.Add(tb_Masanpham);
+            grb_Thongtin.Controls.Add(txt_Gia);
+            grb_Thongtin.Controls.Add(txt_Tensanpham);
+            grb_Thongtin.Controls.Add(txtChip);
+            grb_Thongtin.Controls.Add(txt_quantity);
+            grb_Thongtin.Controls.Add(txt_Masanpham);
             grb_Thongtin.Controls.Add(label1);
-            grb_Thongtin.Controls.Add(lb_Trangthai);
-            grb_Thongtin.Controls.Add(label4);
+            grb_Thongtin.Controls.Add(Chip);
             grb_Thongtin.Controls.Add(label2);
             grb_Thongtin.Controls.Add(label3);
             grb_Thongtin.Controls.Add(lb_Tensanpham);
@@ -82,51 +78,58 @@
             grb_Thongtin.TabStop = false;
             grb_Thongtin.Text = "Thông tin";
             // 
-            // btn_Chonanh
+            // Btn_Save
             // 
-            btn_Chonanh.Location = new Point(788, 261);
-            btn_Chonanh.Name = "btn_Chonanh";
-            btn_Chonanh.Size = new Size(94, 29);
-            btn_Chonanh.TabIndex = 4;
-            btn_Chonanh.Text = "Chọn ảnh";
-            btn_Chonanh.UseVisualStyleBackColor = true;
-            // 
-            // cmb_Trangthai
-            // 
-            cmb_Trangthai.FormattingEnabled = true;
-            cmb_Trangthai.Location = new Point(504, 198);
-            cmb_Trangthai.Name = "cmb_Trangthai";
-            cmb_Trangthai.Size = new Size(361, 28);
-            cmb_Trangthai.TabIndex = 2;
+            Btn_Save.Location = new Point(295, 445);
+            Btn_Save.Name = "Btn_Save";
+            Btn_Save.Size = new Size(341, 52);
+            Btn_Save.TabIndex = 2;
+            Btn_Save.Text = "Lưu";
+            Btn_Save.UseVisualStyleBackColor = true;
+            Btn_Save.Click += Btn_Save_Click;
             // 
             // tb_Mota
             // 
-            tb_Mota.Location = new Point(50, 319);
+            tb_Mota.Location = new Point(59, 256);
             tb_Mota.Multiline = true;
             tb_Mota.Name = "tb_Mota";
             tb_Mota.Size = new Size(832, 165);
             tb_Mota.TabIndex = 1;
             // 
-            // tb_Gia
+            // txt_Gia
             // 
-            tb_Gia.Location = new Point(59, 199);
-            tb_Gia.Name = "tb_Gia";
-            tb_Gia.Size = new Size(361, 27);
-            tb_Gia.TabIndex = 1;
+            txt_Gia.Location = new Point(59, 199);
+            txt_Gia.Name = "txt_Gia";
+            txt_Gia.Size = new Size(361, 27);
+            txt_Gia.TabIndex = 1;
             // 
-            // tb_Tensanpham
+            // txt_Tensanpham
             // 
-            tb_Tensanpham.Location = new Point(59, 134);
-            tb_Tensanpham.Name = "tb_Tensanpham";
-            tb_Tensanpham.Size = new Size(361, 27);
-            tb_Tensanpham.TabIndex = 1;
+            txt_Tensanpham.Location = new Point(59, 134);
+            txt_Tensanpham.Name = "txt_Tensanpham";
+            txt_Tensanpham.Size = new Size(361, 27);
+            txt_Tensanpham.TabIndex = 1;
             // 
-            // tb_Masanpham
+            // txtChip
             // 
-            tb_Masanpham.Location = new Point(59, 70);
-            tb_Masanpham.Name = "tb_Masanpham";
-            tb_Masanpham.Size = new Size(361, 27);
-            tb_Masanpham.TabIndex = 1;
+            txtChip.Location = new Point(504, 134);
+            txtChip.Name = "txtChip";
+            txtChip.Size = new Size(361, 27);
+            txtChip.TabIndex = 1;
+            // 
+            // txt_quantity
+            // 
+            txt_quantity.Location = new Point(504, 70);
+            txt_quantity.Name = "txt_quantity";
+            txt_quantity.Size = new Size(361, 27);
+            txt_quantity.TabIndex = 1;
+            // 
+            // txt_Masanpham
+            // 
+            txt_Masanpham.Location = new Point(59, 70);
+            txt_Masanpham.Name = "txt_Masanpham";
+            txt_Masanpham.Size = new Size(361, 27);
+            txt_Masanpham.TabIndex = 1;
             // 
             // label1
             // 
@@ -137,14 +140,14 @@
             label1.TabIndex = 0;
             label1.Text = "Mô tả";
             // 
-            // lb_Trangthai
+            // Chip
             // 
-            lb_Trangthai.AutoSize = true;
-            lb_Trangthai.Location = new Point(504, 175);
-            lb_Trangthai.Name = "lb_Trangthai";
-            lb_Trangthai.Size = new Size(75, 20);
-            lb_Trangthai.TabIndex = 0;
-            lb_Trangthai.Text = "Trạng thái";
+            Chip.AutoSize = true;
+            Chip.Location = new Point(504, 111);
+            Chip.Name = "Chip";
+            Chip.Size = new Size(39, 20);
+            Chip.TabIndex = 0;
+            Chip.Text = "Chip";
             // 
             // label2
             // 
@@ -154,6 +157,15 @@
             label2.Size = new Size(31, 20);
             label2.TabIndex = 0;
             label2.Text = "Giá";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(504, 47);
+            label3.Name = "label3";
+            label3.Size = new Size(69, 20);
+            label3.TabIndex = 0;
+            label3.Text = "Số lượng";
             // 
             // lb_Tensanpham
             // 
@@ -172,38 +184,6 @@
             lb_Masanpham.Size = new Size(98, 20);
             lb_Masanpham.TabIndex = 0;
             lb_Masanpham.Text = "Mã sản phẩm";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(504, 47);
-            label3.Name = "label3";
-            label3.Size = new Size(69, 20);
-            label3.TabIndex = 0;
-            label3.Text = "Số lượng";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(504, 70);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(361, 27);
-            textBox1.TabIndex = 1;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(504, 111);
-            label4.Name = "label4";
-            label4.Size = new Size(98, 20);
-            label4.TabIndex = 0;
-            label4.Text = "Mã sản phẩm";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(504, 134);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(361, 27);
-            textBox2.TabIndex = 1;
             // 
             // Thêm_sản_phẩm
             // 
@@ -227,18 +207,19 @@
         private GroupBox grb_Thongtin;
         private Label lb_Masanpham;
         private ComboBox cmb_Trangthai;
-        private TextBox tb_Gia;
-        private TextBox tb_Tensanpham;
-        private TextBox tb_Masanpham;
+        private TextBox txt_Gia;
+        private TextBox txt_Tensanpham;
+        private TextBox txt_Masanpham;
         private Label label1;
         private Label lb_Trangthai;
         private Label label2;
         private Label lb_Tensanpham;
         private TextBox tb_Mota;
         private Button btn_Chonanh;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private Label label4;
+        private TextBox txtChip;
+        private TextBox txt_quantity;
+        private Label Chip;
         private Label label3;
+        private Button Btn_Save;
     }
 }
