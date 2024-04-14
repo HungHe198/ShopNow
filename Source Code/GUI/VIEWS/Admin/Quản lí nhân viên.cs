@@ -66,5 +66,10 @@ namespace ShopNow.Source_Code.GUI.VIEWS.Admin
         {
             Services.ShowForm(this, new GioHangCho());
         }
+
+        private void btn_Sua_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

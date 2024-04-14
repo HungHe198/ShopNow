@@ -32,11 +32,10 @@
             label1 = new Label();
             btn_Xoa = new Button();
             btn_Them = new Button();
-            tb_Timkiem = new TextBox();
-            cmb_Sapxep = new ComboBox();
             dataGridView1 = new DataGridView();
             ptb_Logo = new PictureBox();
-            button1 = new Button();
+            btn_reload = new Button();
+            btn_QLKH = new Button();
             grb_Quanlinhanvien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
@@ -47,8 +46,6 @@
             grb_Quanlinhanvien.Controls.Add(label1);
             grb_Quanlinhanvien.Controls.Add(btn_Xoa);
             grb_Quanlinhanvien.Controls.Add(btn_Them);
-            grb_Quanlinhanvien.Controls.Add(tb_Timkiem);
-            grb_Quanlinhanvien.Controls.Add(cmb_Sapxep);
             grb_Quanlinhanvien.Controls.Add(dataGridView1);
             grb_Quanlinhanvien.Font = new Font("Arial", 9F, FontStyle.Regular, GraphicsUnit.Point);
             grb_Quanlinhanvien.Location = new Point(233, 11);
@@ -63,9 +60,9 @@
             label1.Font = new Font("Times New Roman", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
             label1.Location = new Point(6, 21);
             label1.Name = "label1";
-            label1.Size = new Size(250, 25);
+            label1.Size = new Size(208, 25);
             label1.TabIndex = 10;
-            label1.Text = "Đơn hàng cần xác nhận";
+            label1.Text = "Quản lí khách hàng";
             // 
             // btn_Xoa
             // 
@@ -98,25 +95,9 @@
             btn_Them.Name = "btn_Them";
             btn_Them.Size = new Size(88, 38);
             btn_Them.TabIndex = 9;
-            btn_Them.Text = "Xác nhận";
+            btn_Them.Text = "Thêm";
             btn_Them.UseVisualStyleBackColor = false;
-            // 
-            // tb_Timkiem
-            // 
-            tb_Timkiem.BackColor = SystemColors.InactiveBorder;
-            tb_Timkiem.Location = new Point(6, 147);
-            tb_Timkiem.Name = "tb_Timkiem";
-            tb_Timkiem.PlaceholderText = "Nhập để tìm kiếm";
-            tb_Timkiem.Size = new Size(356, 25);
-            tb_Timkiem.TabIndex = 8;
-            // 
-            // cmb_Sapxep
-            // 
-            cmb_Sapxep.FormattingEnabled = true;
-            cmb_Sapxep.Location = new Point(396, 147);
-            cmb_Sapxep.Name = "cmb_Sapxep";
-            cmb_Sapxep.Size = new Size(151, 25);
-            cmb_Sapxep.TabIndex = 7;
+            btn_Them.Click += btn_Them_Click;
             // 
             // dataGridView1
             // 
@@ -139,25 +120,38 @@
             ptb_Logo.TabIndex = 46;
             ptb_Logo.TabStop = false;
             // 
-            // button1
+            // btn_reload
             // 
-            button1.Location = new Point(12, 429);
-            button1.Name = "button1";
-            button1.Size = new Size(205, 45);
-            button1.TabIndex = 48;
-            button1.Text = "Đơn hàng cần xác nhận";
-            button1.UseVisualStyleBackColor = true;
+            btn_reload.Location = new Point(12, 195);
+            btn_reload.Name = "btn_reload";
+            btn_reload.Size = new Size(205, 45);
+            btn_reload.TabIndex = 48;
+            btn_reload.Text = "Đơn hàng cần xác nhận";
+            btn_reload.UseVisualStyleBackColor = true;
+            btn_reload.Click += btn_reload_Click;
+            // 
+            // btn_QLKH
+            // 
+            btn_QLKH.Location = new Point(12, 272);
+            btn_QLKH.Name = "btn_QLKH";
+            btn_QLKH.Size = new Size(205, 45);
+            btn_QLKH.TabIndex = 50;
+            btn_QLKH.Text = "Quản lí khách hàng";
+            btn_QLKH.UseVisualStyleBackColor = true;
+            btn_QLKH.Click += btn_QLKH_Click_1;
             // 
             // QuanLiKhachHang
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1220, 778);
+            Controls.Add(btn_QLKH);
             Controls.Add(grb_Quanlinhanvien);
             Controls.Add(ptb_Logo);
-            Controls.Add(button1);
+            Controls.Add(btn_reload);
             Name = "QuanLiKhachHang";
             Text = "QuanLiKhachHang";
+            Load += QuanLiKhachHang_Load;
             grb_Quanlinhanvien.ResumeLayout(false);
             grb_Quanlinhanvien.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
@@ -171,10 +165,9 @@
         private Label label1;
         private Button btn_Xoa;
         private Button btn_Them;
-        private TextBox tb_Timkiem;
-        private ComboBox cmb_Sapxep;
         private DataGridView dataGridView1;
         private PictureBox ptb_Logo;
-        private Button button1;
+        private Button btn_reload;
+        private Button btn_QLKH;
     }
 }
