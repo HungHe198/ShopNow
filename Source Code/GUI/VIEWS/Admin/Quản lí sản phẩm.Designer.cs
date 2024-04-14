@@ -129,6 +129,7 @@
             btn_Themsanpham.TabIndex = 6;
             btn_Themsanpham.Text = "Thêm";
             btn_Themsanpham.UseVisualStyleBackColor = false;
+            btn_Themsanpham.Click += btn_Themsanpham_Click;
             // 
             // tb_Timkiem
             // 

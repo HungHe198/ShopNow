@@ -37,6 +37,8 @@
             dataGridView1 = new DataGridView();
             ptb_Logo = new PictureBox();
             button1 = new Button();
+            btn_QLKH = new Button();
+            btn_reload = new Button();
             grb_Quanlinhanvien.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptb_Logo).BeginInit();
@@ -83,6 +85,7 @@
             btn_Xoa.TabIndex = 9;
             btn_Xoa.Text = "Xóa";
             btn_Xoa.UseVisualStyleBackColor = false;
+            btn_Xoa.Click += btn_Xoa_Click;
             // 
             // btn_Them
             // 
@@ -100,6 +103,7 @@
             btn_Them.TabIndex = 9;
             btn_Them.Text = "Xác nhận";
             btn_Them.UseVisualStyleBackColor = false;
+            btn_Them.Click += btn_Them_Click;
             // 
             // tb_Timkiem
             // 
@@ -148,11 +152,33 @@
             button1.Text = "Đơn hàng cần xác nhận";
             button1.UseVisualStyleBackColor = true;
             // 
+            // btn_QLKH
+            // 
+            btn_QLKH.Location = new Point(17, 267);
+            btn_QLKH.Name = "btn_QLKH";
+            btn_QLKH.Size = new Size(205, 45);
+            btn_QLKH.TabIndex = 49;
+            btn_QLKH.Text = "Quản lí khách hàng";
+            btn_QLKH.UseVisualStyleBackColor = true;
+            btn_QLKH.Click += btn_QLKH_Click;
+            // 
+            // btn_reload
+            // 
+            btn_reload.Location = new Point(17, 202);
+            btn_reload.Name = "btn_reload";
+            btn_reload.Size = new Size(205, 45);
+            btn_reload.TabIndex = 50;
+            btn_reload.Text = "Đơn hàng cần xác nhận";
+            btn_reload.UseVisualStyleBackColor = true;
+            btn_reload.Click += btn_reload_Click;
+            // 
             // GioHangCho
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1220, 778);
+            Controls.Add(btn_QLKH);
+            Controls.Add(btn_reload);
             Controls.Add(grb_Quanlinhanvien);
             Controls.Add(ptb_Logo);
             Controls.Add(button1);
@@ -176,5 +202,7 @@
         private DataGridView dataGridView1;
         private PictureBox ptb_Logo;
         private Button button1;
+        private Button btn_QLKH;
+        private Button btn_reload;
     }
 }

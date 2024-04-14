@@ -92,6 +92,7 @@
             btn_Sua.TabIndex = 9;
             btn_Sua.Text = "Sửa";
             btn_Sua.UseVisualStyleBackColor = false;
+            btn_Sua.Click += btn_Sua_Click;
             // 
             // btn_Xoa
             // 
